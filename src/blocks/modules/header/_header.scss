@@ -1,0 +1,33 @@
+.header {
+	background-color: var(--color-bg-secondary);
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 1200px;
+
+		@media screen and (min-width: $break_lg) {
+			padding: 0 16px;
+		}
+	}
+
+	&__logo {
+		display: none;
+		width: 216px;
+
+		@media screen and (min-width: $break_lg) {
+			display: block;
+		}
+	}
+
+	&__lines {
+		flex: 0 0 100%;
+
+		@media screen and (min-width: $break_lg) {
+			flex: 0 0 76%;
+		}
+	}
+}

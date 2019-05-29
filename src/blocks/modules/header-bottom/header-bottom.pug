@@ -1,0 +1,16 @@
+mixin header-bottom()
+	.header-bottom
+		.container.container--header
+			.header-bottom__logo-mobile
+				a(href="/")
+					picture
+						//- source(srcset="img/logo-mobile.webp" type="image/webp")
+						img(src="img/logo-mobile.png" alt="Логотип")
+			.header-bottom__icons
+				.header-bottom__writeUs
+					+write-us()
+				.header-bottom__blind-toggle
+					+blind-toggle()
+				+sandwich()
+			.header-bottom__menu
+				+menu()

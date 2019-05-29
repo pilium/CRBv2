@@ -1,0 +1,50 @@
+.header-top {
+	margin-top: 8px;
+
+	.container {
+		padding-bottom: 8px;
+
+		@media screen and (min-width: $break_md) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		@media screen and (min-width: $break_lg) {
+			border-bottom: 1px solid var(--color-text-helper);
+		}
+	}
+
+	&__address {
+		border-right: 1px solid var(--color-text-helper);
+		padding-right: 8px;
+		padding-left: 32px;
+
+		@media screen and (min-width: $break_xs) {
+			padding-right: 16px;
+		}
+	}
+
+	&__schedule {
+		padding-left: 8px;
+
+		@media screen and (min-width: $break_xs) {
+			padding-left: 16px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: flex-start;
+		font-size: 14px;
+		line-height: 1.2;
+
+		@media screen and (min-width: $break_lg) {
+			padding-left: 24px;
+		}
+	}
+
+	&__tel-desktop {
+		margin-left: 8px;
+	}
+}

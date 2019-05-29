@@ -1,0 +1,14 @@
+mixin header-top()
+	.header-top
+		.container.container--header
+			.header-top__info
+				.header-top__address
+					+address({
+						icon: 'location',
+						city: 'Ст.Романовская,',
+						street: 'пер.Союзный 97а'
+					})
+				.header-top__schedule
+					+schedule()
+			.header-top__tel-desktop
+				+tel-desktop()
