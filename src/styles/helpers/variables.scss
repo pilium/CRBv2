@@ -1,6 +1,28 @@
 :root {
 	// colors
-	--warning: hsl(35, 84%, 62%);
+	--color-main: #1a7977;
+	--color-text: #4a5d5b;
+	--color-text-helper: #a8a8a8;
+	--color-hover: #55c8c0;
+	--color-title: #223837;
+	--color-title-light: #05adaa;
+	--color-link: #27615e;
+	--color-link-hover: var(--color-hover);
+	--color-menu-item: #253836;
+	--color-secondary: #3e7e7a;
+	--color-border: #2e8884;
+	--color-border-light: #e1ebeb;
+	--color-bg-darken: #e0eaea;
+	--color-bg-lighten: #e9f0f0;
+	--color-bg-secondary: #f2f7f7;
+	--color-icon: #3e9892;
+	--color-light: #fff;
+	--color-dark: #000;
+
+	// Gradients
+	--gradient-main: linear-gradient(112.72013189013455deg, hsl(183, 95%, 64%) 4.927083333333334%, var(--color-main) 97.84374999999999%);
+	--gradient-secondary: linear-gradient(112.72013189013455deg, hsl(179, 38%, 55%) 4.927083333333334%, hsl(159, 83%, 64%) 97.84374999999999%);
+	--gradient-hover: linear-gradient(360deg, var(--color-main) 0, var(--color-hover) 0);
 
 	// Font
 	--font-size: 16px;
@@ -10,9 +32,16 @@
 	--font-size-h4: 20px;
 	--font-size-h5: 16px;
 	--font-size-h6: 16px;
-	--line-height: 1.44;
+	--line-height: 1.5;
 	--font-family--default: "Exo 2", -apple-system, BlinkMacSystemFont, "Ubuntu", "Arial", sans-serif;
 	--font-family--thin: "Exo 2 Thin";
 	--font-family--semibold: "Exo 2 Semi Bold";
-	--font-family--bold: "Exo 2 Black";
+	--font-family--bold: "Exo 2 Bold";
 }
+
+// Breakpoints
+$break_xs: 425px;
+$break_sm: 576px;
+$break_md: 768px;
+$break_lg: 992px;
+$break_xl: 1200px;
