@@ -1,0 +1,102 @@
+mixin menu()
+	nav.menu(aria-hidden="true")
+		.menu__wrapper
+			ul.menu__list#main-nav-menu(role="menu" aria-labelledby="main-menu-trigger")
+				li.menu__item(role="none")
+					a.link.menu__link.menu__link--has-submenu(href="#" title="На страницу О больнице" aria-haspopup="true" aria-expanded="false" role="menuitem") О больнице
+						.menu__icon
+							+icon('hospital', 'menu__svg-icon')
+						.arrow
+							.arrow__bar.arrow__bar--1
+							.arrow__bar.arrow__bar--2
+						ul.submenu(role="menu" aria-label="О больнице")
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу Новости") Новости
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу полезных статей") Полезные статьи
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу дорожной карты") Дорожная карта
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о модернизации здравоохранения") Модернизация здравоохранения
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о противодействии коррупции") Противодействие с коррупцией
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу вакансий") Вакансии
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу вакансий") Платные услуги
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу отзывов") Отзывы
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о вышестоящих организациях") Вышестоящие организации
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу галереи") Галерея
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о нормативных документах") Нормативные документы
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу каталога файлов") Каталог файлов
+				li.menu__item(role="none")
+					a.link.menu__link.menu__link--has-submenu(href="#" title="На страницу пациентам" aria-haspopup="true" aria-expanded="false" role="menuitem") Пациентам
+						.menu__icon
+							+icon('patient', 'menu__svg-icon')
+						.arrow
+							.arrow__bar.arrow__bar--1
+							.arrow__bar.arrow__bar--2
+						ul.submenu(role="menu" aria-label="Пациентам")
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу Новости") График приема врачей
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу полезных статей") Права и обязанности пациента
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу дорожной карты") Правила записи на прием
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о модернизации здравоохранения") Правила подготовки к исследованиям
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о противодействии коррупции") Условия оказания медицинской помощи
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу вакансий") Оказываемые услуги
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о вышестоящих организациях") Демографическте показатели
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу галереи") Прием граждан по личным вопросам
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о нормативных документах") Защита прав граждан
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу каталога файлов") Перечень страховых компаний
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу каталога файлов") Диспансеризация
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу каталога файлов") Перечень #[abbr.abbr(title="Жизненно необходимые и важнейшие лекарственные препараты") ЖНВЛП]
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу каталога файлов") Здоровый образ жизни
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу каталога файлов") Консультация Online
+				li.menu__item(role="none")
+					a.link.menu__link.menu__link--has-submenu(href="#" title="На страницу платных услуг" aria-haspopup="true" aria-expanded="false" role="menuitem") 
+						span Структура
+						.menu__icon
+							+icon('structure', 'menu__svg-icon')
+						.arrow
+							.arrow__bar.arrow__bar--1
+							.arrow__bar.arrow__bar--2
+						ul.submenu(role="menu" aria-label="Структура больницы")
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу Новости") Администрация
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу полезных статей") Хирургическое отделение
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу дорожной карты") Неврологическое отделение
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о модернизации здравоохранения") Терапевтическое отделение(ст.Романовская)
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о противодействии коррупции") Терапевтическое отделение(х.Рябичи)
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу дорожной карты") Поликлиника
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о модернизации здравоохранения") Отделение скорой помощи
+							li.submenu__item(role="none")
+								a.link.submenu__link(href="#" title="На страницу о противодействии коррупции") Фельдшерско-акушерские пункты
+				li.menu__item(role="none")
+					a.link.menu__link(href="#" title="На страницу Контакты" role="menuitem") Лицензии
+						.menu__icon
+							+icon('licence', 'menu__svg-icon')
+			+menu-map()
