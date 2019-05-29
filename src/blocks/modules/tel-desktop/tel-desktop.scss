@@ -1,0 +1,42 @@
+.tel-desktop {
+	&__line-wrapper {
+		display: flex;
+
+		> * {
+			&:not(:last-child) { margin-right: 16px; }
+		}
+	}
+
+	&__line {
+		position: relative;
+		display: none;
+		padding-left: 40px;
+
+		&--first {
+			@media screen and (min-width: $break_md) {
+				display: block;
+			}
+		}
+
+		@media screen and (min-width: $break_lg) {
+			display: block;
+		}
+	}
+
+	&__desktop-icon {
+		position: absolute;
+		left: 0;
+		top: -4px;
+	}
+
+	&__desktop-svg-icon {
+		width: 32px;
+		height: 32px;
+	}
+
+	&__wrapper-link {
+		font-family: var(--font-family--semibold);
+		line-height: 1.2;
+		color: var(--color-main);
+	}
+}
