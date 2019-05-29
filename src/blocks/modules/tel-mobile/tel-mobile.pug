@@ -1,0 +1,21 @@
+mixin tel-mobile()
+	.tel-mobile.js-tel-mobile
+		+btn({
+			tag: 'button',
+			icon: 'phone',
+			iconClass: 'tel-mobile__svg-icon',
+			mods: 'tel,bg-tr',
+		})
+		ul.tel-mobile__list
+			li.tel-mobile__item
+				a.tel-mobile__link.link(href="tel:+78639470717") +7 (86394) 7-07-17
+				span.tel-mobile__link-text Call-Центр
+			li.tel-mobile__item
+				a.tel-mobile__link.link(href="tel:+78639470142 ") +7 (86394) 7-01-42
+				span.tel-mobile__link-text Мобильный call-Центр
+			li.tel-mobile__item
+				a.tel-mobile__link.link(href="tel:+79282125806 ") +7 (928) 212-58-06
+				span.tel-mobile__link-text Регистратура детская
+			li.tel-mobile__item
+				a.tel-mobile__link.link(href="tel:+78639470241") +7 (86394) 7-02-41
+				span.tel-mobile__link-text Скорая помощь
