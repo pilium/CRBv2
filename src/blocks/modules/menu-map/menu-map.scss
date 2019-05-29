@@ -1,0 +1,39 @@
+.menu-map {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+
+		> * {
+			&:not(:last-child) { margin-bottom: 8px; }
+		}
+	}
+
+	&__link {
+		border-bottom: 1px solid var(--color-border-light);
+
+		&:hover,
+		&:focus {
+			border-color: var(--color-border);
+		}
+	}
+
+	&__address {
+		font-family: var(--font-family--semibold);
+		color: var(--color-main);
+	}
+
+	&__icon {
+		width: 80px;
+		height: 80px;
+	}
+
+	@media screen and (min-width: $break_lg) {
+		display: none;
+	}
+}
