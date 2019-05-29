@@ -1,0 +1,50 @@
+.blind-toggle {
+	line-height: 0;
+
+	.btn {
+		> * {
+			&:not(:last-child) {
+				@media screen and (min-width: $break_xl) {
+					margin-right: 8px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $break_lg) {
+			border-radius: 0;
+			padding: 8px;
+			width: 64px;
+			height: 64px;
+			height: auto;
+			background: var(--gradient-secondary);
+
+			&:hover,
+			&:focus {
+				background: var(--gradient-hover);
+				transition: background linear 0.3s;
+			}
+		}
+	}
+
+	&__icon {
+		width: 32px;
+		height: 32px;
+
+		@media screen and (min-width: $break_md) {
+			width: 40px;
+			height: 40px;
+		}
+
+		@media screen and (min-width: $break_lg) {
+			height: 48px;
+		}
+	}
+
+	&__text {
+		display: none;
+
+		@media screen and (min-width: $break_xl) {
+			display: inline;
+		}
+	}
+}

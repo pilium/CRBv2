@@ -1,0 +1,8 @@
+mixin blind-toggle()
+	.blind-toggle
+		+btn({
+			tag: 'button',
+			icon: 'blind',
+			iconClass: 'blind-toggle__icon',
+			mods: 'blind-toggle,bg-tr,with-icon',
+		})(tabindex="0" aria-label="Переключить в режим для слабовидящих")
