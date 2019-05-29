@@ -22,7 +22,6 @@ import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminGiflossy from 'imagemin-giflossy';
 import imageminWebp from 'imagemin-webp';
 import webp from 'gulp-webp';
-import favicons from 'gulp-favicons';
 import replace from 'gulp-replace';
 import plumber from 'gulp-plumber';
 import debug from 'gulp-debug';
@@ -32,7 +31,6 @@ import yargs from 'yargs';
 const webpackConfig = require('./webpack.config.js');
 const argv = yargs.argv;
 const production = !!argv.production;
-const smartgrid = require('smart-grid');
 
 const paths = {
 	views: {
@@ -126,40 +124,6 @@ export const serverConfig = () => gulp.src(paths.server_config.src)
 	.pipe(debug({
 		title: 'Server config',
 	}));
-
-export const smartGrid = (cb) => {
-	smartgrid('./src/styles/vendor', {
-		outputStyle: 'scss',
-		filename: '_smart-grid',
-		columns: 12, // number of grid columns
-		offset: '24px', // gutter width
-		mobileFirst: true,
-		mixinNames: {
-			container: 'container',
-		},
-		container: {
-			fields: '16px', // side fields
-		},
-		breakPoints: {
-			xs: {
-				width: '320px',
-			},
-			sm: {
-				width: '576px',
-			},
-			md: {
-				width: '768px',
-			},
-			lg: {
-				width: '992px',
-			},
-			xl: {
-				width: '1200px',
-			},
-		},
-	});
-	cb();
-};
 
 export const views = () => gulp.src(paths.views.src)
 	.pipe(pug({
@@ -294,29 +258,9 @@ export const fonts = () => gulp.src(paths.fonts.src)
 		title: 'Fonts',
 	}));
 
-export const favs = () => gulp.src(paths.favicons.src)
-	.pipe(favicons({
-		icons: {
-			appleIcon: true,
-			favicons: true,
-			online: false,
-			appleStartup: false,
-			android: false,
-			firefox: false,
-			yandex: false,
-			windows: false,
-			coast: false,
-		},
-	}))
-	.pipe(gulp.dest(paths.favicons.dist))
-	.pipe(debug({
-		title: 'Favicons',
-	}));
-
-export const development = gulp.series(cleanFiles, smartGrid,
-	gulp.parallel(views, styles, scripts, svgsprites, images, webpimages, fonts, favs),
+export const development = gulp.series(cleanFiles, 	gulp.parallel(views, styles, scripts, svgsprites, images, webpimages, fonts),
 	gulp.parallel(server));
 
-export const prod = gulp.series(cleanFiles, smartGrid, serverConfig, views, styles, scripts, svgsprites, images, webpimages, fonts, favs);
+export const prod = gulp.series(cleanFiles, serverConfig, views, styles, scripts, svgsprites, images, webpimages, fonts);
 
 export default development;
