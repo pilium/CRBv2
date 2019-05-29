@@ -1,0 +1,13 @@
+.link {
+	color: var(--color-link);
+
+	&:hover,
+	&:focus {
+		color: var(--color-link-hover);
+		transition: color linear 0.3s;
+	}
+
+	&:active {
+		color: var(--color-link-hover);
+	}
+}
