@@ -1,0 +1,23 @@
+mixin btn(props)
+	-
+		var allMods = '';
+		if(typeof(props.mods) !== 'undefined' && props.mods) {
+			var modsList = props.mods.split(',');
+			for (var i = 0; i < modsList.length; i++) {
+				allMods = allMods + ' btn--' + modsList[i].trim();
+			}
+		}
+	if (props.tag === 'a')
+		a.btn(class=allMods href=props.href)&attributes(attributes)= props.text
+	if (props.tag === 'button')
+		button.btn(class=allMods)&attributes(attributes)
+			if (props.icon)
+				.button__icon
+					+icon(props.icon, props.iconClass)
+			if (props.text)
+				span.btn__text= props.text
+			if (props.count)
+				span.text-count 786
+			block
+	if (props.tag === 'input')
+		input.btn(class=allMods type="submit" value=props.text)

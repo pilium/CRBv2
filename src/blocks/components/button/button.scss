@@ -1,0 +1,68 @@
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 4px;
+	padding: 0 16px;
+	height: 40px;
+	font-family: var(--font-family-semibold);
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 0;
+	letter-spacing: 0.5px;
+	white-space: nowrap;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	color: var(--color-light);
+	cursor: pointer;
+	user-select: none;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, outline 50ms ease-in-out;
+
+	&__icon {
+		position: relative;
+		display: inline-flex;
+		align-self: center;
+		width: 32px;
+		height: 32px;
+	}
+
+	&:focus {
+		outline: 1px solid var(--color-dark);
+		outline-offset: 4px;
+	}
+
+	&--pd2 {
+		padding: 8px 16px;
+	}
+
+	&--bg-white {
+		background: var(--color-light);
+	}
+
+	&--bg-main {
+		background: var(--color-main);
+	}
+
+	&--bg-tr {
+		background: transparent;
+	}
+
+	&--with-icon {
+		padding: 0;
+	}
+
+	&--full {
+		width: 100%;
+	}
+
+	&--no-flex {
+		display: block;
+	}
+
+	@media screen and (min-width: $break_lg) {
+		background: var(--color-main);
+	}
+}
