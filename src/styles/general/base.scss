@@ -22,11 +22,16 @@ body {
 	font-family: var(--font-family--default);
 	font-size: var(--font-size);
 	line-height: var(--line-height);
-	background-color: var(--main-bg-color);
+	color: var(--color-text);
+	background-color: var(--color-light);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-text-size-adjust: 100%;
+
+	&.fixed {
+		overflow: hidden;
+	}
 }
 
 h1,
@@ -41,14 +46,32 @@ ul {
 }
 
 .container {
-	@include container;
-	@include sm(max-width, 510px);
-	@include md(max-width, 890px);
-	@include lg(max-width, 1100px);
-	@include xl(max-width, 1600px);
+	margin: 0 auto;
+	padding: 0 8px;
+	max-width: 320px;
+
+	&--header {
+		@media screen and (min-width: $break_lg) {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	@media screen and (min-width: $break_xs) {
+		padding: 0 8px;
+		max-width: 368px;
+	}
+
+	@media screen and (min-width: $break_md) {
+		max-width: 640px;
+	}
+
+	@media screen and (min-width: $break_lg) {
+		max-width: 1200px;
+	}
 }
 
-.img-responsive {
+img {
 	width: 100%;
 	height: auto;
 	max-width: 704px;
@@ -124,6 +147,7 @@ svg {
 }
 
 a {
+	text-decoration: none;
 	background-color: transparent;
 	transition: color 0.3s;
 
@@ -131,7 +155,6 @@ a {
 		@media (min-width: 1200px) {
 			white-space: nowrap;
 			text-decoration: inherit;
-			color: inherit;
 			pointer-events: none;
 		}
 	}
@@ -159,7 +182,6 @@ h5 { font-size: var(--font-size-h5); }
 h6 { font-size: var(--font-size-h6); }
 
 p,
-ul,
 ol,
 dl,
 table,
@@ -187,18 +209,26 @@ address {
 
 ul,
 ol {
-	margin-bottom: 1em;
-	padding-left: 1.5em;
+	list-style-type: none;
+	padding-left: 0;
 
 	ul,
 	ol {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
+
+	&.article__list {
+		padding-left: 1.5em;
+	}
 }
 
 li {
 	line-height: inherit;
+}
+
+dl {
+	margin: 0;
 }
 
 dt {
@@ -219,7 +249,7 @@ dd {
 
 mark {
 	padding: 0.1em 0.3em;
-	background: rgba(var(--color-warning), 0.3);
+	background: var(--color-warning);
 }
 
 b,
