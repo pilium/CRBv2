@@ -1,0 +1,47 @@
+.sandwich {
+	position: relative;
+	outline-offset: 4px;
+	width: 32px;
+	height: 24px;
+	cursor: pointer;
+
+	&__line {
+		position: absolute;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 3px;
+		background-color: #fff;
+		transition: top linear 0.4s, transform linear 0.4s, opacity linear 0.4s;
+		&--top { top: 0; }
+
+		&--middle { top: 11px; }
+
+		&--bottom { top: 21px; }
+	}
+
+	&:hover,
+	&:focus {
+		outline: 1px solid var(--color-dark);
+		outline-offset: 4px;
+	}
+
+	&.active {
+		.sandwich__line {
+			&--top {
+				top: 11px;
+				transform: rotate(45deg);
+			}
+			&--middle { opacity: 0; }
+
+			&--bottom {
+				top: 11px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	@media screen and (min-width: $break_lg) {
+		display: none;
+	}
+}
