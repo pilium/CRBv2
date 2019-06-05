@@ -3,7 +3,7 @@ import svg from 'gulp-svg-sprite';
 import debug from 'gulp-debug';
 import browsersync from 'browser-sync';
 
-gulp.task('sprites', () => gulp.src('./src/img/svg/*.svg')
+gulp.task('sprites', () => gulp.src('./src/img/svg/**/*.svg')
 	.pipe(svg({
 		shape: {
 			dest: 'intermediate-svg',
