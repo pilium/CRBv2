@@ -43,7 +43,7 @@ MicroModal.init({
 });
 
 // Checkbox
-import {doctor} from '../../modules/checkbox/checkbox';
+import {doctor} from '../../components/checkbox/checkbox';
 const modalLine = document.querySelector('.modal__line');
 
 function doctorToggle() {
