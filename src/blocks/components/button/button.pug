@@ -16,8 +16,8 @@ mixin btn(props)
 					+icon(props.icon, props.iconClass)
 			if (props.text)
 				span.btn__text= props.text
-			if (props.count)
-				span.text-count 786
+			if (props.modalText)
+				span.btn__text(data-micromodal-close)= props.modalText
 			block
 	if (props.tag === 'input')
 		input.btn(class=allMods type="submit" value=props.text)
