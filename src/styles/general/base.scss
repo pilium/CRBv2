@@ -248,13 +248,46 @@ dd {
 }
 
 mark {
-	padding: 0.1em 0.3em;
-	background: var(--color-warning);
+	--color: rgb(250, 247, 133);
+	--color--red: rgb(247, 143, 190);
+	--color--blue: rgb(140, 235, 242);
+
+	border-radius: 1em 0 1em 0;
+	padding: 0.1em 0.2em;
+	background-image:
+		linear-gradient(
+			-100deg,
+			color(var(--color) alpha(-70%)),
+			color(var(--color) alpha(-30%)) 95%,
+			color(var(--color) alpha(-90%))
+		);
+
+	&.red {
+		background-image:
+			linear-gradient(
+				-100deg,
+				color(var(--color--red) alpha(-70%)),
+				color(var(--color--red) alpha(-30%)) 95%,
+				color(var(--color--red) alpha(-90%))
+			);
+	}
+
+	&.blue {
+		background-image:
+			linear-gradient(
+				-100deg,
+				color(var(--color--blue) alpha(-70%)),
+				color(var(--color--blue) alpha(-30%)) 95%,
+				color(var(--color--blue) alpha(-90%))
+			);
+	}
 }
 
-b,
-strong {
-	font-weight: bolder;
+small {
+	display: none;
+	font-size: 0.75rem;
+	line-height: 1.2;
+	color: var(--color-text-helper);
 }
 
 blockquote {
@@ -262,3 +295,57 @@ blockquote {
 	margin-left: 0;
 	padding: 0;
 }
+
+abbr {
+	text-decoration: none;
+}
+
+fieldset {
+	margin: 0;
+	border: none;
+	padding: 0;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	clip-path: inset(100%);
+}
+
+// ::-webkit-scrollbar { /* 1 - скроллбар */
+// 	width: 4px;
+// 	height: 4px;
+// 	background-color: var(--color-black);
+// }
+
+// ::-webkit-scrollbar-button { /* 2 - кнопка */
+// 	border-radius: 8px;
+// 	background-color: var(--color--blue);
+// }
+
+// ::-webkit-scrollbar-track { /* 3 - трек */
+// 	background-color: var(--color-light);
+// }
+
+// ::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */
+// 	background-color: var(--color-bg-dark);
+// }
+
+// ::-webkit-scrollbar-thumb { /* 5 - ползунок */
+// 	border-radius: 8px;
+// 	background-color: #d1d1d1;
+// }
+
+// ::-webkit-scrollbar-corner { /* 6 - уголок */
+// 	background-color: var(--color-icon);
+// }
+
+// ::-webkit-resizer { /* 7 - изменение размеров */
+// 	background-color: red;
+// }

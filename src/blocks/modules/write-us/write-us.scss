@@ -1,13 +1,10 @@
 .write-us {
-	display: flex;
-
 	.btn {
 		@media screen and (min-width: $break_lg) {
 			flex-direction: column-reverse;
 			border-radius: 0;
 			padding: 24px 8px 16px 8px;
 			height: auto;
-			box-shadow: 0 0 3px rgba(71, 86, 85, 0.5);
 			background: var(--gradient-secondary);
 
 			&:hover,
@@ -29,7 +26,6 @@
 			line-height: 42px;
 			writing-mode: vertical-rl;
 			transform: rotate(180deg);
-			text-orientation: mixed;
 		}
 	}
 
