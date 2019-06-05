@@ -1,0 +1,24 @@
+mixin section(props)
+	-
+		// список модификаторов
+		var allMods = '';
+		if(typeof(props.mods) !== 'undefined' && props.mods) {
+			var modsList = props.mods.split(',');
+			for (var i = 0; i < modsList.length; i++) {
+				allMods = allMods + ' section--' + modsList[i].trim();
+			}
+		}
+	section.section(class= allMods)
+		.container
+			if(props.header)
+				+section-header({
+					title: props.title,
+					link: props.link,
+				})
+			block
+			
+mixin section-header(props)
+	.section__header
+		h2.section__title= props.title
+		if(props.link)
+			.section__link.link= props.link
