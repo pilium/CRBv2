@@ -1,0 +1,49 @@
+mixin docs-links()
+	.docs-links
+		+docs-links-item({
+			title: 'Ссылка на файл медициеской лицензии больницы',
+			text: 'На медицинскую деятельность',
+			icon: 'pdf',
+		})
+		+docs-links-item({
+			title: 'Ссылка на файл медициеской лицензии больницы',
+			text: 'На медицинскую деятельность',
+			icon: 'doc',
+		})
+		+docs-links-item({
+			title: 'Ссылка на файл медициеской лицензии больницы',
+			text: 'Устав МБУЗ "ЦРБ"',
+			icon: 'pdf',
+		})
+		+docs-links-item({
+			title: 'Ссылка на файл медициеской лицензии больницы',
+			text: 'Структура МБУЗ "ЦРБ"',
+			icon: 'docx',
+		})
+		+docs-links-item({
+			title: 'Ссылка на файл медициеской лицензии больницы',
+			text: 'Дорожная карта',
+			icon: 'pdf',
+		})
+		+docs-links-item({
+			title: 'Ссылка на файл медициеской лицензии больницы',
+			text: 'Платные услуги',
+			icon: 'doc',
+		})
+		+docs-links-item({
+			title: 'Ссылка на файл медициеской лицензии больницы',
+			text: 'План диспансеризации',
+			icon: 'xls',
+		})
+		+docs-links-item({
+			title: 'Ссылка на файл медициеской лицензии больницы',
+			text: 'На медицинскую деятельность',
+			icon: 'jpg',
+		})
+
+mixin docs-links-item(props)
+	a.docs-links__item(href="#" title= props.title)
+		.docs-links__item-inner
+			.docs-links__item-img-wrapper
+				img.docs-links__item-svg-icon(src=`img/files/${props.icon}.svg` alt="иконка типа файла лицензии")
+			span.docs-links__item-text= props.text
