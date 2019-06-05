@@ -24,6 +24,7 @@
 		"bem-tools-create": "bem-tools/bem-tools-create",
 		"browser-sync": "^2.23.6",
 		"css-mqpacker": "^7.0.0",
+		"del": "^4.1.1",
 		"eslint": "^5.16.0",
 		"gulp": "^4.0.0",
 		"gulp-autoprefixer": "^5.0.0",
@@ -31,6 +32,7 @@
 		"gulp-clean-css": "^3.9.2",
 		"gulp-debug": "^3.2.0",
 		"gulp-favicons": "^2.3.0",
+		"gulp-group-css-media-queries": "^1.2.2",
 		"gulp-if": "^2.0.2",
 		"gulp-imagemin": "^5.0.3",
 		"gulp-plumber": "^1.2.0",
@@ -53,6 +55,7 @@
 		"install": "^0.12.2",
 		"node-sass": "^4.12.0",
 		"npm": "^6.9.0",
+		"require-dir": "^1.2.0",
 		"sort-css-media-queries": "^1.4.3",
 		"stylelint": "^10.0.1",
 		"stylelint-8-point-grid": "^0.2.1",
@@ -64,13 +67,14 @@
 		"stylelint-no-unsupported-browser-features": "^3.0.2",
 		"stylelint-order": "^2.2.1",
 		"stylelint-scss": "^2.2.0",
+		"terser-webpack-plugin": "^1.3.0",
 		"webpack": "^4.30.0",
 		"webpack-stream": "^5.2.1",
 		"yargs": "^12.0.5"
 	},
 	"dependencies": {
-		"global": "^4.3.2",
+		"choices.js": "^7.0.0",
 		"micromodal": "^0.4.0",
-		"smart-grid": "^2.1.2"
+		"simplebar": "^4.0.0"
 	}
 }
