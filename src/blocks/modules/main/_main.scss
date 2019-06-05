@@ -1,0 +1,18 @@
+.hero {
+	display: flex;
+	width: 100%;
+	height: calc(100vh - 111px);
+	background-color: var(--color-bg-darken);
+
+	&__inner {
+		margin: auto;
+		padding: 16px;
+		font-size: 34px;
+		color: #fff;
+		background-color: rgba(#fff, 0.1);
+	}
+
+	@media screen and (min-width: $break_lg) {
+		background: var(--gradient-main);
+	}
+}

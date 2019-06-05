@@ -1,4 +1,5 @@
-/* eslint-disable no-console */
+/* eslint-disable func-names */
+// /* eslint-disable no-console */
 // Test async/await
 function resolveAfter2Seconds(x) {
 	return new Promise((resolve) => {
