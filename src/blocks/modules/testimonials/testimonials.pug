@@ -1,0 +1,34 @@
+mixin testimonials()
+	.testimonials
+		+testimonials-item({
+			name: 'Артур Пирожков',
+			date: '20.05.2018',
+			doctor: 'Андара Магане Чамара Чандраратне',
+			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolore commodi, explicabo officiis doloribus cumque fugiat id quis impedit voluptatem incidunt odit optio dignissimos harum ad perferendis, enim molestiae? Commodi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolore commodi, explicabo officiis doloribus cumque fugiat id quis impedit voluptatem incidunt odit optio dignissimos harum ad perferendis, enim molestiae? Commodi!Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolore commodi, explicabo officiis doloribus cumque fugiat id quis impedit voluptatem incidunt odit optio dignissimos harum ad perferendis, enim molestiae? Commodi!'
+		})
+		+testimonials-item({
+			name: 'Артур Пирожков',
+			date: '20.05.2018',
+			doctor: 'Андара Магане Чамара Чандраратне',
+			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolore commodi, explicabo officiis doloribus cumque fugiat id quis impedit voluptatem incidunt odit optio dignissimos harum ad perferendis, enim molestiae? Commodi!'
+		})
+		+testimonials-item({
+			name: 'Артур Пирожков',
+			date: '20.05.2018',
+			doctor: 'Андара Магане Чамара Чандраратне',
+			text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolore commodi, explicabo officiis doloribus cumque fugiat id quis impedit voluptatem incidunt odit optio dignissimos harum ad perferendis, enim molestiae? Commodi!'
+		})
+		
+mixin testimonials-item(props)
+	.testimonials__item
+		.testimonials__item-info
+			.testimonials__item-author
+				.testimonials__item-name= props.name
+				.testimonials__item-rating
+					+rating()
+			.testimonials__item-date= props.date
+		if(props.doctor)
+			.testimonials__item-about
+				span Отзыв о:
+				span.testimonials__item-target= props.doctor
+		.testimonials__item-text= props.text
