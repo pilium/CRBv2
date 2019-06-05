@@ -5,9 +5,24 @@ append vars
 	- var description = 'Муниципальное бюджетное учреждение здравоохранения "Центральная районная больница" волгодонского района ростовской области'
 
 block content
+	+section({
+		mods: 'hero',
+	})
 	.hero
 		.hero__inner
 			span Центральная районная больница 
-	section.section.section--license
+	+section({
+		mods: 'doc-links',
+	})
 		+docs-links()
-	include ../blocks/modules/main/main
+	+section({
+		mods: 'hero',
+		title: 'Отзывы',
+		link: 'Все отзывы',
+		header: true,
+	})
+		+testimonials()
+	+section({
+		mods: 'map',
+	})
+		+map()
