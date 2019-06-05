@@ -1,0 +1,23 @@
+mixin rating()
+	.rating
+		+fieldset({
+			legend: 'Поставьте рейтинг вашего отзыва',
+			legendHidden: true,
+		})
+			.rating__group
+				input.rating__input.visually-hidden#testimonial-rating-1(type="radio" name="testimonial-rating" value="1")
+				label.rating__star(for="testimonial-rating-1" aria-label="Ужасно")
+
+				input.rating__input.visually-hidden#testimonial-rating-2(type="radio" name="testimonial-rating" value="2")
+				label.rating__star(for="testimonial-rating-2" aria-label="Сносно")
+
+				input.rating__input.visually-hidden#testimonial-rating-3(type="radio" name="testimonial-rating" value="3")
+				label.rating__star(for="testimonial-rating-3" aria-label="Нормально")
+
+				input.rating__input.visually-hidden#testimonial-rating-4(type="radio" name="testimonial-rating" value="4")
+				label.rating__star(for="testimonial-rating-4" aria-label="Хорошо")
+
+				input.rating__input.visually-hidden#testimonial-rating-5(type="radio" name="testimonial-rating" value="5")
+				label.rating__star(for="testimonial-rating-5" aria-label="Отлично")
+				//- Helper for focus on old browser
+				.rating__focus
