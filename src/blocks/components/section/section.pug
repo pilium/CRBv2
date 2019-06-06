@@ -9,14 +9,22 @@ mixin section(props)
 			}
 		}
 	section.section(class= allMods)
-		.container
+		if(props.container)
+			.container
+				if(props.header)
+					+section-header({
+						title: props.title,
+						link: props.link,
+					})
+				block
+		else
 			if(props.header)
 				+section-header({
 					title: props.title,
 					link: props.link,
 				})
 			block
-			
+
 mixin section-header(props)
 	.section__header
 		h2.section__title= props.title
