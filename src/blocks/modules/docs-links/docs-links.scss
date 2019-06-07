@@ -74,7 +74,12 @@
 
 		@media screen and (min-width: $break_md) {
 			width: 64px;
-			height: 96px;
+			height: 64px;
+		}
+
+		@media screen and (min-width: $break_xl) {
+			width: 88px;
+			height: 88px;
 		}
 	}
 
