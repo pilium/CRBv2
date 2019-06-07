@@ -42,7 +42,10 @@
 		@media screen and (min-width: $break_lg) {
 			border-bottom: none;
 			padding: 16px 0 16px 64px;
-			width: 25%;
+
+			&:not(:last-child) {
+				width: 28%;
+			}
 
 			&:hover,
 			&:focus {
@@ -64,11 +67,6 @@
 		font-weight: bold;
 		font-size: 20px;
 		color: var(--color-menu-item);
-
-		&:hover,
-		&:focus {
-			color: var(--color-menu-item);
-		}
 
 		@media screen and (min-width: $break_lg) {
 			position: relative;
@@ -148,6 +146,7 @@
 	}
 
 	.submenu {
+		z-index: 9;
 		display: none;
 
 		&__item {
