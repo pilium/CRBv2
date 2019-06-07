@@ -1,7 +1,7 @@
 .hero {
 	position: relative;
+	padding-bottom: 16px;
 	color: #fff;
-	background-color: var(--color-bg-darken);
 
 	&__inner {
 		display: flex;
@@ -11,6 +11,7 @@
 
 	&__info {
 		max-width: 600px;
+		text-align: center;
 	}
 
 	&__titles {
@@ -20,13 +21,30 @@
 
 	&__title {
 		font-family: var(--font-family--bold);
-		font-size: 43px;
-		line-height: 64px;
+		font-size: 24px;
+		line-height: 30px;
 		letter-spacing: 2px;
+
+		@media screen and (min-width: $break_md) {
+			font-size: 43px;
+			line-height: 64px;
+		}
 	}
 
 	&__subtitle {
-		font-size: 24px;
+		font-size: 18px;
+
+		@media screen and (min-width: $break_md) {
+			font-size: 24px;
+		}
+	}
+
+	&__img {
+		display: none;
+
+		@media screen and (min-width: $break_lg) {
+			display: block;
+		}
 	}
 
 	.btn {
@@ -34,13 +52,4 @@
 		height: auto;
 		text-transform: uppercase;
 	}
-
-	@media screen and (min-width: $break_lg) {
-		background: var(--gradient-main);
-	}
-}
-
-.contacts {
-	min-height: 240px;
-	background-color: #000;
 }
