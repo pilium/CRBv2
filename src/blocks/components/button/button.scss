@@ -68,6 +68,12 @@
 		width: 100%;
 	}
 
+	&--white {
+		border: 2px solid var(--color-light);
+		color: var(--color-light);
+		background-color: none;
+	}
+
 	&--no-flex {
 		display: block;
 	}

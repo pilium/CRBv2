@@ -1,0 +1,46 @@
+.hero {
+	position: relative;
+	color: #fff;
+	background-color: var(--color-bg-darken);
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__info {
+		max-width: 600px;
+	}
+
+	&__titles {
+		margin-bottom: 32px;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		font-family: var(--font-family--bold);
+		font-size: 43px;
+		line-height: 64px;
+		letter-spacing: 2px;
+	}
+
+	&__subtitle {
+		font-size: 24px;
+	}
+
+	.btn {
+		padding: 24px;
+		height: auto;
+		text-transform: uppercase;
+	}
+
+	@media screen and (min-width: $break_lg) {
+		background: var(--gradient-main);
+	}
+}
+
+.contacts {
+	min-height: 240px;
+	background-color: #000;
+}

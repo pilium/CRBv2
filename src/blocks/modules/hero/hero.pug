@@ -1,0 +1,17 @@
+mixin hero(props)
+	.hero
+		.container
+			.hero__inner
+				.hero__info
+					.hero__titles
+						h1.hero__title= props.title
+						if(props.subtitle)
+							h2.hero__subtitle= props.subtitle
+					+btn({
+						tag: 'a',
+						href: props.href,
+						text: props.btnText,
+						mods: 'white'
+					})(rel="noopener noreferrer" target="_blanc")
+				.hero__img
+					img(src="img/hero.png" alt="Фото всей семьи")
