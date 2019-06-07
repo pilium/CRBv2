@@ -16,3 +16,25 @@ block content
 		.contacts
 			p Contacts
 	include ../blocks/modules/main/main
+	+section({
+		mods: 'hero',
+	})
+	.hero
+		.hero__inner
+			span Центральная районная больница 
+	+section({
+		mods: 'doc-links',
+	})
+		+docs-links()
+	+section({
+		mods: 'hero',
+		title: 'Отзывы',
+		link: 'Все отзывы',
+		header: true,
+		container: true,
+	})
+		+testimonials()
+	+section({
+		mods: 'map',
+	})
+		+map()
