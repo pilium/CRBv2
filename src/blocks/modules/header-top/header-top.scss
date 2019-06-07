@@ -11,12 +11,12 @@
 		}
 
 		@media screen and (min-width: $break_lg) {
-			border-bottom: 1px solid var(--color-text-helper);
+			border-bottom: 1px solid var(--color-border-light);
 		}
 	}
 
 	&__address {
-		border-right: 1px solid var(--color-text-helper);
+		border-right: 1px solid var(--color-border-light);
 		padding-right: 8px;
 		padding-left: 32px;
 
