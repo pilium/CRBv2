@@ -1,10 +1,21 @@
 .link {
 	color: var(--color-link);
 
+	@at-root .link-text {
+		display: block;
+		font-size: 14px;
+		color: var(--color-text-helper);
+	}
+
 	&:hover,
 	&:focus {
 		color: var(--color-link-hover);
 		transition: color linear 0.3s;
+
+		.link-text {
+			color: var(--color-link-hover);
+			transition: color linear 0.3s;
+		}
 	}
 
 	&:active {
