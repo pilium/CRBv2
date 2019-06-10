@@ -185,10 +185,13 @@ dl,
 table,
 blockquote,
 pre,
-address,
-figure {
+address {
 	margin-top: 0;
 	margin-bottom: 1em;
+}
+
+figure {
+	margin: 0;
 }
 
 p {

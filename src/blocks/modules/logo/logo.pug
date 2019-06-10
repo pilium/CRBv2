@@ -1,4 +1,5 @@
 mixin logo(props)
 	a.logo(href="/" aria-label="Логотип и ссылка на главную страницу сайта")
-		img.logo__img(src= props.src alt= props.alt)
-		span.logo__text= props.text
+		figure
+			img.logo__img(src= props.src alt= props.alt)
+			figcaption.logo__text= props.text
