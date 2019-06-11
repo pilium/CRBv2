@@ -18,7 +18,7 @@
 		top: 0;
 		z-index: 4;
 		display: none;
-		width: 168px;
+		width: 200px;
 		line-height: var(--line-height);
 		background-color: var(--color-bg-secondary);
 		transition: left linear 0.3s;
@@ -51,8 +51,8 @@
 	}
 
 	&__svg-icon {
-		width: 40px;
-		height: 40px;
+		width: 56px;
+		height: 56px;
 	}
 
 	&__item {
@@ -78,6 +78,7 @@
 
 	&__link {
 		font-family: var(--font-family--semibold);
+		font-size: 20px;
 		color: var(--color-light);
 
 		&:hover,
@@ -88,6 +89,8 @@
 
 	.btn {
 		padding: 0;
+		width: 100%;
+		height: 100%;
 
 		@media screen and (min-width: $break_lg) {
 			display: none;
@@ -96,8 +99,8 @@
 
 	&--active {
 		.tel-mobile__list {
-			left: -128px;
-			top: -254px;
+			left: -152px;
+			top: -280px;
 			display: block;
 			transition: left linear 0.3s;
 
