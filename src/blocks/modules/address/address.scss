@@ -10,18 +10,13 @@
 		display: block;
 
 		@media screen and (min-width: $break_xs) {
-			top: 0;
+			top: 3px;
 		}
 	}
 
 	&__svg-icon {
 		width: 32px;
 		height: 32px;
-
-		@media screen and (min-width: $break_xs) {
-			width: 32px;
-			height: 32px;
-		}
 	}
 
 	&__city {
