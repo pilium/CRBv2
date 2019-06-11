@@ -6,15 +6,25 @@ import replace from 'gulp-replace';
 import browsersync from 'browser-sync';
 import yargs from 'yargs';
 
+import getJsonData from './utils/getJsonData';
+
 const argv = yargs.argv;
 const production = !!argv.production;
 
-gulp.task('views', () => gulp.src(['./src/views/index.pug', './src/pages/*.pug'])
-	.pipe(pug({
-		plugins: [pugbem],
-		pretty: true,
-	}))
-	.pipe(gulpif(production, replace('main.css', 'main.min.css')))
-	.pipe(gulpif(production, replace('main.js', 'main.min.js')))
-	.pipe(gulp.dest('./dist/'))
-	.on('end', browsersync.reload));
+gulp.task('views', () =>
+	gulp
+		.src(['./src/views/index.pug', './src/pages/*.pug'])
+		.pipe(
+			pug({
+				plugins: [pugbem],
+				pretty: true,
+				locals: {
+					...getJsonData('./tmp/data.json'),
+				},
+			})
+		)
+		.pipe(gulpif(production, replace('main.css', 'main.min.css')))
+		.pipe(gulpif(production, replace('main.js', 'main.min.js')))
+		.pipe(gulp.dest('./dist/'))
+		.on('end', browsersync.reload)
+);

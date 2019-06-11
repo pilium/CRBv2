@@ -7,6 +7,7 @@ gulp.task('serve', () => {
 		port: 4000,
 		notify: true,
 	});
+	gulp.watch(['./src/blocks/**/**/*.yml'], gulp.parallel('data'));
 
 	gulp.watch([
 		'./src/blocks/**/*.pug',
