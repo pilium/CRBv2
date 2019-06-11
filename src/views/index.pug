@@ -19,6 +19,12 @@ block content
 	})
 		+contacts()
 	+section({
+		mods: 'quick-links',
+		header: false,
+		container: true,
+	})
+		+quick-links()
+	+section({
 		mods: 'doc-links',
 	})
 		+docs-links()
@@ -26,6 +32,7 @@ block content
 		mods: 'testimonials',
 		title: 'Отзывы',
 		link: 'Все отзывы',
+		href: '#',
 		header: true,
 		container: true,
 	})
