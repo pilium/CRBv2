@@ -348,5 +348,5 @@ fieldset {
 }
 
 ::-webkit-resizer { /* 7 - изменение размеров */
-	background-color: red;
+	background-color: var(--color-error);
 }
