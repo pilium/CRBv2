@@ -9,7 +9,8 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "gulp",
-		"build": "gulp prod --production"
+		"build": "gulp prod --production",
+		"lint:style": "stylelint \"src/**/*.scss\" --syntax=scss"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.4.3",
