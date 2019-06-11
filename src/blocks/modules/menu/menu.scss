@@ -111,44 +111,6 @@
 		// }
 	}
 
-	.arrow {
-		position: relative;
-		display: inline-block;
-		width: 24px;
-		height: 24px;
-		cursor: pointer;
-		transform: rotate(180deg);
-		transition: all ease-in 0.3s;
-
-		&__bar {
-			position: absolute;
-			left: 35%;
-			border-radius: 9% / 3%;
-			width: 14%;
-			height: 69%;
-			background: var(--color-icon);
-			transition: all ease-in 0.3s;
-
-			&--1 {
-				top: -2px;
-				transform: rotate(45deg);
-			}
-
-			&--2 {
-				top: 32%;
-				transform: rotate(-45deg);
-			}
-		}
-
-		&.active {
-			transform: rotate(270deg);
-		}
-
-		@media screen and (min-width: $break_lg) {
-			display: none;
-		}
-	}
-
 	.submenu {
 		z-index: 9;
 		display: none;
