@@ -5,7 +5,15 @@
 		"jquery": true,
 		"node": true
 	},
-	"extends": "eslint:recommended",
+	"plugins": [
+		"promise",
+		"switch-case"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:promise/recommended",
+		"plugin:switch-case/recommended"
+	],
 	"globals": {
 		"_": false,
 		"AOS": false,
