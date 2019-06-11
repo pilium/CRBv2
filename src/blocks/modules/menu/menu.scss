@@ -41,7 +41,7 @@
 
 		@media screen and (min-width: $break_lg) {
 			border-bottom: none;
-			padding: 16px 0 16px 64px;
+			padding: 24px 0 24px 64px;
 
 			&:not(:last-child) {
 				width: 28%;
@@ -52,6 +52,10 @@
 				.submenu {
 					display: block;
 				}
+			}
+
+			&:last-child {
+				width: 24%;
 			}
 		}
 	}
@@ -92,8 +96,8 @@
 		}
 
 		@media screen and (min-width: $break_lg) {
-			left: -40px;
-			top: -2px;
+			left: -48px;
+			top: -10px;
 		}
 	}
 
@@ -101,10 +105,10 @@
 		width: 40px;
 		height: 40px;
 
-		@media screen and (min-width: $break_lg) {
-			width: 32px;
-			height: 32px;
-		}
+		// @media screen and (min-width: $break_lg) {
+		// 	width: 32px;
+		// 	height: 32px;
+		// }
 	}
 
 	.arrow {
