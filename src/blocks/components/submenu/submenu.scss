@@ -19,17 +19,14 @@
 		padding: 16px 0 16px 8px;
 		font-family: var(--font-family--semibold);
 
-		.abbr {
-			margin-left: 8px;
-		}
-
 		&:hover,
 		&:focus {
 			border-color: var(--color-border);
-			transition: border-color linear 0.3s;
+			transition: border-color linear 0.3s, padding-left linear 0.3s;
 
 			@media screen and (min-width: $break_lg) {
 				border-color: var(--color-main);
+				padding-left: 16px;
 			}
 		}
 
