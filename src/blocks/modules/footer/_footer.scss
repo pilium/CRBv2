@@ -1,0 +1,9 @@
+.footer {
+	padding: 24px 0;
+	color: var(--color-light);
+	background-color: var(--color-main);
+
+	&__copyright {
+		max-width: 608px;
+	}
+}
