@@ -14,8 +14,26 @@
 		}
 	}
 
-	&--quick-links {
-		background-color: var(--color-bg-secondary);
+	&--quick-links,
+	&--slider {
+		background-color: var(--color-light);
+	}
+
+	&--slider {
+		padding: 0;
+
+		.section__header {
+			display: block;
+			text-align: center;
+		}
+
+		.section__title {
+			font-size: 32px;
+
+			@media screen and (min-width: $break_md) {
+				font-size: 50px;
+			}
+		}
 	}
 
 	&--doc-links {
