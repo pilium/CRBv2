@@ -1,0 +1,13 @@
+mixin card(props)
+	a.card(href="#" title="К новости")
+		.card__inner
+			.card__img
+				img(src="https://picsum.photos/400/364?random=4" alt="r")
+			.card__info
+				.card__title
+					h2= props.title
+				.card__addition
+					p.card__date
+						span Опубликовано: 
+						span= props.date
+					p.card__text= props.text
