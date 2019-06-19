@@ -1,0 +1,12 @@
+mixin panel(props)
+	-
+		// список модификаторов
+		var allMods = '';
+		if(typeof(props.mods) !== 'undefined' && props.mods) {
+			var modsList = props.mods.split(',');
+			for (var i = 0; i < modsList.length; i++) {
+				allMods = allMods + ' panel--' + modsList[i].trim();
+			}
+		}
+	.panel(class= allMods)
+		block

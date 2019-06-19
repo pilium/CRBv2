@@ -1,0 +1,45 @@
+.panel {
+	flex: 1;
+	border-radius: 8px;
+
+	&--mr1 {
+		margin: 0;
+		margin-bottom: 1rem;
+
+		@media screen and (min-width: $break_md) {
+			margin: 1rem;
+		}
+	}
+
+	&--pd1 {
+		padding: 8px;
+
+		@media screen and (min-width: $break_md) {
+			padding: 16px;
+		}
+	}
+
+	&--pd2 {
+		padding: 8px;
+
+		@media screen and (min-width: $break_md) {
+			padding: 8px 16px;
+		}
+	}
+
+	&--shadow {
+		@media screen and (min-width: $break_md) {
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+		}
+	}
+
+	&--flex {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	@media screen and (min-width: $break_md) {
+		background-color: var(--color-light);
+	}
+}
