@@ -1,0 +1,9 @@
+.informer {
+	&__inner {
+		display: block;
+
+		@media screen and (min-width: $break_xl) {
+			display: flex;
+		}
+	}
+}
