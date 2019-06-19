@@ -1,45 +1,48 @@
 mixin quick-links(props)
 	.quick-links
-		+quick-links__item({
-			icon: 'calendar',
-			title: 'График приема',
-			descr: 'ст. Романовская, х.Рябичев',
+		+panel({
+			mods: 'flex,shadow',
 		})
-		+quick-links__item({
-			icon: 'doctor',
-			title: 'Услуги',
-			descr: 'Стоматология, рентгенология, физиотерапия...',
-		})
-		+quick-links__item({
-			icon: 'testimonial',
-			title: 'Отзывы',
-			descr: 'Отзывы пацментов о работе больницы',
-		})
-		+quick-links__item({
-			icon: 'health',
-			title: 'Диспансеризация',
-			descr: 'Информация по прохождении диспансеризации в больнице',
-		})
-		+quick-links__item({
-			icon: 'medical-insurance',
-			title: 'Страховые компании',
-			descr: 'Информация о страховых компаниях ростовской области ',
-		})
-		+quick-links__item({
-			icon: 'article',
-			title: 'Полезные статьи',
-			descr: 'большое количество статей на тему здоровья',
-		})
-		+quick-links__item({
-			icon: 'gallery',
-			title: 'Галерея',
-			descr: 'Фотографии больницы, врачей, кабинетов',
-		})
-		+quick-links__item({
-			icon: 'payment',
-			title: 'Платные услуги',
-			descr: 'Информация с список платных услуг больницы',
-		})
+			+quick-links__item({
+				icon: 'calendar',
+				title: 'График приема',
+				descr: 'ст. Романовская, х.Рябичев',
+			})
+			+quick-links__item({
+				icon: 'doctor',
+				title: 'Услуги',
+				descr: 'Стоматология, рентгенология, физиотерапия...',
+			})
+			+quick-links__item({
+				icon: 'testimonial',
+				title: 'Отзывы',
+				descr: 'Отзывы пацментов о работе больницы',
+			})
+			+quick-links__item({
+				icon: 'health',
+				title: 'Диспансеризация',
+				descr: 'Информация по прохождении диспансеризации в больнице',
+			})
+			+quick-links__item({
+				icon: 'medical-insurance',
+				title: 'Страховые компании',
+				descr: 'Информация о страховых компаниях ростовской области ',
+			})
+			+quick-links__item({
+				icon: 'article',
+				title: 'Полезные статьи',
+				descr: 'большое количество статей на тему здоровья',
+			})
+			+quick-links__item({
+				icon: 'gallery',
+				title: 'Галерея',
+				descr: 'Фотографии больницы, врачей, кабинетов',
+			})
+			+quick-links__item({
+				icon: 'payment',
+				title: 'Платные услуги',
+				descr: 'Информация с список платных услуг больницы',
+			})
 		
 mixin quick-links__item(props)
 	a.quick-links__item(href="#")

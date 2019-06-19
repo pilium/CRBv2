@@ -101,10 +101,4 @@
 		width: 72px;
 		height: 72px;
 	}
-
-	@media screen and (min-width: $break_md) {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-	}
 }
