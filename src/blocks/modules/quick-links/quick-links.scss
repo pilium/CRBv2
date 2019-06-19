@@ -7,6 +7,7 @@
 		padding-bottom: 16px;
 		word-break: break-word;
 		cursor: pointer;
+		transition: background-color linear 0.3s;
 
 		svg {
 			fill: var(--color-icon);
@@ -24,10 +25,7 @@
 
 		&:hover,
 		&:focus {
-			.quick-links__title,
-			.quick-links__descr {
-				color: var(--color-main);
-			}
+			background-color: var(--color-border-light);
 		}
 
 		&:last-child {
@@ -40,6 +38,7 @@
 			margin-bottom: 0;
 			padding: 32px;
 			width: 50%;
+			min-height: 240px;
 			text-align: center;
 
 			&:nth-child(odd) {
