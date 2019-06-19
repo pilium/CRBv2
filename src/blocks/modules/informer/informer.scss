@@ -1,6 +1,14 @@
 .informer {
+	position: relative;
+	z-index: 100;
+	margin-bottom: 1rem;
+
 	&__inner {
 		display: block;
+
+		> * {
+			&:not(:last-child) { margin-right: 24px; }
+		}
 
 		@media screen and (min-width: $break_xl) {
 			display: flex;
