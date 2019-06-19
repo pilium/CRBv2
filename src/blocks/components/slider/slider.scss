@@ -115,6 +115,10 @@
 			&:hover,
 			&:focus {
 				border-color: var(--color-text);
+
+				.glide__arrow-icon {
+					fill: var(--color-text);
+				}
 			}
 		}
 
@@ -124,7 +128,9 @@
 			top: 50%;
 			width: 24px;
 			height: 24px;
+			fill: var(--color-light);
 			transform: translate(-50%, -50%);
+			transition: fill linear 0.3s;
 		}
 
 		&__bullets {

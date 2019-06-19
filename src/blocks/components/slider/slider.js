@@ -8,7 +8,8 @@ let slidesLenght = slides.length;
 const options = {
 	startAt: 0,
 	perView: 2,
-	animationDuration: 300,
+	animationTimingFunc: 'ease',
+	animationDuration: 800,
 	hoverpause: false,
 	gap: 120,
 	breakpoints: {
@@ -24,13 +25,20 @@ const options = {
 
 let glide = new Glide('.js-glide', options);
 
-glide.on(['mount.after', 'run'], () => {
-	if (glide.index + 1 < 10) {
-		currentSlide.innerHTML = `0${glide.index + 1}`;
-	} else {
-		currentSlide.innerHTML = `${glide.index + 1}`;
-	}
+function showBullets(bulletLenght) {
+	const sliderBullets = document.querySelector('.glide__bullets');
 
+	for (let i = 0; i < bulletLenght; i++) {
+		let button = document.createElement('button');
+
+		button.classList.add('glide__bullet');
+		button.setAttribute('data-glide-dir', `=${i}`);
+
+		sliderBullets.appendChild(button);
+	}
+}
+
+glide.on(['mount.after', 'run'], () => {
 	if (slidesLenght < 10) {
 		totalSlide.innerHTML = `0${slidesLenght}`;
 	} else {
@@ -40,5 +48,15 @@ glide.on(['mount.after', 'run'], () => {
 
 	sliderProgress.style.width = `${slideWidth}px`;
 });
+
+glide.on(['run.offset', 'run'], () => {
+	if (glide.index + 1 < 10) {
+		currentSlide.innerHTML = `0${glide.index + 1}`;
+	} else {
+		currentSlide.innerHTML = `${glide.index + 1}`;
+	}
+});
+
+showBullets(slidesLenght);
 
 glide.mount();
