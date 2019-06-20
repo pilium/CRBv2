@@ -1,7 +1,7 @@
 .feedback-type {
 	position: relative;
 	border: 2px solid #d7d9e0;
-	border-radius: 16px;
+	border-radius: var(--border-radius);
 	padding: 8px;
 	background-color: #f7f7fa;
 	cursor: pointer;

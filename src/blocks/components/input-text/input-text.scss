@@ -32,7 +32,7 @@
 
 	&__input {
 		border: 2px solid var(--color-border-light);
-		border-radius: 8px;
+		border-radius: var(--border-radius);
 		padding: 8px 48px 8px 16px;
 		width: 100%;
 		min-height: 48px;

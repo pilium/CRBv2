@@ -68,11 +68,11 @@
 		}
 
 		&:first-child {
-			border-radius: 4px 4px 0 0;
+			border-radius: var(--border-radius--half) var(--border-radius--half) 0 0;
 		}
 
 		&:last-child {
-			border-radius: 0 0 4px 4px;
+			border-radius: 0 0 var(--border-radius--half) var(--border-radius--half);
 		}
 	}
 

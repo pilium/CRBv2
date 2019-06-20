@@ -10,6 +10,7 @@
 		position: relative;
 		display: none;
 		flex: 0 0 30%;
+		border-radius: var(--border-radius);
 		min-height: 480px;
 		color: var(--color-light);
 		background: var(--gradient-hover);
