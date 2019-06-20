@@ -2,25 +2,21 @@
 	padding: 32px 0;
 
 	&--hero {
+		padding: 0;
 		background: var(--gradient-main);
 	}
 
 	&--contacts {
 		display: none;
-		background-color: var(--color-bg-secondary);
 
 		@media screen and (min-width: $break_md) {
 			display: block;
 		}
 	}
 
-	&--quick-links {
-		background-color: var(--color-bg-secondary);
-	}
 
 	&--slider {
 		padding: 0;
-		background-color: var(--color-bg-secondary);
 
 		.section__header {
 			display: block;
