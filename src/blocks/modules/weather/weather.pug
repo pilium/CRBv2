@@ -1,0 +1,63 @@
+mixin weather()
+	.weather.js-weather
+		article.weather__widget
+			.weather__icon
+				//- +icon('cloudy', 'weather__svg-icon')
+			.weather__info
+				.weather__temperature
+				.weather__description  
+					.weather__condition
+					.weather__place ст. Романовская
+				.weather__addition
+					.weather__addition-item
+						+icon('file', 'weather__svg-icon')
+						span.weather__humidity
+					.weather__addition-item
+						+icon('file', 'weather__svg-icon')
+						span.weather__windSpeed
+			.weather__date
+				span ЧТ, 20 июня
+				//- a.link--underline(href="#") погода на 5 дней
+			//- .weather__overlay
+			//- 	.weather__days
+			//- 		+day({
+			//- 			dayName: 'Пн',
+			//- 			temperature: '25',
+			//- 			active: true,
+			//- 			icon: 'cloudy',
+
+			//- 		})
+			//- 		+day({
+			//- 			dayName: 'Вт',
+			//- 			temperature: '25',
+			//- 			active: false,
+			//- 			icon: 'cloudy',
+
+			//- 		})
+			//- 		+day({
+			//- 			dayName: 'Ср',
+			//- 			temperature: '25',
+			//- 			active: false,
+			//- 			icon: 'cloudy',
+			//- 		})
+			//- 		+day({
+			//- 			dayName: 'Чт',
+			//- 			temperature: '25',
+			//- 			active: false,
+			//- 			icon: 'cloudy',
+
+			//- 		})
+			//- 		+day({
+			//- 			dayName: 'Пт',
+			//- 			temperature: '25',
+			//- 			active: false,
+			//- 			icon: 'cloudy',
+			//- 		})
+
+mixin day(props)
+	.day(id= props.dayName data-day= props.dayName class= props.active)
+		.day__inner
+			.day-name= props.dayName
+			.day-weather
+				+icon(props.icon, 'weather__svg-icon')
+			.day-temperature= `${props.temperature}°`
