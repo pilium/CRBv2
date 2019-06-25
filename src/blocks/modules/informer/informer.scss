@@ -7,10 +7,14 @@
 		display: block;
 
 		> * {
-			&:not(:last-child) { margin-right: 24px; }
+			&:not(:last-child) {
+				@media screen and (min-width: $break_xxxl) {
+					margin-right: 24px;
+				}
+			}
 		}
 
-		@media screen and (min-width: $break_xl) {
+		@media screen and (min-width: $break_xxxl) {
 			display: flex;
 		}
 	}
