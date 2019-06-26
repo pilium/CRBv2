@@ -6,10 +6,10 @@ mixin contacts-footer()
 			})
 				.contacts-footer__main
 					h2.contacts-footer__title Главный корпус
-					.contacts-footer__item.contacts-footer__item--stretch
+					.contacts-footer__item
 						.contacts-footer__icon
 							+icon('location-pin', 'contacts-footer__svg-icon')
-						address Ростовская область, Волгодонской район, ст. Романовская, пер. Союзный 97а
+						address(tabindex="0") Ростовская область, Волгодонской район, ст. Романовская, пер. Союзный 97а
 					.contacts-footer__item
 						.contacts-footer__icon
 							+icon('mail', 'contacts-footer__svg-icon')
@@ -17,7 +17,7 @@ mixin contacts-footer()
 					.contacts-footer__item
 						.contacts-footer__icon
 							+icon('contact-tel', 'contacts-footer__svg-icon')
-						ul.tels
+						ul.contacts-footer__tels
 							li
 								span Главный врач: 
 								a.link.link--underline(href="tel:+") +7 (988) 434-80-23
@@ -33,10 +33,10 @@ mixin contacts-footer()
 			})
 				.contacts-footer__fil
 					h2.contacts-footer__title Филиал
-					.contacts-footer__item.contacts-footer__item--stretch
+					.contacts-footer__item
 						.contacts-footer__icon
 							+icon('location-pin', 'contacts-footer__svg-icon')
-						address Ростовская область, Волгодонской район, хутор Рябичев, Юбилейная улица, 52
+						address(tabindex="0") Ростовская область, Волгодонской район, хутор Рябичев, Юбилейная улица, 52
 					.contacts-footer__item
 						.contacts-footer__icon
 							+icon('mail', 'contacts-footer__svg-icon')
@@ -44,7 +44,7 @@ mixin contacts-footer()
 					.contacts-footer__item
 						.contacts-footer__icon
 							+icon('contact-tel', 'contacts-footer__svg-icon')
-						ul.tels
+						ul.contacts-footer__tels
 							li
 								span Главный врач: 
 								a.link.link--underline(href="tel:+") +7 (988) 434-80-23
