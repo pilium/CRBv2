@@ -2,8 +2,12 @@
 	padding: 32px 0;
 
 	&--hero {
-		padding: 0;
+		padding: 24px 0;
 		background: var(--gradient-main);
+
+		@media screen and (min-width: $break_md) {
+			padding: 0;
+		}
 	}
 
 	&--contacts {
@@ -13,7 +17,6 @@
 			display: block;
 		}
 	}
-
 
 	&--slider {
 		padding: 0;
