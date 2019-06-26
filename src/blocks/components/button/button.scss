@@ -67,9 +67,15 @@
 		width: 100%;
 	}
 
-	&--white {
+	&--border {
 		border: 2px solid var(--color-light);
 		color: var(--color-light);
+
+		&:focus,
+		&:hover {
+			border-color: var(--color-main);
+			transition: border-color linear 0.3s;
+		}
 	}
 
 	&--no-flex {
