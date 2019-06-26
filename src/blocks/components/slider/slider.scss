@@ -23,8 +23,8 @@
 
 	&__controls {
 		position: absolute;
-		right: 24%;
-		top: 24%;
+		right: 26%;
+		top: 28%;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
@@ -87,7 +87,7 @@
 	.glide {
 		&__track {
 			@media screen and (min-width: $break_xl) {
-				margin-top: 40px;
+				margin-top: 56px;
 				transform: translateX(-80px);
 			}
 		}
