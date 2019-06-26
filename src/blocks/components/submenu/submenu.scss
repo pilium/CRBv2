@@ -26,7 +26,15 @@
 
 			@media screen and (min-width: $break_lg) {
 				border-color: var(--color-main);
-				padding-left: 16px;
+				padding-left: 24px;
+			}
+		}
+
+		&.active {
+			@media screen and (min-width: $break_lg) {
+				border-color: var(--color-main);
+				padding-left: 24px;
+				color: var(--color-link-hover);
 			}
 		}
 
