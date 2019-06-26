@@ -8,14 +8,14 @@ mixin section(props)
 				allMods = allMods + ' section--' + modsList[i].trim();
 			}
 		}
-	section.section(class= allMods)
+	section.section(class= allMods)&attributes(attributes)
 		if(props.container)
 			.container
 				if(props.header)
 					+section-header({
 						title: props.title,
 						link: props.link,
-						href: props.href
+						href: props.href,
 					})
 				block
 		else
@@ -28,6 +28,6 @@ mixin section(props)
 
 mixin section-header(props)
 	.section__header
-		h2.section__title= props.title
+		h2.section__title= props.title			
 		if(props.link)
 			a.section__link.link(href= props.href rel="noopener" target="_blanc")= props.link
