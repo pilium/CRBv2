@@ -6,31 +6,6 @@ export const types = document.querySelector('.feedback-types');
 export const content = document.querySelector('.modal__content');
 
 MicroModal.init({
-	onShow: (modal) => {
-		setTimeout(() => {
-			content.innerHTML = `
-				${modal.id}
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-				<p>Dinamic contetn with many forms other types</p>
-			`;
-		}, 2000000000000000);
-	},
 	onClose: () => {
 		const trigger = document.querySelector('.btn--write-us');
 
