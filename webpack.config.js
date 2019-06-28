@@ -3,8 +3,14 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+	entry: {
+		main: './src/js/index.js',
+		gallery: './src/js/import/pages/gallery.js',
+	},
 	output: {
 		filename: '[name].js',
+		chunkFilename: '[name].js',
+		publicPath: '/',
 	},
 	module: {
 		rules: [
@@ -15,13 +21,16 @@ module.exports = {
 					loader: 'babel-loader',
 					query: {
 						presets: [
-							['@babel/preset-env', {
-								modules: false,
-								targets: {
-									node: 'current',
+							[
+								'@babel/preset-env',
+								{
+									modules: false,
+									targets: {
+										node: 'current',
+									},
+									useBuiltIns: false,
 								},
-								useBuiltIns: false,
-							}],
+							],
 						],
 					},
 				},
@@ -36,10 +45,16 @@ module.exports = {
 		},
 	},
 	optimization: {
-		minimizer: [
-			new TerserPlugin({
-				test: /\.js(\?.*)?$/i,
-			}),
-		],
+		minimizer: [new TerserPlugin()],
+		splitChunks: {
+			cacheGroups: {
+				vendor: {
+					test: /node_modules/,
+					chunks: 'initial',
+					name: 'vendor',
+					enforce: true,
+				},
+			},
+		},
 	},
 };
