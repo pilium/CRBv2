@@ -4,6 +4,7 @@ import SimpleBar from 'simplebar';
 export const types = document.querySelector('.feedback-types');
 
 export const content = document.querySelector('.modal__content');
+export const modalLine = document.querySelector('.modal__line');
 
 MicroModal.init({
 	onClose: () => {
@@ -16,17 +17,3 @@ MicroModal.init({
 	disableFocus: false,
 	awaitCloseAnimation: true,
 });
-
-// Checkbox
-import {doctor} from '../../components/checkbox/checkbox';
-const modalLine = document.querySelector('.modal__line');
-
-function doctorToggle() {
-	if (doctor.checked) {
-		modalLine.classList.add('active');
-	} else {
-		modalLine.classList.remove('active');
-	}
-}
-
-doctor.addEventListener('change', doctorToggle);
