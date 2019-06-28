@@ -40,6 +40,11 @@
 	&__info-wrapper {
 		display: flex;
 		flex-direction: column;
+
+		@media screen and (min-width: $break_xxxl) {
+			flex: 0 0 60%;
+			flex-direction: row;
+		}
 	}
 
 	&__temperature {
@@ -50,6 +55,7 @@
 		font-size: 45px;
 
 		@media screen and (min-width: $break_sm) {
+			flex: 1;
 			font-size: 65px;
 		}
 	}
@@ -62,6 +68,10 @@
 		width: 100%;
 		height: 100%;
 		text-align: center;
+
+		@media screen and (min-width: $break_sm) {
+			flex: 1;
+		}
 	}
 
 	&__condition {
