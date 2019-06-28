@@ -1,3 +1,5 @@
+import * as Choices from 'choices.js';
+
 /* eslint-disable no-undef */
 let inputSelect = () => {
 	const select = document.querySelectorAll('.field-select__select');
