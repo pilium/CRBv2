@@ -18,7 +18,7 @@
 		}
 	}
 
-	&--slider {
+	&--news {
 		padding: 0;
 
 		.section__header {
@@ -32,6 +32,28 @@
 			@media screen and (min-width: $break_md) {
 				font-size: 50px;
 			}
+		}
+	}
+
+	&--articles {
+		.container {
+			padding: 0 16px;
+			max-width: 100%;
+
+			@media screen and (min-width: $break_lg) {
+				max-width: 1200px;
+			}
+		}
+
+		.section__header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 16px 0;
+		}
+
+		.section__title {
+			margin: 0;
 		}
 	}
 
