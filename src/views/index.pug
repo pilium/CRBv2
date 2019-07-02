@@ -26,58 +26,102 @@ block content
 		+quick-links()
 	+section({
 		title: 'Последние новости',
+		link: 'Все новости',
+		href: '#',
 		header: true,
-		mods: 'slider',
+		mods: 'news',
 	})
 		+slider({
 			title: 'Новости',
+			link: 'Все новости',
+			info: true,
 			mods: 'news',
 		})
 			li.glide__slide
 				+card({
 					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
 					date: '28 декабря 2019 года',
-					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь'
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: 'full',
 				})
 			li.glide__slide
 				+card({
 					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
 					date: '28 декабря 2019 года',
-					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь'
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: 'full',
 				})
 			li.glide__slide
 				+card({
 					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
 					date: '28 декабря 2019 года',
-					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь'
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: 'full',
 				})
 			li.glide__slide
 				+card({
 					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
 					date: '28 декабря 2019 года',
-					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь'
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: 'full',
 				})
 			li.glide__slide
 				+card({
 					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
 					date: '28 декабря 2019 года',
-					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь'
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: 'full',
 				})
 			li.glide__slide
 				+card({
 					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
 					date: '28 декабря 2019 года',
-					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь'
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: 'full',
 				})
 	+section({
-		mods: 'testimonials',
-		title: 'Отзывы',
-		link: 'Все отзывы',
+		title: 'Полезные статьи',
+		link: 'Все статьи',
 		href: '#',
 		header: true,
 		container: true,
+		mods: 'articles',
 	})
-		+testimonials()
+		+slider({
+			title: 'Новости',
+			link: 'Все новости',
+			info: false,
+			onlyBullets: true,
+			mods: 'articles',
+		})
+			li.glide__slide
+				+card({
+					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
+					date: '28 декабря 2019 года',
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: '',
+				})
+			li.glide__slide
+				+card({
+					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
+					date: '28 декабря 2019 года',
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: '',
+				})
+			li.glide__slide
+				+card({
+					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
+					date: '28 декабря 2019 года',
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: '',
+				})
+			li.glide__slide
+				+card({
+					title: 'ДИСПАНСЕРИЗАЦИЯ В 2019Г: ДОПОЛНИТЕЛЬНЫЙ ДЕНЬ К ОТПУСКУ, КАК ВОСПОЛЬЗОВАТЬСЯ?',
+					date: '28 декабря 2019 года',
+					text: 'C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь C 1 янвapя 2019 г. для пpoxoждeния диcпaнcepизaции paбoтoдaтeли oбязaны пpeдocтaвлять вceм paбoтникaм нepaбoчий дeнь',
+					mods: '',
+				})
 	+section({
 		mods: 'informer',
 	})
