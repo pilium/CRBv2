@@ -37,6 +37,42 @@
 			}
 		}
 
+		&.hide {
+			@media screen and (min-width: $break_lg) {
+				animation: flip-out-ver-right 0.45s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+
+				@keyframes flip-out-ver-right {
+					0% {
+						opacity: 1;
+						transform: rotateY(0);
+					}
+
+					100% {
+						opacity: 0;
+						transform: rotateY(70deg);
+					}
+				}
+			}
+		}
+
+		&.show {
+			@media screen and (min-width: $break_lg) {
+				animation: flip-in-ver-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+				@keyframes flip-in-ver-left {
+					0% {
+						opacity: 0;
+						transform: rotateY(80deg);
+					}
+
+					100% {
+						opacity: 1;
+						transform: rotateY(0);
+					}
+				}
+			}
+		}
+
 		@media screen and (min-width: $break_lg) {
 			position: fixed;
 			right: 0;

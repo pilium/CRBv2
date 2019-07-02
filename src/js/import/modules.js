@@ -6,3 +6,4 @@ import '%modules%/menu/menu.js';
 import '%modules%/feedback-type/feedback-type';
 import '%modules%/polite/polite.js';
 import '%modules%/weather/weather.js';
+import '%modules%/header-bottom/header-bottom.js';
