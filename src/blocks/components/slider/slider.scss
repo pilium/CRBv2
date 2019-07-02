@@ -4,6 +4,7 @@
 		display: flex;
 		align-items: center;
 		overflow: hidden;
+		padding: 16px 0;
 	}
 
 	&__info {
@@ -134,15 +135,21 @@
 			transition: fill linear 0.3s;
 		}
 
-		&__bullets {
-			position: absolute;
-			left: 50%;
-			bottom: 1%;
-			z-index: 1;
-			transform: translateX(-50%);
+		&__bullets,
+		&__onlyBullets {
+			display: none;
 
-			> * {
-				&:not(:last-child) { margin-right: 8px; }
+			@media screen and (min-width: $break_md) {
+				position: absolute;
+				left: 50%;
+				bottom: 0;
+				z-index: 1;
+				display: block;
+				transform: translateX(-50%);
+
+				> * {
+					&:not(:last-child) { margin-right: 8px; }
+				}
 			}
 		}
 
@@ -158,6 +165,12 @@
 			&--active {
 				background-color: var(--color-main);
 			}
+		}
+	}
+
+	&.js-slider--articles {
+		.glide__track {
+			transform: none;
 		}
 	}
 }
