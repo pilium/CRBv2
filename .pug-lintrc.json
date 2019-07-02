@@ -11,7 +11,6 @@
     "requireClassLiteralsBeforeIdLiterals": true,
     "requireIdLiteralsBeforeAttributes": true,
     "requireLineFeedAtFileEnd": true,
-    "requireLowerCaseAttributes": true,
     "requireLowerCaseTags": true,
     "requireSpaceAfterCodeOperator": true,
     "requireSpecificAttributes": [
