@@ -68,8 +68,13 @@
 	}
 
 	&--border {
-		border: 2px solid var(--color-light);
-		color: var(--color-light);
+		border: 2px solid var(--color-main);
+		color: var(--color-main);
+
+		@media screen and (min-width: $break_md) {
+			border-color: var(--color-light);
+			color: var(--color-light);
+		}
 
 		&:focus,
 		&:hover {

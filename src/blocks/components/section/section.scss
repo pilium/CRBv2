@@ -3,10 +3,10 @@
 
 	&--hero {
 		padding: 24px 0;
-		background: var(--gradient-main);
 
 		@media screen and (min-width: $break_md) {
 			padding: 0;
+			background: var(--gradient-main);
 		}
 	}
 
@@ -37,19 +37,26 @@
 
 	&--articles {
 		.container {
-			padding: 0 16px;
+			padding: 0;
 			max-width: 100%;
 
 			@media screen and (min-width: $break_lg) {
+				padding: 0 16px;
 				max-width: 1200px;
 			}
 		}
 
 		.section__header {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 16px 0;
+			margin-bottom: 16px;
+			text-align: center;
+
+			@media screen and (min-width: $break_lg) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 0;
+				padding: 16px 0;
+			}
 		}
 
 		.section__title {

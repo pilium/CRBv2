@@ -1,6 +1,15 @@
 .hero {
 	position: relative;
-	color: #fff;
+	padding-bottom: 16px;
+	color: var(--color-title);
+
+	@media screen and (min-width: $break_md) {
+		color: var(--color-light);
+	}
+
+	@media screen and (min-width: $break_xl) {
+		padding-bottom: 0;
+	}
 
 	&__inner {
 		display: flex;
