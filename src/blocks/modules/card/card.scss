@@ -2,7 +2,6 @@
 	position: relative;
 	display: flex;
 	border-radius: var(--border-radius);
-	padding: 40px 24px;
 	color: var(--color-text);
 
 	&__inner {
@@ -13,21 +12,7 @@
 		> * {
 			&:not(:last-child) {
 				margin-bottom: 32px;
-
-				@media screen and (min-width: $break_lg) {
-					margin-right: 32px;
-					margin-bottom: 0;
-				}
 			}
-		}
-
-		@media screen and (min-width: $break_lg) {
-			flex-direction: row;
-		}
-
-		@media screen and (min-width: $break_xl) {
-			margin: auto;
-			transform: translateX(24px);
 		}
 	}
 
@@ -42,12 +27,6 @@
 			width: 100%;
 			max-height: 320px;
 			object-fit: cover;
-
-
-			@media screen and (min-width: $break_lg) {
-				width: auto;
-				max-height: 100%;
-			}
 		}
 	}
 
@@ -61,10 +40,6 @@
 		h2 {
 			margin-top: 0;
 			font-size: 24px;
-
-			@media screen and (min-width: $break_lg) {
-				font-size: var(--font-size-h2);
-			}
 		}
 	}
 
@@ -78,21 +53,62 @@
 		flex-direction: column;
 
 		> * {
-			&:not(:last-child) { margin-bottom: 32px; }
-		}
-
-		@media screen and (min-width: $break_lg) {
-			max-width: 60%;
-		}
-
-		@media screen and (min-width: $break_xl) {
-			max-width: 100%;
+			&:not(:last-child) { margin-bottom: 24px; }
 		}
 	}
 
-	@media screen and (min-width: $break_xl) {
-		padding: 0;
-		min-height: 464px;
-		background-color: var(--color-bg-secondary);
+	&.card--full {
+		.card__inner {
+			> * {
+				&:not(:last-child) {
+					@media screen and (min-width: $break_lg) {
+						margin-right: 32px;
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			@media screen and (min-width: $break_lg) {
+				flex-direction: row;
+			}
+
+			@media screen and (min-width: $break_xl) {
+				margin: auto;
+				transform: translateX(24px);
+			}
+		}
+
+		.card__img {
+			img {
+				@media screen and (min-width: $break_lg) {
+					width: auto;
+					max-height: 100%;
+				}
+			}
+		}
+
+		.card__title {
+			h2 {
+				@media screen and (min-width: $break_lg) {
+					font-size: var(--font-size-h2);
+				}
+			}
+		}
+
+		.card__addition {
+			@media screen and (min-width: $break_lg) {
+				max-width: 60%;
+			}
+
+			@media screen and (min-width: $break_xl) {
+				max-width: 100%;
+			}
+		}
+
+		@media screen and (min-width: $break_xl) {
+			padding: 0;
+			min-height: 464px;
+			background-color: var(--color-bg-secondary);
+		}
 	}
 }

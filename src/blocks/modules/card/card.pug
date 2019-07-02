@@ -1,5 +1,14 @@
 mixin card(props)
-	article.card
+	-
+		// список модификаторов
+		var allMods = '';
+		if(typeof(props.mods) !== 'undefined' && props.mods) {
+			var modsList = props.mods.split(',');
+			for (var i = 0; i < modsList.length; i++) {
+				allMods = allMods + ' card--' + modsList[i].trim();
+			}
+		}
+	article.card(class= allMods)
 		.card__inner
 			.card__img
 				img(src="https://picsum.photos/400/364?random=4" alt="r")
