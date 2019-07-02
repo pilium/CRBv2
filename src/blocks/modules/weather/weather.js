@@ -30,4 +30,5 @@ const fetchPublicReposCount = async () => {
 
 fetchPublicReposCount()
 	.then((data) => weatherRender(data))
-	.catch((err) => console.log(err));
+	// eslint-disable-next-line no-console
+	.catch((err) => console.error(err));
