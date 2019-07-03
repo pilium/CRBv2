@@ -102,6 +102,7 @@
 		@media screen and (min-width: $break_lg) {
 			position: static;
 			display: block;
+			overflow-y: visible;
 			padding: 0;
 			height: auto;
 			background-color: transparent;
