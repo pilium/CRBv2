@@ -14,5 +14,7 @@ mixin hero(props)
 						mods: 'border'
 					})(rel="noopener noreferrer" target="_blanc")
 				figure.hero__img
-					img(src="img/hero.png" alt="Фото всей семьи")
+					picture
+						source(type="image/webp" srcset="img/hero.webp")
+						img(src="img/hero.png" alt="Фото всей семьи")
 					figcaptio.hide-text Фотография врачей
