@@ -89,12 +89,12 @@
 		top: -200%;
 		padding: 8px 0;
 		width: 100%;
-		height: calc(100vh - 104px);
+		height: calc(100vh - 112px);
 		background-color: var(--color-light);
 
 		&.active {
 			position: fixed;
-			top: 104px;
+			top: 112px;
 			z-index: 999;
 		}
 
