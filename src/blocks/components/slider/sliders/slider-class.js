@@ -34,7 +34,7 @@ export class Slider {
 			} else {
 				this.totalSlideContainer.innerHTML = `${this.slides.length}`;
 			}
-			let slideWidth = 160 / this.slides.length * this.sliderName.index + 1;
+			let slideWidth = 160 / this.slides.length * (this.sliderName.index + 1);
 
 			this.sliderProgress.style.width = `${slideWidth}px`;
 		});
