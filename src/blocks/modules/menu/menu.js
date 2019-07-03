@@ -12,7 +12,6 @@ function mainMenuLinkHandler() {
 	let submenu = this.parentNode.querySelector('.submenu');
 	let arrow = this.querySelector('.arrow');
 
-	headerMenu.classList.toggle('scrool');
 	arrow.classList.toggle('active');
 	submenu.classList.toggle('active');
 }

@@ -3,25 +3,25 @@ mixin menu()
 		.menu__wrapper
 			ul.menu__list#main-nav-menu(role="menu" aria-labelledby="main-menu-trigger")
 				li.menu__item(role="none")
-					a.link.menu__link.menu__link--has-submenu(href="#" title="На страницу О больнице" aria-haspopup="true" aria-expanded="false" role="menuitem") О больнице
+					a.link.menu__link.menu__link--has-submenu(href="javascript:void(0);" title="На страницу О больнице" aria-haspopup="true" aria-expanded="false" role="menuitem") О больнице
 						.menu__icon
 							+icon('hospital', 'menu__svg-icon')
 						+arrow()
 						+submenu(submenu.hospital)
 				li.menu__item(role="none")
-					a.link.menu__link.menu__link--has-submenu(href="#" title="На страницу пациентам" aria-haspopup="true" aria-expanded="false" role="menuitem") Пациентам
+					a.link.menu__link.menu__link--has-submenu(href="javascript:void(0);" title="На страницу пациентам" aria-haspopup="true" aria-expanded="false" role="menuitem") Пациентам
 						.menu__icon
 							+icon('patient', 'menu__svg-icon')
 						+arrow()
 						+submenu(submenu.patient)
 				li.menu__item(role="none")
-					a.link.menu__link.menu__link--has-submenu(href="#" title="На страницу платных услуг" aria-haspopup="true" aria-expanded="false" role="menuitem") 
+					a.link.menu__link.menu__link--has-submenu(href="javascript:void(0);" title="На страницу платных услуг" aria-haspopup="true" aria-expanded="false" role="menuitem") 
 						span Структура
 						.menu__icon
 							+icon('structure', 'menu__svg-icon')
 						+arrow()
 						+submenu(submenu.structure)
 				li.menu__item(role="none")
-					a.link.menu__link(href="#" title="На страницу Контакты" role="menuitem") Лицензии
+					a.link.menu__link(href="javascript:void(0);" title="На страницу Контакты" role="menuitem") Лицензии
 						.menu__icon
 							+icon('licence', 'menu__svg-icon')

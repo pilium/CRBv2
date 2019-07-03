@@ -87,6 +87,7 @@
 		left: 0;
 		right: 0;
 		top: -200%;
+		overflow-y: scroll;
 		padding: 8px 0;
 		width: 100%;
 		height: calc(100vh - 112px);
@@ -96,10 +97,6 @@
 			position: fixed;
 			top: 112px;
 			z-index: 999;
-		}
-
-		&.scrool {
-			overflow-y: scroll;
 		}
 
 		@media screen and (min-width: $break_lg) {
