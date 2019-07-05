@@ -21,7 +21,8 @@ function weatherRender(data) {
 	weatherDate.innerHTML = `${localDate}`;
 	setTimeout(() => {
 		if (preloader.parentNode) {
-			preloader.parentNode.removeChild(preloader);
+			preloader.classList.add('hide');
+			// preloader.parentNode.removeChild(preloader);
 		}
 	}, 2000);
 }
