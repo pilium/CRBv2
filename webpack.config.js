@@ -45,7 +45,12 @@ module.exports = {
 		},
 	},
 	optimization: {
-		minimizer: [new TerserPlugin()],
+		minimizer: [
+			new TerserPlugin({
+				cache: true,
+				parallel: true,
+			}),
+		],
 		splitChunks: {
 			cacheGroups: {
 				vendor: {
