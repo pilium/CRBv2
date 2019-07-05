@@ -1,0 +1,28 @@
+include ../utils/mixins
+include ../blocks
+
+block vars
+	-
+		var cabinetPage = cabinetPage || ''
+	-
+		var title = title  || ''
+		var description = description
+		var image = image || ''
+		var breadcrumbs = breadcrumbs || []
+
+doctype html
+html(lang="ru")
+	head
+		include ../includes/head
+	body
+		.main-wrapper
+			block header
+				include ../../blocks/modules/header/header
+				.breadcrumbs__wrapper
+					.container
+						+breadcrumbs()
+			main.main
+				block content
+			block footer
+				include ../../blocks/modules/footer/footer
+			block scripts	

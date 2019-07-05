@@ -321,6 +321,12 @@ fieldset {
 	padding: 0;
 }
 
+.breadcrumbs__wrapper {
+	.container {
+		text-align: left;
+	}
+}
+
 .visually-hidden {
 	position: absolute;
 	clip: rect(0 0 0 0);

@@ -1,0 +1,16 @@
+mixin breadcrumbs()
+	nav.breadcrumbs
+		ul.breadcrumbs__list(itemscope itemtype="http://schema.org/BreadcrumbList" aria-label="Breadcrumb")
+			li.breadcrumbs__item.breadcrumbs__item--main(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+				a.link(href="/" itemprop="item")
+					span(itemprop="name") На главную
+					meta(meta itemprop="position" content="1")
+			each val, index in breadcrumbs.length ? breadcrumbs : ['ошибка при создании хлебных крошек']
+				if(index === breadcrumbs.lenth)
+					li.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" aria-current="page")
+						span.link(itemprop="name")= val.title
+						meta(itemprop="position" content= breadcrumbs.lenth)
+				li.breadcrumbs__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+					a.link(href=val.link itemprop="item")
+						span(itemprop="name")= val.title
+						meta(itemprop="position" content= index+2)
