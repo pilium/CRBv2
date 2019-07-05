@@ -5,6 +5,7 @@
 		position: relative;
 		flex: 0 0 40%;
 		width: 100%;
+		min-height: 144px;
 		max-height: 144px;
 
 		@media screen and (min-width: $break_lg) {
