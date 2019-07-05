@@ -1,0 +1,14 @@
+mixin input-date()
+	+input-text({
+		type: 'date',
+		id: 'testimonial-date',
+		name: 'testimonial-date',
+		ph: 'Введите дату посещения',
+		valideIconAccept: 'accept',
+		valideIconError: 'error',
+		helpId: 'testimonialDatehelp',
+		helpText: 'текст подсказки',
+		validateIcons: true,
+		required: false,
+		mods: 'checkable'
+	})

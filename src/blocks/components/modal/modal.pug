@@ -199,19 +199,7 @@ mixin modal(props)
 														title: 'Указать дату приема',
 														id: 'date'
 													})
-													+input-text({
-														type: 'date',
-														id: 'testimonial-date',
-														name: 'testimonial-date',
-														text: 'Введите дату посещения:',
-														valideIconAccept: 'accept',
-														valideIconError: 'error',
-														helpId: 'testimonialDatehelp',
-														helpText: 'текст подсказки',
-														validateIcons: true,
-														required: false,
-														mods: 'checkable'
-													})(min="2016-01-01")
+													+input-date()
 											+fieldset({
 												step: 4,
 												legend: 'Проверка, что вы не робот',
