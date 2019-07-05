@@ -88,14 +88,14 @@
 		overflow: hidden;
 		margin: 0 auto;
 		border: 1px solid var(--color-main);
-		width: 100%;
+		width: 95%;
 		font-family: var(--font-family--bold);
 		color: var(--color-main);
 		background-color: var(--color-bg--secondary);
 
 		&::before,
 		&::after {
-			content: '';
+			content: "";
 			position: absolute;
 			right: 0;
 			bottom: 0;
@@ -131,10 +131,6 @@
 			&::after {
 				transform: translate(50%, 0) scale(1.1);
 			}
-		}
-
-		@media screen and (min-width: $break_xs) {
-			width: 45%;
 		}
 	}
 }
