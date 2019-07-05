@@ -28,13 +28,14 @@ let sliderArticles = new Slider({
 	sliderOptions: {
 		type: 'carousel',
 		startAt: 0,
-		perView: 2,
+		perView: 3,
 		animationTimingFunc: 'ease',
 		animationDuration: 800,
 		hoverpause: false,
 		gap: 120,
 		breakpoints: {
 			1500: {
+				perView: 2,
 				gap: 60,
 			},
 			900: {
