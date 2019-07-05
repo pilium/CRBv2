@@ -1,17 +1,14 @@
 .card {
-	position: relative;
 	display: flex;
-	border-radius: var(--border-radius);
-	color: var(--color-text);
 
 	&__inner {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		flex-direction: column;
 
 		> * {
 			&:not(:last-child) {
-				margin-bottom: 32px;
+				margin-bottom: 24px;
 			}
 		}
 	}
@@ -44,7 +41,7 @@
 	&__title {
 		h2 {
 			margin-top: 0;
-			font-size: 24px;
+			font-size: 20px;
 		}
 	}
 
@@ -87,7 +84,13 @@
 		height: 24px;
 	}
 
-	&.card--full {
+	&--full {
+		.btn {
+			@media screen and (min-width: $break_lg) {
+				width: 60%;
+			}
+		}
+
 		.card__inner {
 			> * {
 				&:not(:last-child) {
