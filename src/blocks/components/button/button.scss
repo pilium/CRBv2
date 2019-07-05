@@ -5,12 +5,8 @@
 	justify-content: center;
 	border: none;
 	border-radius: var(--border-radius);
-	padding: 0 16px;
-	height: 40px;
-	font-weight: 600;
-	font-size: 14px;
+	padding: 24px;
 	line-height: 0;
-	letter-spacing: 0.5px;
 	white-space: nowrap;
 	text-align: center;
 	text-decoration: none;
@@ -18,7 +14,7 @@
 	color: var(--color-light);
 	cursor: pointer;
 	user-select: none;
-	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, outline 50ms ease-in-out;
+	transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 
 	&__icon {
 		position: relative;
@@ -71,19 +67,74 @@
 		border: 2px solid var(--color-main);
 		color: var(--color-main);
 
-		@media screen and (min-width: $break_md) {
-			border-color: var(--color-light);
-			color: var(--color-light);
-		}
-
 		&:focus,
 		&:hover {
 			border-color: var(--color-main);
-			transition: border-color linear 0.3s;
+			background-color: var(--color-main);
+			transition: background-color linear 0.3s, border-color linear 0.3s;
+		}
+
+		@media screen and (min-width: $break_md) {
+			border-color: var(--color-light);
+			color: var(--color-light);
 		}
 	}
 
 	&--no-flex {
 		display: block;
+	}
+
+	&--pill {
+		overflow: hidden;
+		margin: 0 auto;
+		border: 1px solid var(--color-main);
+		width: 100%;
+		font-family: var(--font-family--bold);
+		color: var(--color-main);
+		background-color: var(--color-bg--secondary);
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			background: var(--color-main);
+			opacity: 0.1;
+			transform: translate(100%, -25%) translate3d(50%, 0, 0) scale(2.3);
+			transition: transform 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+		}
+
+		&::after {
+			transform: translate(100%, -25%) translate3d(50%, 0, 0) scale(2.5);
+		}
+
+		&:hover,
+		&:focus {
+			border-color: transparent;
+			transition: border-color 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+
+			&::before,
+			&::after {
+				opacity: 0.2;
+				transition: transform 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+			}
+
+			&::before {
+				transform: translate3d(50%, 0, 0) scale(0.9);
+			}
+
+			&::after {
+				transform: translate(50%, 0) scale(1.1);
+			}
+		}
+
+		@media screen and (min-width: $break_xs) {
+			width: 45%;
+		}
 	}
 }

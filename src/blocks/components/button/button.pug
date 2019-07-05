@@ -9,6 +9,9 @@ mixin btn(props)
 		}
 	if (props.tag === 'a')
 		a.btn(class=allMods href=props.href)&attributes(attributes)= props.text
+			if (props.icon)
+				.button__icon
+					+icon(props.icon, props.iconClass)
 	if (props.tag === 'button')
 		button.btn(class=allMods)&attributes(attributes)
 			if (props.icon)
