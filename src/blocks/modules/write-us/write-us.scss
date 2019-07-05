@@ -25,7 +25,11 @@
 	&__icon {
 		width: 32px;
 		height: 32px;
-		fill: var(--color-icon);
+		fill: var(--color-light);
+
+		@media screen and (min-width: $break_lg) {
+			fill: var(--color-icon);
+		}
 	}
 
 	.btn__text {
