@@ -2,16 +2,30 @@
 	.btn {
 		@media screen and (min-width: $break_lg) {
 			flex-direction: column-reverse;
-			padding: 24px 8px 16px 8px;
+			border-radius: 0;
+			padding: 32px 8px 24px 8px;
 			height: auto;
-			background: var(--gradient-secondary);
+			box-shadow: 0 0 3px rgba(71, 86, 85, 0.5);
+			color: var(--color-icon);
+			background-color: var(--color-light);
 
 			&:hover,
 			&:focus {
-				background: var(--gradient-hover);
-				transition: background linear 0.3s;
+				color: var(--color-main);
+				transition: color cubic-bezier(0.02, 0.01, 0.47, 1) 0.1s;
+
+				.write-us__icon {
+					fill: var(--color-main);
+					transition: fill cubic-bezier(0.02, 0.01, 0.47, 1) 0.1s;
+				}
 			}
 		}
+	}
+
+	&__icon {
+		width: 32px;
+		height: 32px;
+		fill: var(--color-icon);
 	}
 
 	.btn__text {
@@ -26,10 +40,5 @@
 			writing-mode: vertical-rl;
 			transform: rotate(180deg);
 		}
-	}
-
-	&__icon {
-		width: 32px;
-		height: 32px;
 	}
 }
