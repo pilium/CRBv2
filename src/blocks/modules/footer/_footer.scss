@@ -1,9 +1,15 @@
 .footer {
-	padding: 24px 0;
-	color: var(--color-light);
-	background-color: var(--color-main);
+	padding: 8px 0;
+	color: var(--color-text);
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
 	&__copyright {
-		max-width: 608px;
+		max-width: 656px;
+		font-family: var(--font-family--bold);
 	}
 }
