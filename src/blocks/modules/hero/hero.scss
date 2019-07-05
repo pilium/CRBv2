@@ -3,14 +3,6 @@
 	padding-bottom: 16px;
 	color: var(--color-title);
 
-	@media screen and (min-width: $break_md) {
-		color: var(--color-light);
-	}
-
-	@media screen and (min-width: $break_xl) {
-		padding-bottom: 0;
-	}
-
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -19,7 +11,6 @@
 
 	&__info {
 		max-width: 600px;
-		text-align: center;
 	}
 
 	&__titles {
@@ -57,9 +48,11 @@
 		}
 	}
 
-	.btn {
-		padding: 24px;
-		height: auto;
-		text-transform: uppercase;
+	@media screen and (min-width: $break_md) {
+		color: var(--color-light);
+	}
+
+	@media screen and (min-width: $break_xl) {
+		padding-bottom: 0;
 	}
 }
