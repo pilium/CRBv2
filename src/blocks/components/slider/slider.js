@@ -32,7 +32,7 @@ let sliderArticles = new Slider({
 		animationTimingFunc: 'ease',
 		animationDuration: 800,
 		hoverpause: false,
-		gap: 120,
+		gap: 32,
 		breakpoints: {
 			1500: {
 				perView: 2,
