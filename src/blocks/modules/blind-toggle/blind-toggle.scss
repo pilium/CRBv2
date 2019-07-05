@@ -11,6 +11,7 @@
 		}
 
 		@media screen and (min-width: $break_lg) {
+			border-radius: 0;
 			padding: 8px;
 			width: 64px;
 			height: 64px;
@@ -20,7 +21,7 @@
 			&:hover,
 			&:focus {
 				background: var(--gradient-hover);
-				transition: background linear 0.3s;
+				transition: background cubic-bezier(0.02, 0.01, 0.47, 1) 0.3s;
 			}
 		}
 	}
