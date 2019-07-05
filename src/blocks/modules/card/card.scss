@@ -48,7 +48,8 @@
 		}
 	}
 
-	&__date {
+	&__date,
+	&__time {
 		font-size: 14px;
 		color: var(--color-text-helper);
 	}
@@ -60,6 +61,30 @@
 		> * {
 			&:not(:last-child) { margin-bottom: 24px; }
 		}
+	}
+
+	&__addition-info {
+		display: flex;
+		align-items: center;
+
+		> * {
+			&:not(:last-child) { margin-right: 32px; }
+		}
+	}
+
+	&__read-time,
+	&__date {
+		display: flex;
+		align-items: center;
+
+		> * {
+			&:not(:last-child) { margin-right: 8px; }
+		}
+	}
+
+	&__icon {
+		width: 24px;
+		height: 24px;
 	}
 
 	&.card--full {

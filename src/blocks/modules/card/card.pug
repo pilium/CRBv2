@@ -16,7 +16,17 @@ mixin card(props)
 				.card__title
 					h2= props.title
 				.card__addition
-					p.card__date
-						span Опубликовано: 
-						span= props.date
+					.card__addition-info
+						span.card__date
+							+icon('publish', 'card__icon')
+							span= props.date
+						span.card__read-time
+							+icon('read_time', 'card__icon')
+							span.card__time 3 мин
 					p.card__text= props.text
+				+btn({
+					tag: 'a',
+					href: '#',
+					text: 'Перейти к статье',
+					mods: 'pill'
+				})(rel="noopener noreferrer" target="_blanc")
