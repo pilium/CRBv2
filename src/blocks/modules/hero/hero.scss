@@ -11,6 +11,11 @@
 
 	&__info {
 		max-width: 600px;
+		text-align: center;
+
+		@media screen and (min-width: $break_xl) {
+			text-align: left;
+		}
 	}
 
 	&__titles {
