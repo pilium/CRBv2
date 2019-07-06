@@ -5,11 +5,16 @@
 	&__inner {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		flex-direction: column-reverse;
+
+		@media screen and (min-width: $break_lg) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 	}
 
 	&__copyright {
 		max-width: 656px;
-		font-family: var(--font-family--bold);
+		font-size: 14px;
 	}
 }

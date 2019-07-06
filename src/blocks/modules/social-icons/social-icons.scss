@@ -1,22 +1,12 @@
 .social-icons {
+	margin-bottom: 16px;
+
 	&__list {
 		display: flex;
 		align-items: center;
-		flex-direction: column;
 
 		> * {
-			&:not(:last-child) {
-				margin-bottom: 8px;
-
-				@media screen and (min-width: $break_lg) {
-					margin-right: 8px;
-					margin-bottom: 0;
-				}
-			}
-		}
-
-		@media screen and (min-width: $break_lg) {
-			flex-direction: row;
+			&:not(:last-child) { margin-right: 8px; }
 		}
 	}
 
@@ -43,5 +33,9 @@
 	&__svg-icon {
 		width: 32px;
 		height: 32px;
+	}
+
+	@media screen and (min-width: $break_lg) {
+		margin-bottom: 0;
 	}
 }
