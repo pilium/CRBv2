@@ -14,6 +14,6 @@ MicroModal.init({
 	},
 	openTrigger: 'data-custom-open',
 	disableScroll: true,
-	disableFocus: false,
+	disableFocus: true,
 	awaitCloseAnimation: true,
 });
