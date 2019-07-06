@@ -24,7 +24,7 @@ function weatherRender(data) {
 			preloader.classList.add('hide');
 			// preloader.parentNode.removeChild(preloader);
 		}
-	}, 2000);
+	}, 1000);
 }
 
 const fetchPublicReposCount = async () => {
