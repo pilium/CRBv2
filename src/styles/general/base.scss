@@ -131,8 +131,6 @@ textarea {
 }
 
 svg {
-	fill: currentColor;
-
 	&:not(:root) {
 		overflow: hidden; // Скрыть выступающее за границы в IE
 	}
