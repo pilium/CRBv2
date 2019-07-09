@@ -31,6 +31,10 @@ body {
 	&.fixed {
 		overflow: hidden;
 	}
+
+	&.inner {
+		background-color: var(--color-light);
+	}
 }
 
 h1,
@@ -38,8 +42,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-ul {
+h6 {
 	margin: 0;
 	padding: 0;
 }
@@ -211,13 +214,7 @@ ol {
 	list-style-type: none;
 	padding-left: 0;
 
-	ul,
-	ol {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-
-	&.article__list {
+	&.toc__list-inner {
 		padding-left: 1.5em;
 	}
 }
