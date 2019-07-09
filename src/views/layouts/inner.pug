@@ -3,24 +3,21 @@ include ../blocks
 
 block vars
 	-
-		var cabinetPage = cabinetPage || ''
+		var bodyClass = bodyClass || ''
 	-
 		var title = title  || ''
 		var description = description
 		var image = image || ''
-		var breadcrumbs = breadcrumbs || []
+		var keywords = keywords || ''
 
 doctype html
 html(lang="ru")
 	head
 		include ../includes/head
-	body
+	body(class= bodyClass)
 		.main-wrapper
 			block header
 				include ../../blocks/modules/header/header
-				.breadcrumbs__wrapper
-					.container
-						+breadcrumbs()
 			main.main
 				block content
 			block footer
