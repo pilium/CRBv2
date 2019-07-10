@@ -5,6 +5,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
 	entry: {
 		main: './src/js/index.js',
+		common: './src/js/import/pages/common.js',
 		gallery: './src/js/import/pages/gallery.js',
 	},
 	output: {
