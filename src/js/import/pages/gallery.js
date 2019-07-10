@@ -1,3 +1,4 @@
+import '../common.js';
 import Spotlight from 'spotlight.js';
 
 // eslint-disable-next-line no-console
