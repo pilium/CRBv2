@@ -10,22 +10,30 @@
 
 	&__inner {
 		position: relative;
+		padding: 16px 0;
 	}
 
 	&__row {
-		display: flex;
-		align-items: center;
 		padding: 0 8px;
 
 		> * {
 			&:not(:last-child) { margin-right: 16px; }
 		}
+
+		@media screen and (min-width: $break_xs) {
+			display: flex;
+			align-items: center;
+		}
 	}
 
 	&__termin {
-		margin-bottom: 16px;
+		margin-bottom: 8px;
 		font-size: rem(22);
 		text-transform: uppercase;
+
+		@media screen and (min-width: $break_xs) {
+			margin-bottom: 16px;
+		}
 	}
 
 	&__determines {
@@ -40,8 +48,8 @@
 
 	&__btn {
 		border: none;
-		padding: 0 16px;
-		height: 40px;
+		padding: 0 8px;
+		height: 32px;
 		color: #fff;
 		background-color: #000;
 		cursor: pointer;
@@ -49,14 +57,22 @@
 		&.active {
 			outline: 2px solid #f00;
 			outline-style: dashed;
-			outline-offset: 2px;
+
+			@media screen and (min-width: $break_xs) {
+				outline-offset: 2px;
+			}
+		}
+
+		@media screen and (min-width: $break_xs) {
+			padding: 0 16px;
+			height: 40px;
 		}
 	}
 
 	&__control {
 		position: absolute;
 		right: 8px;
-		top: 8px;
+		top: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -74,7 +90,11 @@
 		}
 
 		&--reset {
-			top: 48px;
+			right: 40px;
+
+			@media screen and (min-width: $break_xs) {
+				right: 56px;
+			}
 		}
 	}
 
@@ -126,5 +146,10 @@
 
 	&.active {
 		display: block;
+		height: 110vh;
+
+		@media screen and (min-width: $break_xs) {
+			height: auto;
+		}
 	}
 }
