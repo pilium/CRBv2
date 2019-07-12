@@ -42,17 +42,16 @@
 		display: flex;
 		align-items: center;
 		font-weight: 600;
-		font-size: 16px;
 
 		@media screen and (min-width: $break_md) {
 			flex-direction: column;
 			margin: auto;
-			font-size: 18px;
+			font-size: rem(18);
 		}
 
 		@media screen and (min-width: $break_xl) {
 			font-family: var(--font-family--semibold);
-			font-size: 20px;
+			font-size: rem(20);
 		}
 	}
 

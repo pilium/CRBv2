@@ -16,19 +16,14 @@
 			width: 64px;
 			height: 64px;
 			height: auto;
-			background: var(--gradient-secondary);
-
-			&:hover,
-			&:focus {
-				background: var(--gradient-hover);
-				transition: background cubic-bezier(0.02, 0.01, 0.47, 1) 0.3s;
-			}
+			background: var(--gradient-main);
 		}
 	}
 
 	&__icon {
 		width: 32px;
 		height: 32px;
+		fill: var(--color-light);
 
 		@media screen and (min-width: $break_md) {
 			width: 40px;

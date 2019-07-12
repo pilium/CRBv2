@@ -1,0 +1,25 @@
+.flatpickr-calendar {
+	background-color: var(--color-bg-light);
+
+	.flatpickr-weekday,
+	.flatpickr-day,
+	.flatpickr-month {
+		color: var(--color-text);
+	}
+
+	svg {
+		fill: var(--color-text);
+	}
+
+	.flatpickr-day {
+		border-color: var(--color-border-light);
+
+		&.flatpickr-disabled {
+			opacity: 0.4;
+		}
+
+		&.today {
+			border-right-color: var(--color-border-light);
+		}
+	}
+}

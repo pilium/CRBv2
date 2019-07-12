@@ -1,0 +1,73 @@
+mixin blind()
+	.blind
+		.container
+			.blind__inner
+				.blind__row
+					dl.blind__list
+						dt.blind__termin Цвета сайта
+						.blind__determines
+							dd
+								button.blind__btn.blind__color--normal.active
+									span Обычный
+							dd
+								button.blind__btn.blind__color--invrerse
+									span Инверсия
+							dd
+								button.blind__btn.blind__color--contrast
+									span Контраст
+							dd
+								button.blind__btn.blind__color--comfort
+									span Комфорт
+							dd
+								button.blind__btn.blind__color--blue
+									span Синий
+							dd
+								button.blind__btn.blind__color--brown
+									span Коричневый
+				.blind__row
+					dl.blind__list
+						dt.blind__termin Шрифт
+						.blind__determines
+							dd
+								button.blind__btn.blind__font-sansSerif.active
+									span Без засечек
+							dd
+								button.blind__btn.blind__font-serif
+									span С засечками
+					dl.blind__list
+						dt.blind__termin Размер шрифта
+						.blind__determines.blind__determines--fz
+							dd
+								button.blind__btn.blind__font-size.blind__font-size--small
+									span A
+							dd
+								button.blind__btn.blind__font-size.blind__font-size--normal.active
+									span A
+							dd
+								button.blind__btn.blind__font-size.blind__font-size--big
+									span A
+				.blind__row
+					dl.blind__list
+						dt.blind__termin Расстояние между буквами
+						.blind__determines
+							dd
+								button.blind__btn.blind__int-normal.active(data-class="ls1")
+									span Стандартное
+							dd
+								button.blind__btn.blind__int-middle(data-class="ls2")
+									span Среднее
+							dd
+								button.blind__btn.blind__int-big(data-class="ls3")
+									span Большое
+					dl.blind__list
+						dt.blind__termin Изображения
+						.blind__determines
+							dd
+								button.blind__btn.blind__img-on.active
+									span Включить
+							dd
+								button.blind__btn.blind__img-off
+									span Выключить
+				button.blind__control.blind__control--close(aria-label="Закрыть панель настройки") Х
+				button.blind__control.blind__control--reset(aria-label="Вернуть исходные значения")
+					+icon('refresh', 'blind__icon')

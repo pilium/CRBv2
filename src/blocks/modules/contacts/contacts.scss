@@ -19,7 +19,7 @@
 
 	&__title {
 		margin-top: 0;
-		font-size: 40px;
+		font-size: rem(40);
 	}
 
 	&__item {
@@ -44,7 +44,7 @@
 
 	&__address-info {
 		margin-bottom: 16px;
-		font-size: 20px;
+		font-size: rem(20);
 
 		span {
 			display: block;
@@ -64,14 +64,14 @@
 
 	&__list-link {
 		font-family: var(--font-family--semibold);
-		font-size: 20px;
+		font-size: rem(20);
 	}
 
 	.btn {
 		border-bottom: 2px solid var(--color-main);
 		padding: 24px 56px;
-		font-size: 18px;
-		background-color: var(--color-icon);
+		font-size: rem(18);
+		background-color: var(--color-bg-icon);
 
 		&:hover,
 		&:focus {

@@ -1,7 +1,7 @@
 .header-bottom {
 	padding: 8px 0;
 	color: var(--color-light);
-	background-color: var(--color-main);
+	background-color: var(--color-bg-icon);
 
 	.container {
 		display: flex;
@@ -88,14 +88,11 @@
 		right: 0;
 		top: -200%;
 		overflow-y: scroll;
-		padding: 8px 0;
 		width: 100%;
-		height: calc(100vh - 112px);
-		background-color: var(--color-light);
+		background-color: var(--color-bg-light);
 
 		&.active {
 			position: fixed;
-			top: 112px;
 			z-index: 999;
 		}
 
@@ -105,7 +102,7 @@
 			overflow-y: visible;
 			padding: 0;
 			height: auto;
-			background-color: transparent;
+			background-color: var(--color-bg-body);
 		}
 	}
 

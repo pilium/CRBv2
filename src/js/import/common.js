@@ -4,7 +4,6 @@ import '%components%/select/select.js';
 import '%components%/checkbox/checkbox.js';
 import '%components%/preloader/preloader.js';
 import '%components%/input-date/input-date.js';
-
 import '%modules%/footer/footer.js';
 import '%modules%/tel-mobile/tel-mobile.js';
 import '%modules%/sandwich/sandwich.js';
@@ -13,3 +12,5 @@ import '%modules%/menu/menu.js';
 import '%modules%/feedback-type/feedback-type';
 import '%modules%/polite/polite.js';
 import '%modules%/header-bottom/header-bottom.js';
+import '%modules%/blind/blind.js';
+import '%modules%/blind-toggle/blind-toggle.js';

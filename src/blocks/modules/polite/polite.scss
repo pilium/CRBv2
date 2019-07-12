@@ -14,7 +14,7 @@
 
 	&__text-title {
 		font-family: var(--font-family--bold);
-		font-size: 18px;
+		font-size: rem(18);
 	}
 
 	&.active {

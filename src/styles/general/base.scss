@@ -1,8 +1,3 @@
-// Сделаем viewport великим снова! (привет, IE10) http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
-@-ms-viewport {
-	width: device-width;
-}
-
 * {
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
@@ -13,6 +8,7 @@
 
 html {
 	box-sizing: border-box;
+	font-size: var(--font-size);
 }
 
 body {
@@ -20,9 +16,9 @@ body {
 	width: 100%;
 	height: 100%;
 	font-family: var(--font-family--default);
-	font-size: var(--font-size);
+	letter-spacing: var(--letter-spacing);
 	color: var(--color-text);
-	background-color: var(--color-body);
+	background-color: var(--color-bg-body);
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -33,7 +29,11 @@ body {
 	}
 
 	&.inner {
-		background-color: var(--color-light);
+		background-color: var(--color-bg-light);
+
+		.header {
+			background-color: var(--color-bg-body);
+		}
 	}
 }
 
@@ -43,8 +43,13 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
 	padding: 0;
+	font-family: var(--font-family--default);
+	font-weight: 700;
+	line-height: 1.2;
+	color: currentColor;
 }
 
 .container {
@@ -82,7 +87,7 @@ img {
 	cursor: pointer;
 }
 
-// Мы любим Сафари (на самом деле, нет).
+// Мы любим Сафари.
 [type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
@@ -151,25 +156,12 @@ a {
 
 	&[href^="tel:"] {
 		@media (min-width: 1200px) {
+			font-size: rem(18);
 			white-space: nowrap;
 			text-decoration: inherit;
 			cursor: pointer;
 		}
 	}
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin-top: 1em;
-	margin-bottom: 0.5em;
-	font-family: var(--font-family--default);
-	font-weight: 700;
-	line-height: 1.2;
-	color: currentColor;
 }
 
 h1 { font-size: var(--font-size-h1); }
@@ -227,70 +219,11 @@ dl {
 	margin: 0;
 }
 
-dt {
-	font-weight: 700;
-}
-
 dd {
 	margin-left: 0;
 
 	+ dt {
 		margin-top: (var(--line-height) / 2);
-	}
-
-	@media (min-width: 480px) {
-		margin-left: 1.5rem;
-	}
-}
-
-mark {
-	--color: rgb(250, 247, 133);
-	--color--red: rgb(247, 143, 190);
-	--color--blue: rgb(140, 235, 242);
-
-	border-radius: 1em 0 1em 0;
-	padding: 0.1em 0.2em;
-	background-image:
-		linear-gradient(
-			-100deg,
-			color(var(--color) alpha(-70%)),
-			color(var(--color) alpha(-30%)) 95%,
-			color(var(--color) alpha(-90%))
-		);
-
-	&.red {
-		background-image:
-			linear-gradient(
-				-100deg,
-				color(var(--color--red) alpha(-70%)),
-				color(var(--color--red) alpha(-30%)) 95%,
-				color(var(--color--red) alpha(-90%))
-			);
-	}
-
-	&.blue {
-		background-image:
-			linear-gradient(
-				-100deg,
-				color(var(--color--blue) alpha(-70%)),
-				color(var(--color--blue) alpha(-30%)) 95%,
-				color(var(--color--blue) alpha(-90%))
-			);
-	}
-}
-
-.main-wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-
-	header,
-	footer {
-		flex: 0;
-	}
-
-	main {
-		flex: 1;
 	}
 }
 
@@ -317,12 +250,6 @@ fieldset {
 	padding: 0;
 }
 
-.breadcrumbs__wrapper {
-	.container {
-		text-align: left;
-	}
-}
-
 .visually-hidden {
 	position: absolute;
 	clip: rect(0 0 0 0);
@@ -338,16 +265,14 @@ fieldset {
 ::-webkit-scrollbar { /* 1 - скроллбар */
 	width: 4px;
 	height: 4px;
-	background-color: var(--color-black);
 }
 
 ::-webkit-scrollbar-button { /* 2 - кнопка */
 	border-radius: 8px;
-	background-color: var(--color--blue);
 }
 
 ::-webkit-scrollbar-track { /* 3 - трек */
-	background-color: var(--color-light);
+	background-color: #fff;
 }
 
 ::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */
@@ -356,13 +281,5 @@ fieldset {
 
 ::-webkit-scrollbar-thumb { /* 5 - ползунок */
 	border-radius: 8px;
-	background-color: #d1d1d1;
-}
-
-::-webkit-scrollbar-corner { /* 6 - уголок */
-	background-color: var(--color-icon);
-}
-
-::-webkit-resizer { /* 7 - изменение размеров */
-	background-color: var(--color-error);
+	background-color: var(--color-main);
 }

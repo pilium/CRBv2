@@ -1,0 +1,22 @@
+.article {
+	&__title {
+		font-size: rem(54);
+	}
+
+	// &__inner {
+	// 	display: flex;
+	// 	align-items: flex-start;
+
+	// 	> * {
+	// 		&:not(:last-child) { margin-right: 5%; }
+	// 	}
+	// }
+
+	// &__text {
+	// 	flex: 1;
+	// }
+
+	// .toc {
+	// 	flex: 0 0 40%;
+	// }
+}

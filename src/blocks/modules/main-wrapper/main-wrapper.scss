@@ -1,0 +1,26 @@
+.main-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	header,
+	footer {
+		flex: 0;
+	}
+
+	main {
+		flex: 1;
+	}
+
+	&.blind-active {
+		svg:not(.icon-blind):not(.glide__arrow-icon):not(.social-icons__svg-icon):not(.blind__icon):not(.write-us__icon) {
+			@media screen and (min-width: $break_lg) {
+				display: none;
+			}
+		}
+
+		.weather__widget {
+			background: transparent;
+		}
+	}
+}

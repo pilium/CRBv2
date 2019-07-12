@@ -17,7 +17,7 @@ gulp.task('views', () =>
 		.pipe(
 			pug({
 				plugins: [pugbem],
-				pretty: true,
+				pretty: false,
 				locals: {
 					...getJsonData('./tmp/data.json'),
 				},

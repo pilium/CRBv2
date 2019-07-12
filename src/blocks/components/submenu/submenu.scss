@@ -34,7 +34,7 @@
 			@media screen and (min-width: $break_lg) {
 				border-color: var(--color-main);
 				padding-left: 24px;
-				color: var(--color-link-hover);
+				color: var(--color-hover);
 			}
 		}
 
@@ -53,6 +53,6 @@
 		left: 0;
 		top: 100%;
 		width: 168%;
-		background-color: var(--color-light);
+		background-color: var(--color-bg-light);
 	}
 }

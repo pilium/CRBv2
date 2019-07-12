@@ -3,10 +3,10 @@
 
 	&__inner {
 		display: block;
-		font-size: 14px;
+		font-size: rem(14);
 
 		@media screen and (min-width: $break_xs) {
-			font-size: var(--font-size);
+			font-size: rem(16);
 		}
 
 		@media screen and (min-width: $break_md) {
@@ -36,6 +36,7 @@
 	&__svg-icon {
 		width: 48px;
 		height: 48px;
+		fill: var(--color-main);
 
 		@media screen and (min-width: $break_xs) {
 			width: 56px;
