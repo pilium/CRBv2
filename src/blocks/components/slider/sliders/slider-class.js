@@ -70,6 +70,7 @@ export class Slider {
 			let button = document.createElement('button');
 
 			button.classList.add('glide__bullet');
+			button.setAttribute('tabindex', '-1');
 			button.setAttribute('data-glide-dir', `=${i}`);
 
 			this.sliderBullets.appendChild(button);
