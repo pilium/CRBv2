@@ -1,0 +1,98 @@
+.doctor-about {
+	&__wrapper {
+		display: flex;
+
+		> * {
+			&:not(:last-child) { margin-right: 10%; }
+		}
+	}
+
+	&__figcaption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 16px 8px;
+		text-align: center;
+		color: var(--color-light);
+		background-color: var(--color-text);
+	}
+
+	&__img {
+		width: auto;
+	}
+
+	&__test {
+		color: var(--color-text);
+	}
+
+	&__test-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&:not(:last-child) { margin-bottom: 16px; }
+
+		&--time {
+			display: list-item;
+			text-align: center;
+
+			> * {
+				&:not(:first-child) { margin-top: 16px; }
+			}
+
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+	}
+
+	&__test-title {
+		font-family: var(--font-family--bold);
+	}
+
+	&__main-info {
+		border-bottom: 2px solid var(--color-bg-darken);
+		padding-bottom: 64px;
+	}
+
+	&__name {
+		margin-top: 0;
+		font-family: var(--font-family--semibold);
+		font-size: 52px;
+		line-height: 56px;
+		color: var(--color-title);
+	}
+
+	&__job {
+		font-size: 28px;
+		line-height: 36px;
+		color: var(--color-text);
+	}
+
+	&__edu-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 2px solid var(--color-bg-darken);
+		padding: 16px;
+		padding-bottom: 24px;
+
+		> * {
+			&:not(:last-child) { margin-right: 13%; }
+		}
+	}
+
+	&__edu-year {
+		flex: 0 0 80px;
+	}
+
+	figure {
+		display: inline-block;
+		overflow: hidden;
+		margin-bottom: 32px;
+		border-radius: var(--border-radius);
+	}
+}
