@@ -34,9 +34,9 @@ gulp.task('images', () => gulp.src(['./src/img/**/*.{jpg,jpeg,png,gif,svg}', '!.
 		imagemin.svgo({
 			plugins: [
 				{removeViewBox: false},
-				{removeUnusedNS: false},
-				{removeUselessStrokeAndFill: false},
-				{cleanupIDs: false},
+				{removeUnusedNS: true},
+				{removeUselessStrokeAndFill: true},
+				{cleanupIDs: true},
 				{removeComments: true},
 				{removeEmptyAttrs: true},
 				{removeEmptyText: true},
