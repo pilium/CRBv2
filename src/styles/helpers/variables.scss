@@ -1,44 +1,48 @@
-:root {
+html {
 	// colors
 	--color-main: #1a7977;
-	--color-body: #f0f1f4;
-	--color-main-light: #eaf1f1;
+	--color-bg-body: #f0f1f4;
 	--color-text: #4a5d5b;
+	--color-text--bg: #4a5d5b;
 	--color-text-helper: #a8a8a8;
 	--color-hover: #55c8c0;
+	--color-link-hover: #55c8c0;
 	--color-title: #223837;
-	--color-bg-docs-links1: #50bab4;
-	--color-bg-docs-links2: #56c8c1;
-	--color-title-light: #05adaa;
 	--color-link: #27615e;
-	--color-link-hover: var(--color-hover);
-	--color-menu-item: #253836;
-	--color-secondary: #3e7e7a;
 	--color-border: #2e8884;
 	--color-border-light: #cedada;
-	--color-error: #e17776;
 	--color-modal: #6e768e;
-	--color-bg-darken: #e0eaea;
-	--color-bg-lighten: #e9f0f0;
 	--color-bg-secondary: #f2f7f7;
-	--color-icon: #3e9892;
+	--color-bg-icon: #3e9892;
 	--color-light: #fff;
+	--color-bg-light: #fff;
 	--color-dark: #000;
+	--color-bg-blind: #000;
+
+	// --color-main-light: #eaf1f1;
+	// --color-title-light: #05adaa;
+	// --color-bg-docs-links1: #50bab4;
+	// --color-bg-docs-links2: #56c8c1;
+	// 	--color-menu-item: #253836;
+	// 	--color-secondary: #3e7e7a;
+	// 	--color-error: #e17776;
+	// 	--color-bg-lighten: #e9f0f0;
+	// --color-bg-darken: #e0eaea;
+	// 	--gradient-main--to-right: linear-gradient(90.72013189013455deg, hsl(183, 55%, 47%) 0.927083333333334%, var(--color-main) 97.84374999999999%);
+	// --gradient-secondary: linear-gradient(112.72013189013455deg, hsl(179, 38%, 55%) 4.927083333333334%, hsl(159, 83%, 64%) 97.84374999999999%);
+	// --gradient-hover: linear-gradient(360deg, var(--color-main) 0, var(--color-hover) 0);
 
 	// Gradients
 	--gradient-main: linear-gradient(180.72013189013455deg, var(--color-main) 0.927083333333334%, hsl(183, 55%, 47%) 97.84374999999999%);
-	--gradient-main--to-right: linear-gradient(90.72013189013455deg, hsl(183, 55%, 47%) 0.927083333333334%, var(--color-main) 97.84374999999999%);
-	--gradient-secondary: linear-gradient(112.72013189013455deg, hsl(179, 38%, 55%) 4.927083333333334%, hsl(159, 83%, 64%) 97.84374999999999%);
-	--gradient-hover: linear-gradient(360deg, var(--color-main) 0, var(--color-hover) 0);
 
 	// Font
 	--font-size: 16px;
-	--font-size-h1: 40px;
-	--font-size-h2: 32px;
-	--font-size-h3: 24px;
-	--font-size-h4: 20px;
-	--font-size-h5: 16px;
-	--font-size-h6: 16px;
+	--font-size-h1: 2.5rem;
+	--font-size-h2: 2rem;
+	--font-size-h3: 1.5rem;
+	--font-size-h4: 1.25rem;
+	--font-size-h5: 1.1rem;
+	--font-size-h6: var(--font-size);
 	--line-height: 1.5;
 	--font-family--default: "Exo 2", -apple-system, BlinkMacSystemFont, "Ubuntu", "Arial", sans-serif;
 	--font-family--thin: "Exo 2 Thin";
@@ -47,6 +51,8 @@
 
 	// border
 	--border-radius: 8px;
+	--isImgShow: block;
+	--letter-spacing: normal;
 }
 
 // Breakpoints
@@ -57,3 +63,4 @@ $break_lg: 992px;
 $break_xl: 1200px;
 $break_xll: 1366px;
 $break_xxxl: 1528px;
+$font-size: 16;

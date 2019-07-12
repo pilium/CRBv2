@@ -17,7 +17,7 @@
 		top: -0.2em;
 		bottom: -0.2em;
 		z-index: -1;
-		outline: 0.2em solid #4a90e2;
+		outline: 0.2em solid var(--color-main);
 	}
 
 	&__star {
@@ -26,7 +26,6 @@
 		top: 0;
 		margin: 0;
 		height: 2em;
-		font-size: 16px;
 		background-size: 2em 1.9em;
 		background-repeat: repeat-x;
 

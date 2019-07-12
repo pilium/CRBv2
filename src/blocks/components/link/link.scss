@@ -4,11 +4,11 @@
 	&:hover,
 	&:focus {
 		color: var(--color-link-hover);
-		transition: color linear 0.3s;
+		transition: color linear 0.15s;
 
 		.link-text {
 			color: var(--color-link-hover);
-			transition: color linear 0.3s;
+			transition: color linear 0.15s;
 		}
 	}
 
@@ -21,16 +21,23 @@
 	}
 
 	&--section {
-		border-bottom: 3px solid var(--color-icon);
+		border-bottom: 3px solid var(--color-border);
 		padding-bottom: 2px;
 		font-family: var(--font-family--semibold);
-		font-size: 18px;
+		font-size: rem(18);
 		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			border-color: var(--color-link-hover);
+			color: var(--color-link-hover);
+			transition: border-color linear 0.15s;
+		}
 	}
 
 	@at-root .link-text {
 		display: block;
-		font-size: 14px;
+		font-size: rem(14);
 		color: var(--color-text-helper);
 	}
 }
