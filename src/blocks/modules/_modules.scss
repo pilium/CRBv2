@@ -1,3 +1,4 @@
+@import "main-wrapper/main-wrapper";
 @import "header/header";
 @import "header-top/header-top";
 @import "header-bottom/header-bottom";
@@ -23,6 +24,8 @@
 @import "weather/weather";
 @import "contacts-footer/contacts-footer";
 @import "social-icons/social-icons";
+@import "article/article";
+@import "blind/blind";
 
 // Removed
 // @import "docs-links/docs-links";

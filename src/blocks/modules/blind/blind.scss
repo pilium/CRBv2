@@ -1,0 +1,130 @@
+.blind {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	display: none;
+	padding: 16px 0;
+	color: var(--color-dark);
+	background-color: var(--color-bg-light);
+
+	&__inner {
+		position: relative;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		padding: 0 8px;
+
+		> * {
+			&:not(:last-child) { margin-right: 16px; }
+		}
+	}
+
+	&__termin {
+		margin-bottom: 16px;
+		font-size: rem(22);
+		text-transform: uppercase;
+	}
+
+	&__determines {
+		display: flex;
+		flex-wrap: wrap;
+
+		> * {
+			margin-right: 8px;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__btn {
+		border: none;
+		padding: 0 16px;
+		height: 40px;
+		color: #fff;
+		background-color: #000;
+		cursor: pointer;
+
+		&.active {
+			outline: 2px solid #f00;
+			outline-style: dashed;
+			outline-offset: 2px;
+		}
+	}
+
+	&__control {
+		position: absolute;
+		right: 8px;
+		top: 8px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		width: 32px;
+		height: 40px;
+		font-size: 32px;
+		line-height: 0;
+		background-color: #fff;
+		cursor: pointer;
+
+		.blind__icon {
+			width: 24px;
+			height: 24px;
+		}
+
+		&--reset {
+			top: 48px;
+		}
+	}
+
+	&__font-size--small {
+		font-size: rem(12);
+	}
+
+	&__font-size--big {
+		font-size: rem(22);
+	}
+
+	&__font-serif {
+		font-family: serif;
+	}
+
+	&__color--normal,
+	&__img-off {
+		color: #000;
+		background-color: #fff;
+	}
+
+	&__color--contrast {
+		color: #000;
+		background-color: #f3f3f3;
+	}
+
+	&__color--comfort {
+		color: #2f3441;
+		background-color: #e5ded6;
+	}
+
+	&__color--blue {
+		color: #063462;
+		background-color: #9dd1ff;
+	}
+
+	&__color--brown {
+		color: #a9e44d;
+		background-color: #3b2716;
+	}
+
+	&__int-middle {
+		letter-spacing: 2px;
+	}
+
+	&__int-big {
+		letter-spacing: 4px;
+	}
+
+	&.active {
+		display: block;
+	}
+}
