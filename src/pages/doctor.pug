@@ -1,10 +1,13 @@
 extends ../views/layouts/inner
 block vars
-	- var title = "Денисова олеся Геннадьевна";
-	- var description = 'Доктор Денисова олеся Геннадьевна';
-	- var breadcrumbs = [{title: 'Наши доктора',link: 'doctors.html'},{title: 'Денисова олеся Геннадьевна'}]
+	- var bodyClass = "inner"
+	- var title = "Денисова Олеся Геннадьевна";
+	- var description = 'Доктор Денисова Олеся Геннадьевна';
+	- var breadcrumbs = [{title: 'Наши доктора',link: 'doctors.html'},{title: 'Денисова Олеся Геннадьевна'}]
+	- var keywords = 'Денисова Олеся Геннадьевна'
 
 block content
+	+breadcrumbs()
 block scripts
 	script(src="../js/vendor.js")
 	script(src="../js/main.js")
