@@ -7,12 +7,19 @@ mixin hero(props)
 						h1.hero__title= props.title
 						if(props.subtitle)
 							h2.hero__subtitle= props.subtitle
-					+btn({
-						tag: 'a',
-						href: props.href,
-						text: props.btnText,
-						mods: 'border'
-					})(rel="noopener noreferrer" target="_blanc")
+					.hero__btns
+						+btn({
+							tag: 'a',
+							href: props.href,
+							text: props.btnText,
+							mods: 'border'
+						})(rel="noopener noreferrer" target="_blanc")
+						+btn({
+							tag: 'a',
+							href: 'https://www.gosuslugi.ru/category/health',
+							text: 'Запись через гос услуги',
+							mods: 'border',
+						})(rel="noopener noreferrer" target="_blanc")
 				figure.hero__img
 					picture
 						source(type="image/webp" srcset="img/hero.webp")
