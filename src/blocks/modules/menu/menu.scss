@@ -20,6 +20,7 @@
 	}
 
 	&__list {
+		margin-top: 0;
 		margin-bottom: 8px;
 
 		@media screen and (min-width: $break_lg) {
@@ -36,7 +37,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: var(--color-light);
+			background-color: var(--color-bg-light);
 		}
 
 		@media screen and (min-width: $break_lg) {
@@ -51,6 +52,10 @@
 			&:focus {
 				.submenu {
 					display: block;
+				}
+
+				.menu__link {
+					color: var(--color-hover);
 				}
 			}
 
@@ -69,20 +74,15 @@
 		height: 100%;
 		font-family: var(--font-family--bold);
 		font-weight: bold;
-		font-size: 20px;
-		color: var(--color-menu-item);
+		font-size: rem(20);
+		color: var(--color-main);
 
 		@media screen and (min-width: $break_lg) {
 			position: relative;
 			padding: 0;
 			width: auto;
 			height: auto;
-			font-size: 18px;
 			text-align: center;
-		}
-
-		@media screen and (min-width: $break_xl) {
-			font-size: 20px;
 		}
 	}
 
@@ -104,6 +104,7 @@
 	&__svg-icon {
 		width: 40px;
 		height: 40px;
+		fill: var(--color-main);
 	}
 
 	&.active {

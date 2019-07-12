@@ -1,7 +1,11 @@
 .logo {
 	&__text {
-		font-size: 20px;
+		font-size: rem(20);
 		white-space: nowrap;
 		color: var(--color-main);
+	}
+
+	&__img {
+		display: var(--isImgShow, block);
 	}
 }

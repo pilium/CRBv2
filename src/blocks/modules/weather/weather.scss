@@ -30,7 +30,7 @@
 		justify-content: space-around;
 		padding: 8px;
 		color: var(--color-light);
-		background-color: rgba(#000, 0.8);
+		background-color: var(--color-bg-icon);
 
 		@media screen and (min-width: $break_xxxl) {
 			height: 40%;
@@ -52,11 +52,11 @@
 		flex: 0 0 30%;
 		justify-content: space-around;
 		width: 100%;
-		font-size: 45px;
+		font-size: rem(45);
 
 		@media screen and (min-width: $break_sm) {
 			flex: 1;
-			font-size: 65px;
+			font-size: rem(65);
 		}
 	}
 
@@ -76,19 +76,19 @@
 
 	&__condition {
 		font-family: var(--font-family--bold);
-		font-size: 26px;
+		font-size: rem(26);
 		text-transform: uppercase;
 
 		@media screen and (min-width: $break_sm) {
-			font-size: 36px;
+			font-size: rem(36);
 		}
 	}
 
 	&__place {
-		font-size: 18px;
+		font-size: rem(18);
 
 		@media screen and (min-width: $break_sm) {
-			font-size: 24px;
+			font-size: rem(24);
 		}
 	}
 
@@ -121,48 +121,13 @@
 			justify-content: center;
 			height: 100%;
 			font-family: var(--font-family--bold);
-			font-size: 30px;
+			font-size: rem(30);
 			color: var(--color-light);
-			background-color: var(--color-icon);
+			background-color: var(--color-bg-icon);
 		}
 
 		@media screen and (min-width: $break_xxxl) {
 			height: 40%;
 		}
 	}
-
-	// &__overlay {
-	// 	position: absolute;
-	// 	left: 0;
-	// 	right: 0;
-	// 	top: 0;
-	// 	bottom: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	background-color: rgba(#000, 0.7);
-	// 	mix-blend-mode: hard-light;
-	// }
-
-	// &__days {
-	// 	display: flex;
-	// 	font-family: var(--font-family--bold);
-	// }
-
-	// .day {
-	// 	display: flex;
-	// 	align-items: center;
-	// 	flex-direction: column;
-	// 	width: 20%;
-	// 	min-height: 232px;
-	// 	text-align: center;
-	// 	text-transform: uppercase;
-
-	// 	&__inner {
-	// 		margin: auto;
-
-	// 		> * {
-	// 			&:not(:last-child) { margin-bottom: 16px; }
-	// 		}
-	// 	}
-	// }
 }

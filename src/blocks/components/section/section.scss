@@ -27,10 +27,10 @@
 		}
 
 		.section__title {
-			font-size: 32px;
+			font-size: rem(32);
 
 			@media screen and (min-width: $break_md) {
-				font-size: 50px;
+				font-size: rem(50);
 			}
 		}
 	}

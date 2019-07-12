@@ -17,3 +17,7 @@
 	width: 1px;
 	height: 1px;
 }
+
+@function rem($px) {
+	@return ($px / $font-size) + rem;
+}

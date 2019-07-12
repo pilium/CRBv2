@@ -14,7 +14,7 @@
 		border-radius: var(--border-radius);
 		min-height: 480px;
 		color: var(--color-light);
-		background: var(--gradient-hover);
+		background: var(--gradient-main);
 
 		@media screen and (min-width: $break_xl) {
 			display: block;
@@ -58,7 +58,7 @@
 	&__count--current {
 		display: inline-block;
 		margin-right: 16px;
-		font-size: 60px;
+		font-size: rem(60);
 		line-height: 50px;
 		text-align: center;
 		color: var(--color-light);
@@ -66,7 +66,7 @@
 
 	&__count--total {
 		display: inline-block;
-		font-size: 30px;
+		font-size: rem(30);
 		color: var(--color-text);
 	}
 
@@ -74,7 +74,7 @@
 		position: relative;
 		width: 160px;
 		height: 4px;
-		background-color: var(--color-light);
+		background-color: var(--color-bg-light);
 	}
 
 	&__progress-inner {
@@ -82,7 +82,7 @@
 		left: 0;
 		top: 0;
 		height: 4px;
-		background-color: var(--color-text);
+		background-color: var(--color-text--bg);
 	}
 
 	.glide {

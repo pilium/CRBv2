@@ -25,21 +25,21 @@
 
 	&__title {
 		font-family: var(--font-family--bold);
-		font-size: 24px;
+		font-size: rem(24);
 		line-height: 30px;
 		letter-spacing: 2px;
 
 		@media screen and (min-width: $break_md) {
-			font-size: 43px;
-			line-height: 64px;
+			font-size: rem(43);
+			line-height: 56px;
 		}
 	}
 
 	&__subtitle {
-		font-size: 18px;
+		font-size: rem(18);
 
 		@media screen and (min-width: $break_md) {
-			font-size: 24px;
+			font-size: rem(24);
 		}
 	}
 
@@ -49,8 +49,41 @@
 		@media screen and (min-width: $break_lg) {
 			position: relative;
 			top: 3px;
-			display: block;
+			display: var(--isImgShow, block);
 		}
+	}
+
+	&__btns {
+		display: block;
+
+		.btn {
+			width: 100%;
+
+			@media screen and (min-width: $break_lg) {
+				width: auto;
+			}
+		}
+
+		> * {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+
+				@media screen and (min-width: $break_md) {
+					margin-right: 16px;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		@media screen and (min-width: $break_md) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__icon {
+		width: 32px;
+		height: 32px;
 	}
 
 	@media screen and (min-width: $break_md) {
