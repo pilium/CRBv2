@@ -24,12 +24,13 @@
 	}
 
 	&__title {
+		margin-top: 0;
+		font-family: var(--font-family--semibold);
 		font-size: rem(24);
 		line-height: 30px;
-		margin-top: 0;
 
 		@media screen and (min-width: $break_xs) {
-			font-size: rem(54);
+			font-size: rem(64);
 			line-height: 1.2;
 		}
 	}
@@ -38,6 +39,7 @@
 		font-size: rem(18);
 
 		@media screen and (min-width: $break_md) {
+			font-family: var(--font-family--thin);
 			font-size: rem(24);
 		}
 	}
@@ -51,7 +53,7 @@
 
 		@media screen and (min-width: $break_xl) {
 			position: relative;
-			top: 3px;
+			top: 59px;
 			display: var(--isImgShow, block);
 		}
 	}
