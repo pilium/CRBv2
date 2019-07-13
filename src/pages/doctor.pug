@@ -8,6 +8,16 @@ block vars
 
 block content
 	+breadcrumbs()
+	+section({
+		mods: 'doctor-about',
+		header: false,
+		container: true,
+	})
+		+doctor-about()
+	+section({
+		mods: 'informer',
+	})
+		+informer()
 block scripts
 	script(async src="../js/vendor.js")
-	script(async src="../js/main.js")
+	script(async src="../js/common.js")
