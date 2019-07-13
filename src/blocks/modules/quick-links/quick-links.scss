@@ -4,7 +4,8 @@
 		align-items: center;
 		margin-bottom: 16px;
 		border-bottom: 1px solid var(--color-border-light);
-		padding-bottom: 16px;
+		padding: 8px;
+		width: 100%;
 		word-break: break-word;
 		background-color: var(--color-bg-secondary);
 		cursor: pointer;
@@ -70,7 +71,7 @@
 	}
 
 	&__title {
-		margin-bottom: 0;
+		margin: 0 auto;
 		font-family: var(--font-family--semibold);
 		font-size: rem(20);
 		color: var(--color-title);
@@ -98,8 +99,13 @@
 	}
 
 	&__svg-icon {
-		width: 72px;
-		height: 72px;
+		width: 56px;
+		height: 56px;
+
+		@media screen and (min-width: $break_md) {
+			width: 72px;
+			height: 72px;
+		}
 	}
 
 	.panel {
