@@ -10,13 +10,13 @@
 	&__info {
 		position: relative;
 		display: none;
-		flex: 0 0 30%;
+		flex: 0 0 25%;
 		border-radius: var(--border-radius);
 		min-height: 480px;
 		color: var(--color-light);
 		background: var(--gradient-main);
 
-		@media screen and (min-width: $break_xl) {
+		@media screen and (min-width: $break_xll) {
 			display: block;
 			min-height: 576px;
 		}

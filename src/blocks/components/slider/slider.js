@@ -9,14 +9,11 @@ let sliderNews = new Slider({
 		animationTimingFunc: 'ease',
 		animationDuration: 800,
 		hoverpause: false,
-		gap: 120,
+		gap: 40,
 		breakpoints: {
-			1500: {
-				perView: 2,
-				gap: 60,
-			},
-			1200: {
+			1366: {
 				perView: 1,
+				gap: 0,
 			},
 		},
 	},
@@ -34,11 +31,11 @@ let sliderArticles = new Slider({
 		hoverpause: false,
 		gap: 32,
 		breakpoints: {
-			1500: {
+			1200: {
 				perView: 2,
-				gap: 60,
+				gap: 40,
 			},
-			900: {
+			710: {
 				perView: 1,
 			},
 		},
