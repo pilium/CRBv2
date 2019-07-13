@@ -19,19 +19,18 @@
 	}
 
 	&__titles {
-		margin-bottom: 32px;
+		margin-bottom: 48px;
 		text-transform: uppercase;
 	}
 
 	&__title {
-		font-family: var(--font-family--bold);
 		font-size: rem(24);
 		line-height: 30px;
-		letter-spacing: 2px;
+		margin-top: 0;
 
-		@media screen and (min-width: $break_md) {
-			font-size: rem(43);
-			line-height: 56px;
+		@media screen and (min-width: $break_xs) {
+			font-size: rem(54);
+			line-height: 1.2;
 		}
 	}
 
@@ -46,7 +45,11 @@
 	&__img {
 		display: none;
 
-		@media screen and (min-width: $break_lg) {
+		img {
+			width: auto;
+		}
+
+		@media screen and (min-width: $break_xl) {
 			position: relative;
 			top: 3px;
 			display: var(--isImgShow, block);
@@ -59,14 +62,14 @@
 		.btn {
 			width: 100%;
 
-			@media screen and (min-width: $break_lg) {
+			@media screen and (min-width: $break_xl) {
 				width: auto;
 			}
 		}
 
 		> * {
 			&:not(:last-child) {
-				margin-bottom: 8px;
+				margin-bottom: 16px;
 
 				@media screen and (min-width: $break_md) {
 					margin-right: 16px;
@@ -86,7 +89,7 @@
 		height: 32px;
 	}
 
-	@media screen and (min-width: $break_md) {
+	@media screen and (min-width: $break_xl) {
 		color: var(--color-light);
 	}
 
