@@ -12,7 +12,7 @@
 	&__title-wrapper {
 		display: none;
 
-		@media screen and (min-width: $break_xll) {
+		@media screen and (min-width: $break_xl) {
 			display: block;
 		}
 	}
@@ -29,14 +29,14 @@
 			&:not(:last-child) {
 				margin-bottom: 24px;
 
-				@media screen and (min-width: $break_xl) {
+				@media screen and (min-width: $break_lg) {
 					margin-right: 32px;
 					margin-bottom: 0;
 				}
 			}
 		}
 
-		@media screen and (min-width: $break_xl) {
+		@media screen and (min-width: $break_lg) {
 			display: flex;
 			align-items: center;
 		}
@@ -55,7 +55,11 @@
 		display: flex;
 		align-items: center;
 		flex: 1;
-		justify-content: space-between;
+		justify-content: space-around;
+
+		@media screen and (min-width: $break_xl) {
+			justify-content: space-between;
+		}
 	}
 
 	&__list-item {
