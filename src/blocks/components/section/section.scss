@@ -4,7 +4,7 @@
 	&--hero {
 		padding: 24px 0;
 
-		@media screen and (min-width: $break_md) {
+		@media screen and (min-width: $break_xl) {
 			padding: 0;
 			background: var(--gradient-main);
 		}
@@ -60,7 +60,7 @@
 		}
 
 		.section__title {
-			margin: 0;
+			margin-top: 0;
 		}
 	}
 
