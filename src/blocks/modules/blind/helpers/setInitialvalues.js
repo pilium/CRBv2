@@ -14,6 +14,7 @@ export function setInitialColors() {
 	root.setProperty('--color-text-helper', initialValues.colors.colorTextHelper);
 	root.setProperty('--color-title', initialValues.colors.colorTitle);
 	root.setProperty('--color-link', initialValues.colors.colorLink);
+	root.setProperty('--color-icon', initialValues.colors.colorIcon);
 	root.setProperty('--color-link-hover', initialValues.colors.colorHoverLink);
 	root.setProperty('--color-border', initialValues.colors.colorBorder);
 	root.setProperty('--color-border-light', initialValues.colors.colorBorderLight);

@@ -8,6 +8,7 @@ export const initialValues = {
 		colorTextHelper: String(styles.getPropertyValue('--color-text-helper')).trim(),
 		colorTitle: String(styles.getPropertyValue('--color-title')).trim(),
 		colorLink: String(styles.getPropertyValue('--color-link')).trim(),
+		colorIcon: String(styles.getPropertyValue('--color-icon')).trim(),		
 		colorHoverLink: String(styles.getPropertyValue('--color-link-hover')).trim(),
 		colorBorder: String(styles.getPropertyValue('--color-border')).trim(),
 		colorBorderLight: String(styles.getPropertyValue('--color-border-light')).trim(),

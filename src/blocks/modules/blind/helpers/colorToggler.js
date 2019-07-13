@@ -1,4 +1,5 @@
 import {root, initialValues} from './initialvalues';
+import {setInitialColors} from './setInitialvalues';
 export function colorToggler(e) {
 	let target = e.target.closest('.blind__btn');
 
@@ -7,25 +8,7 @@ export function colorToggler(e) {
 	}
 
 	if (target.classList.contains('blind__color--normal')) {
-		root.setProperty('--color-main', initialValues.colors.colorMain);
-		root.setProperty('--color-text', initialValues.colors.colorText);
-		root.setProperty('--color-text-helper', initialValues.colors.colorTextHelper);
-		root.setProperty('--color-title', initialValues.colors.colorTitle);
-		root.setProperty('--color-link', initialValues.colors.colorLink);
-		root.setProperty('--color-link-hover', initialValues.colors.colorHoverLink);
-		root.setProperty('--color-border', initialValues.colors.colorBorder);
-		root.setProperty('--color-border-light', initialValues.colors.colorBorderLight);
-		root.setProperty('--color-modal', initialValues.colors.colorModal);
-		root.setProperty('--color-light', initialValues.colors.colorLight);
-		root.setProperty('--color-dark', initialValues.colors.colorDark);
-		root.setProperty('--color-bg-body', initialValues.colors.bgBody);
-		root.setProperty('--color-bg-secondary', initialValues.colors.bgSecondary);
-		root.setProperty('--color-bg-light', initialValues.colors.bgLight);
-		root.setProperty('--color-bg-icon', initialValues.colors.bgIcon);
-		root.setProperty('--gradient-main', initialValues.colors.grMain);
-		root.setProperty('--color-bg-text', initialValues.colors.bgText);
-		root.setProperty('--color-hover', initialValues.colors.bgHover);
-		root.setProperty('--color-bg-blind', initialValues.colors.bgBlind);
+		setInitialColors();
 	}
 
 	if (target.classList.contains('blind__color--invrerse')) {

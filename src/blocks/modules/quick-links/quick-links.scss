@@ -11,10 +11,6 @@
 		cursor: pointer;
 		transition: background-color linear 0.3s;
 
-		svg {
-			fill: var(--color-main);
-		}
-
 		> * {
 			&:not(:last-child) {
 				margin-right: 16px;
@@ -101,6 +97,7 @@
 	&__svg-icon {
 		width: 56px;
 		height: 56px;
+		fill: var(--color-icon);
 
 		@media screen and (min-width: $break_md) {
 			width: 72px;
