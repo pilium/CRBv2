@@ -66,11 +66,12 @@
 		&:focus,
 		&:hover {
 			border-color: var(--color-main);
+			color: var(--color-light);
 			background-color: var(--color-main);
 			transition: background-color linear 0.3s, border-color linear 0.3s;
 		}
 
-		@media screen and (min-width: $break_md) {
+		@media screen and (min-width: $break_xl) {
 			border-color: var(--color-light);
 			color: var(--color-light);
 		}
@@ -82,9 +83,8 @@
 
 	&--pill {
 		overflow: hidden;
-		margin: 0 auto;
 		border: 1px solid var(--color-main);
-		width: 95%;
+		width: 100%;
 		font-family: var(--font-family--bold);
 		color: var(--color-main);
 		background-color: var(--color-bg--secondary);
