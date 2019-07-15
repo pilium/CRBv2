@@ -29,7 +29,7 @@ function weatherRender(data) {
 
 const fetchPublicReposCount = async () => {
 	const response = await fetch(
-		`http://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&id=501405&appid=${APIKEY}`
+		`https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&id=501405&appid=${APIKEY}`
 	);
 	const json = await response.json();
 

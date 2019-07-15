@@ -4,16 +4,20 @@ let sliderNews = new Slider({
 	element: document.querySelector('.js-slider--news'),
 	sliderName: 'slider-news',
 	sliderOptions: {
+		type: 'carousel',
 		startAt: 0,
-		perView: 2,
+		perView: 4,
 		animationTimingFunc: 'ease',
 		animationDuration: 800,
 		hoverpause: false,
-		gap: 40,
+		gap: 32,
 		breakpoints: {
-			1366: {
+			1200: {
+				perView: 2,
+				gap: 40,
+			},
+			710: {
 				perView: 1,
-				gap: 0,
 			},
 		},
 	},
@@ -51,26 +55,3 @@ sliderArticles.init();
 sliderArticles.addLiveRegion();
 sliderArticles.showBullets();
 sliderArticles.mount();
-
-// autoheight
-// sliderArticles.on('build.after', () => {
-// 	let slideHeight = document.querySelector('.glide__slide--active').outerHeight();
-// 	let glideTrack = document.querySelector('.glide__track').outerHeight();
-
-// 	if (slideHeight !== glideTrack) {
-// 		let newHeight = slideHeight;
-
-// 		document.querySelector('.glide__track').css('height', newHeight);
-// 	}
-// });
-
-// sliderArticles.on('run.after', () => {
-// 	let slideHeight = document.querySelector('.glide__slide--active').outerHeight();
-// 	let glideTrack = document.querySelector('.glide__track').outerHeight();
-
-// 	if (slideHeight !== glideTrack) {
-// 		let newHeight = slideHeight;
-
-// 		document.querySelector('.glide__track').css('height', newHeight);
-// 	}
-// });

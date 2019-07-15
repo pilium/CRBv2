@@ -10,23 +10,7 @@ mixin slider(props)
 		}
 	.slider.glide.js-glide(class=allMods data-glide-autoplay)
 		.slider__wrapper
-			if (props.info)
-				.slider__info
-					.slider__controls
-						.glide__arrows(data-glide-el="controls")
-							button.glide__arrow.glide__arrow--left(data-glide-dir="<")
-								+icon('arrow--prev', 'glide__arrow-icon')
-							button.glide__arrow.glide__arrow--right(data-glide-dir=">")
-								+icon('arrow--next', 'glide__arrow-icon')
-						.slider__counts
-							.slider__counts-inner
-								span.slider__count--current 01
-								span.slider__count--total
-							.slider__progress
-								.slider__progress-inner.js-slider__progress-inner
-				.glide__bullets(data-glide-el="controls[nav]")
-			if (props.onlyBullets)
-				.glide__bullets(data-glide-el="controls[nav]")
+			.glide__bullets(data-glide-el="controls[nav]")
 			.slider__track
 				.glide__track(data-glide-el="track")
 					ul.glide__slides
