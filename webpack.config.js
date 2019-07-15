@@ -7,6 +7,7 @@ module.exports = {
 		main: './src/js/index.js',
 		common: './src/js/import/pages/common.js',
 		gallery: './src/js/import/pages/gallery.js',
+		afterLoad: './src/js/import/afterLoad.js',
 	},
 	output: {
 		filename: '[name].js',
@@ -52,15 +53,15 @@ module.exports = {
 				parallel: true,
 			}),
 		],
-		splitChunks: {
-			cacheGroups: {
-				vendor: {
-					test: /node_modules/,
-					chunks: 'initial',
-					name: 'vendor',
-					enforce: true,
-				},
-			},
-		},
+		// splitChunks: {
+		// 	cacheGroups: {
+		// 		vendor: {
+		// 			test: /node_modules/,
+		// 			chunks: 'initial',
+		// 			name: 'vendor',
+		// 			enforce: true,
+		// 		},
+		// 	},
+		// },
 	},
 };
