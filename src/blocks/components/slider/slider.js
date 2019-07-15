@@ -25,7 +25,7 @@ let sliderArticles = new Slider({
 	sliderOptions: {
 		type: 'carousel',
 		startAt: 0,
-		perView: 3,
+		perView: 4,
 		animationTimingFunc: 'ease',
 		animationDuration: 800,
 		hoverpause: false,
