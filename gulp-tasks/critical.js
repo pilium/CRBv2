@@ -11,7 +11,6 @@ gulp.task('critical', () =>
 				inline: true,
 				css: ['dist/styles/main.min.css'],
 				minify: true,
-				extract: true,
 			})
 		)
 		.pipe(gulp.dest('dist'))
