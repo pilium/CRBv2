@@ -5,7 +5,7 @@ mixin blind()
 				.blind__row
 					dl.blind__list
 						dt.blind__termin Цвета сайта
-						.blind__determines
+						.blind__determines.blind__determines--color
 							dd
 								button.blind__btn.blind__color--normal.active
 									span Обычный
@@ -27,7 +27,7 @@ mixin blind()
 				.blind__row
 					dl.blind__list
 						dt.blind__termin Шрифт
-						.blind__determines
+						.blind__determines.blind__determines--font
 							dd
 								button.blind__btn.blind__font-sansSerif.active
 									span Без засечек
@@ -49,7 +49,7 @@ mixin blind()
 				.blind__row
 					dl.blind__list
 						dt.blind__termin Расстояние между буквами
-						.blind__determines
+						.blind__determines.blind__determines--ls
 							dd
 								button.blind__btn.blind__int-normal.active(data-class="ls1")
 									span Стандартное
@@ -61,7 +61,7 @@ mixin blind()
 									span Большое
 					dl.blind__list
 						dt.blind__termin Изображения
-						.blind__determines
+						.blind__determines.blind__determines--img
 							dd
 								button.blind__btn.blind__img-on.active
 									span Включить

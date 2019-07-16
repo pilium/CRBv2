@@ -1,11 +1,14 @@
 import {root, initialValues} from './initialvalues';
+import {setLocaleStorage} from './setLocalStorage';
 
 export function setInitialLetterSpacing() {
 	root.setProperty('--letter-spacing', 'normal');
+	setLocaleStorage('letterspacing', 'setInitialLetterSpacing');
 }
 
 export function setInitialImg() {
 	root.setProperty('--isImgShow', 'block');
+	setLocaleStorage('img', 'setInitialImg');
 }
 
 export function setInitialColors() {
@@ -26,13 +29,15 @@ export function setInitialColors() {
 	root.setProperty('--color-bg-light', initialValues.colors.bgLight);
 	root.setProperty('--color-bg-icon', initialValues.colors.bgIcon);
 	root.setProperty('--gradient-main', initialValues.colors.grMain);
-	root.setProperty('--color-bg-text', initialValues.colors.bgText);
+	root.setProperty('--color-text--bg', initialValues.colors.bgText);
 	root.setProperty('--color-hover', initialValues.colors.bgHover);
 	root.setProperty('--color-bg-blind', initialValues.colors.bgBlind);
+	setLocaleStorage('color', 'setInitialColors');
 }
 
 export function setInitialFontSize() {
 	root.setProperty('--font-size', initialValues.fonts.fontSize);
+	setLocaleStorage('fontSize', 'setInitialFontSize');
 }
 
 export function setInitialFont() {
@@ -43,6 +48,7 @@ export function setInitialFont() {
 	root.setProperty('--font-family--thin', 'Exo 2 Thin');
 	root.setProperty('--font-family--semibold', 'Exo 2 Semi Bold');
 	root.setProperty('--font-family--bold', 'Exo 2 Bold');
+	setLocaleStorage('font', 'setInitialFont');
 }
 
 export function resetActiveState() {

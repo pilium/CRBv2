@@ -1,4 +1,5 @@
-import {root, initialValues} from './initialvalues';
+import {setFontSizeSmall, setFontSizeBig} from './setParametrsValue';
+import {setInitialFontSize} from './setInitialvalues';
 export function changeFontSize(e) {
 	let target = e.target.closest('.blind__btn');
 
@@ -7,14 +8,14 @@ export function changeFontSize(e) {
 	}
 
 	if (target.classList.contains('blind__font-size--small')) {
-		root.setProperty('--font-size', `${parseFloat(initialValues.fonts.fontSize) - 2}px`);
+		setFontSizeSmall();
 	}
 
 	if (target.classList.contains('blind__font-size--normal')) {
-		root.setProperty('--font-size', initialValues.fonts.fontSize);
+		setInitialFontSize();
 	}
 
 	if (target.classList.contains('blind__font-size--big')) {
-		root.setProperty('--font-size', `${parseFloat(initialValues.fonts.fontSize) + 2}px`);
+		setFontSizeBig();
 	}
 }

@@ -1,5 +1,5 @@
-import {root} from './initialvalues';
 import {setInitialFont} from './setInitialvalues';
+import {setSerifFont} from './setParametrsValue';
 export function changeFont(e) {
 	let target = e.target.closest('.blind__btn');
 
@@ -12,9 +12,6 @@ export function changeFont(e) {
 	}
 
 	if (target.classList.contains('blind__font-serif')) {
-		root.setProperty('--font-family--default', 'serif');
-		root.setProperty('--font-family--thin', 'serif');
-		root.setProperty('--font-family--semibold', 'serif');
-		root.setProperty('--font-family--bold', 'serif');
+		setSerifFont();
 	}
 }

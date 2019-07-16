@@ -6,6 +6,7 @@ import {
 	setInitialFont,
 	resetActiveState,
 } from './setInitialvalues';
+import {resetParametrs} from './setLocalStorage';
 const resetTrigger = document.querySelector('.blind__control--reset');
 
 export function resetBlindParametrs() {
@@ -15,6 +16,7 @@ export function resetBlindParametrs() {
 	setInitialFontSize();
 	setInitialFont();
 	resetActiveState();
+	resetParametrs();
 }
 
 resetTrigger.addEventListener('click', resetBlindParametrs);

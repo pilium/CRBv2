@@ -1,28 +1,28 @@
 export const root = document.documentElement.style;
-let styles = getComputedStyle(document.documentElement);
 
 export const initialValues = {
 	colors: {
-		colorMain: String(styles.getPropertyValue('--color-main')).trim(),
-		colorText: String(styles.getPropertyValue('--color-text')).trim(),
-		colorTextHelper: String(styles.getPropertyValue('--color-text-helper')).trim(),
-		colorTitle: String(styles.getPropertyValue('--color-title')).trim(),
-		colorLink: String(styles.getPropertyValue('--color-link')).trim(),
-		colorIcon: String(styles.getPropertyValue('--color-icon')).trim(),		
-		colorHoverLink: String(styles.getPropertyValue('--color-link-hover')).trim(),
-		colorBorder: String(styles.getPropertyValue('--color-border')).trim(),
-		colorBorderLight: String(styles.getPropertyValue('--color-border-light')).trim(),
-		colorModal: String(styles.getPropertyValue('--color-modal')).trim(),
-		colorLight: String(styles.getPropertyValue('--color-light')).trim(),
-		colorDark: String(styles.getPropertyValue('--color-dark')).trim(),
-		bgIcon: String(styles.getPropertyValue('--color-bg-icon')).trim(),
-		bgText: String(styles.getPropertyValue('--color-bg-text')).trim(),
-		bgHover: String(styles.getPropertyValue('--color-hover')).trim(),
-		bgBlind: String(styles.getPropertyValue('--color-bg-blind')).trim(),
-		bgBody: String(styles.getPropertyValue('--color-bg-body')).trim(),
-		bgLight: String(styles.getPropertyValue('--color-bg-light')).trim(),
-		bgSecondary: String(styles.getPropertyValue('--color-bg-secondary')).trim(),
-		grMain: String(styles.getPropertyValue('--gradient-main')).trim(),
+		colorMain: '#1a7977',
+		colorText: '#4a5d5b',
+		colorTextHelper: '#505050',
+		colorTitle: '#223837',
+		colorLink: '#27615e',
+		colorIcon: '#3e9892',
+		colorHoverLink: '#55c8c0',
+		colorBorder: '#2e8884',
+		colorBorderLight: '#cedada',
+		colorModal: '#6e768e',
+		colorLight: '#fff',
+		colorDark: '#000',
+		bgIcon: '#3e9892',
+		bgText: '#4a5d5b',
+		bgHover: '#55c8c0',
+		bgBlind: '#000',
+		bgBody: '#f0f1f4',
+		bgLight: '#fff',
+		bgSecondary: '#f2f7f7',
+		grMain:
+			'linear-gradient(130.72013189013455deg, var(--color-main) 0.927083333333334%, hsl(183, 55%, 47%) 97.84374999999999%)',
 	},
 
 	fonts: {
@@ -30,6 +30,6 @@ export const initialValues = {
 		'thin': 'Exo 2 Thin',
 		'semibold': 'Exo 2 Semi Bold',
 		'bold': 'Exo 2 Bold',
-		'fontSize': String(styles.getPropertyValue('--font-size')).trim(),
+		'fontSize': '16px',
 	},
 };

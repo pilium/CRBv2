@@ -1,4 +1,5 @@
-import {root} from './initialvalues';
+import {setLetterSpacingMiddle, setLetterSpacingBig} from './setParametrsValue';
+import {setInitialLetterSpacing} from './setInitialvalues';
 export function letterSpacingToggler(e) {
 	let target = e.target.closest('.blind__btn');
 
@@ -7,14 +8,14 @@ export function letterSpacingToggler(e) {
 	}
 
 	if (target.classList.contains('blind__int-normal')) {
-		root.setProperty('--letter-spacing', 'normal');
+		setInitialLetterSpacing();
 	}
 
 	if (target.classList.contains('blind__int-middle')) {
-		root.setProperty('--letter-spacing', '1px');
+		setLetterSpacingMiddle();
 	}
 
 	if (target.classList.contains('blind__int-big')) {
-		root.setProperty('--letter-spacing', '2px');
+		setLetterSpacingBig();
 	}
 }

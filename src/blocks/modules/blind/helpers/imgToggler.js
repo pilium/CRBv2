@@ -1,4 +1,5 @@
-import {root} from './initialvalues';
+import {setImgOff} from './setParametrsValue';
+import {setInitialImg} from './setInitialvalues';
 export function imgToggler(e) {
 	let target = e.target.closest('.blind__btn');
 
@@ -7,10 +8,10 @@ export function imgToggler(e) {
 	}
 
 	if (target.classList.contains('blind__img-on')) {
-		root.setProperty('--isImgShow', 'block');
+		setInitialImg();
 	}
 
 	if (target.classList.contains('blind__img-off')) {
-		root.setProperty('--isImgShow', 'none');
+		setImgOff();
 	}
 }
