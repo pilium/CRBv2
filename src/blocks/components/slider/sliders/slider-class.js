@@ -37,7 +37,9 @@ export class Slider {
 			let button = document.createElement('button');
 
 			button.classList.add('glide__bullet');
+			button.classList.add('hide-text');
 			button.setAttribute('tabindex', '-1');
+			button.setAttribute('aria-label', `перейти на слайд ${i + 1}`);
 			button.setAttribute('data-glide-dir', `=${i}`);
 
 			this.sliderBullets.appendChild(button);

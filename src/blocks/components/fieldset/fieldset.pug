@@ -6,6 +6,8 @@ mixin fieldset(props)
 			block
 	else
 		fieldset.fieldset.fieldset--no-step
-			if(!props.legendHidden)
+			if (props.legendHidden)
+				legend.fieldset__legend.hide-text= props.legend
+			else 
 				legend.fieldset__legend= props.legend
 			block

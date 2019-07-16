@@ -8,8 +8,7 @@ mixin input-text(props)
 			}
 		}
 	.input-text(class= allMods)
-		label.input-text__label(for= props.id)
-			span= props.text
+		label.input-text__label(for= props.id)= props.text
 			if(props.required)
 				strong
 					abbr.input-text__required(title="обязательное поле")  *

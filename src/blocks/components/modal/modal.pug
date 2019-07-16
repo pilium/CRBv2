@@ -1,7 +1,7 @@
 mixin modal(props)
 	.modal.micromodal-slide(aria-hidden="true" id= props.id aria-modal="true")
 		.modal__overlay(tabindex="-1" data-micromodal-close)
-			.modal__container.simplebar(role="dialog" aria-modal="true" aria-labelledby= `${props.id} ${props.labelledby}` aria-describedby= props.description data-simplebar)
+			.modal__container.simplebar(role="dialog" aria-modal="true" aria-describedby= props.description data-simplebar)
 				.modal__wrapper(role="document")
 					header.modal__header
 						h2.modal__title= props.title

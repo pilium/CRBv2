@@ -83,6 +83,13 @@
 			width: auto;
 			height: auto;
 			text-align: center;
+
+			&:hover,
+			&:focus {
+				+ .submenu {
+					display: block;
+				}
+			}
 		}
 	}
 
