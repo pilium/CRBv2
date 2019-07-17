@@ -68,6 +68,7 @@
 		width: 100%;
 		height: 100%;
 		text-align: center;
+		color: var(--color-dark);
 
 		@media screen and (min-width: $break_sm) {
 			flex: 1;

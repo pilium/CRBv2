@@ -3,69 +3,69 @@ mixin blind()
 		.container
 			.blind__inner
 				.blind__row
-					dl.blind__list
-						dt.blind__termin Цвета сайта
-						.blind__determines.blind__determines--color
-							dd
+					.blind__list
+						span.blind__termin Цвета сайта
+						ul.blind__determines.blind__determines--color
+							li
 								button.blind__btn.blind__color--normal.active
 									span Обычный
-							dd
+							li
 								button.blind__btn.blind__color--invrerse
 									span Инверсия
-							dd
+							li
 								button.blind__btn.blind__color--contrast
 									span Контраст
-							dd
+							li
 								button.blind__btn.blind__color--comfort
 									span Комфорт
-							dd
+							li
 								button.blind__btn.blind__color--blue
 									span Синий
-							dd
+							li
 								button.blind__btn.blind__color--brown
 									span Коричневый
 				.blind__row
-					dl.blind__list
-						dt.blind__termin Шрифт
-						.blind__determines.blind__determines--font
-							dd
+					.blind__list
+						span.blind__termin Шрифт
+						ul.blind__determines.blind__determines--font
+							li
 								button.blind__btn.blind__font-sansSerif.active
 									span Без засечек
-							dd
+							li
 								button.blind__btn.blind__font-serif
 									span С засечками
-					dl.blind__list
-						dt.blind__termin Размер шрифта
-						.blind__determines.blind__determines--fz
-							dd
+					.blind__list
+						span.blind__termin Размер шрифта
+						ul.blind__determines.blind__determines--fz
+							li
 								button.blind__btn.blind__font-size.blind__font-size--small
 									span A
-							dd
+							li
 								button.blind__btn.blind__font-size.blind__font-size--normal.active
 									span A
-							dd
+							li
 								button.blind__btn.blind__font-size.blind__font-size--big
 									span A
 				.blind__row
-					dl.blind__list
-						dt.blind__termin Расстояние между буквами
-						.blind__determines.blind__determines--ls
-							dd
+					.blind__list
+						span.blind__termin Расстояние между буквами
+						ul.blind__determines.blind__determines--ls
+							li
 								button.blind__btn.blind__int-normal.active(data-class="ls1")
 									span Стандартное
-							dd
+							li
 								button.blind__btn.blind__int-middle(data-class="ls2")
 									span Среднее
-							dd
+							li
 								button.blind__btn.blind__int-big(data-class="ls3")
 									span Большое
-					dl.blind__list
-						dt.blind__termin Изображения
-						.blind__determines.blind__determines--img
-							dd
+					.blind__list
+						span.blind__termin Изображения
+						ul.blind__determines.blind__determines--img
+							li
 								button.blind__btn.blind__img-on.active
 									span Включить
-							dd
+							li
 								button.blind__btn.blind__img-off
 									span Выключить
 				button.blind__control.blind__control--close(aria-label="Закрыть панель настройки") Х

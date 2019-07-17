@@ -1,5 +1,5 @@
 mixin submenu(data)
 	ul.submenu(role="menu" aria-label=data.label)
 		each item in data.list
-			li.submenu__item(role="none")
+			li.submenu__item
 				a.link.submenu__link(href=item.href title=item.title)= item.text

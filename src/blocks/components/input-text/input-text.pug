@@ -17,7 +17,13 @@ mixin input-text(props)
 				+icon(props.valideIconAccept,'input-text__validation__icon icon-valid')
 				+icon(props.valideIconError,'input-text__validation__icon icon-invalid')
 			if(typeof(props.isTextarea) !== 'undefined' && props.isTextarea)
-				textarea.input-text__input(name= props.name id= props.id aria-required=(props.required) ? true : false aria-describedby= props.helpId placeholder= props.ph required=(props.required ? true : false))&attributes(attributes)
+				if (props.required)
+					textarea.input-text__input(name= props.name id= props.id aria-describedby= props.helpId placeholder= props.ph required)&attributes(attributes)
+				else
+					textarea.input-text__input(name= props.name id= props.id aria-describedby= props.helpId placeholder= props.ph)&attributes(attributes)
 			else
-				input.input-text__input(type= props.type name= props.name id= props.id aria-required=(props.required) ? true : false aria-describedby= props.helpId placeholder= props.ph required=(props.required ? true : false))&attributes(attributes)
+				if (props.required)
+					input.input-text__input(type= props.type name= props.name id= props.id aria-describedby= props.helpId placeholder= props.ph required)&attributes(attributes)
+				else
+					input.input-text__input(type= props.type name= props.name id= props.id aria-describedby= props.helpId placeholder= props.ph)&attributes(attributes)
 		small.form-text.text-muted(id= props.helpId)= props.helpText

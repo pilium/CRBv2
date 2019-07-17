@@ -1,12 +1,12 @@
 mixin modal(props)
-	.modal.micromodal-slide(aria-hidden="true" id= props.id aria-modal="true")
+	.modal.micromodal-slide(aria-hidden="true" id= props.id aria-modal="true" role="dialog")
 		.modal__overlay(tabindex="-1" data-micromodal-close)
-			.modal__container.simplebar(role="dialog" aria-modal="true" aria-describedby= props.description data-simplebar)
+			.modal__container.simplebar(role="dialog" aria-modal="true" data-simplebar)
 				.modal__wrapper(role="document")
-					header.modal__header
+					.modal__header
 						h2.modal__title= props.title
 						button.modal__close(aria-label="Закрыть модальное окно" data-micromodal-close)
-					main.modal__content
+					.modal__content
 						//- +preloader()
 						//- dynamic content
 						.modal__inner
@@ -26,7 +26,7 @@ mixin modal(props)
 									icon: 'question',
 									text: 'Вопрос',
 								})
-							section.d-content
+							.d-content
 								.d-content__inner
 									form(action="#" method="GET")
 										+fieldset({
@@ -47,7 +47,7 @@ mixin modal(props)
 												required: true,
 											})
 											+input-text({
-												type: 'mail',
+												type: 'email',
 												id: 'feedback-mail',
 												name: 'feedback-mail',
 												ph: 'Введите ваш email',
@@ -58,7 +58,7 @@ mixin modal(props)
 												helpText: 'текст подсказки',
 												validateIcons: true,
 												required: true,
-											})(autocapitalize="off" autocomplete="email" autocorrect="off")
+											})(autocapitalize="off" autocomplete="email")
 										.dynamic-modal
 											//- +fieldset({
 											//- 	step: 2,
@@ -206,7 +206,7 @@ mixin modal(props)
 											})
 												span Google captcha
 					if(props.footer)
-						footer.modal__footer
+						.modal__footer
 							+polite({
 								title: 'Принимаю',
 							})

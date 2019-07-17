@@ -39,7 +39,7 @@ if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window) {
 						lazyImages = lazyImages.filter((image) => image !== lazyImage);
 
 						if (lazyImages.length === 0) {
-							document.removeEventListener('scroll', lazyLoad);
+							document.removeEventListener('scroll', lazyLoad, {passive: true});
 							window.removeEventListener('resize', lazyLoad);
 							window.removeEventListener('orientationchange', lazyLoad);
 						}
@@ -51,7 +51,7 @@ if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window) {
 		}
 	};
 
-	document.addEventListener('scroll', lazyLoad);
+	document.addEventListener('scroll', lazyLoad, {passive: true});
 	window.addEventListener('resize', lazyLoad);
 	window.addEventListener('orientationchange', lazyLoad);
 }

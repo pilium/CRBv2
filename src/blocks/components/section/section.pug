@@ -23,6 +23,7 @@ mixin section(props)
 				+section-header({
 					title: props.title,
 					link: props.link,
+					href: props.href,
 				})
 			block
 
@@ -30,4 +31,4 @@ mixin section-header(props)
 	.section__header
 		h2.section__title= props.title			
 		if(props.link)
-			a.link.link--section(href= props.href rel="noopener" target="_blanc")= props.link
+			a.link.link--section(href= props.href rel="noopener" target="blanc")= props.link

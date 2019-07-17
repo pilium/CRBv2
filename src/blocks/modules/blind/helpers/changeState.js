@@ -5,7 +5,7 @@ export function changeState(e) {
 		return;
 	}
 
-	let targetContainer = target.closest('.blind__determines');
+	let targetContainer = target.closest('.blind__list');
 	const targetContainerButtons = targetContainer.querySelectorAll('button');
 
 	for (let i = 0; i < targetContainerButtons.length; i++) {
