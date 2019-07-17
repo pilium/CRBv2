@@ -4,6 +4,7 @@ append vars
 	- bodyClass = 'main'
 	- var title = 'ЦРБ Волгодонского района'
 	- var description = 'Муниципальное бюджетное учреждение здравоохранения "Центральная районная больница" волгодонского района ростовской области'
+	- var keywords = 'ЦРБ волгодонского района, црб романовская, больница романовская, больница волгодонского района'
 
 block content
 	+section({
@@ -141,5 +142,6 @@ block content
 		})
 			+map()
 block scripts
+	link(rel="stylesheet" href="./styles/main.css")
 	//- script(defer src="./js/vendor.js")
-	script(defer src="./js/main.js")
+	script(async src="./js/main.js")

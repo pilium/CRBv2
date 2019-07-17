@@ -15,11 +15,11 @@ html(lang="ru")
 		include ../includes/head
 	body(class= bodyClass)
 		.main-wrapper
-			+blind()
 			block header
 				include ../../blocks/modules/header/header
 			main.main
 				block content
 			block footer
+				+blind()
 				include ../../blocks/modules/footer/footer
-			block scripts	
+			block scripts

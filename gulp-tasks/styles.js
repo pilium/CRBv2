@@ -14,13 +14,16 @@ import yargs from 'yargs';
 const argv = yargs.argv;
 const production = !!argv.production;
 
-gulp.task('styles', () => gulp.src('./src/styles/main.scss')
+gulp.task('styles', () => gulp.src(
+	[	'./src/styles/main.scss',
+		'./src/styles/critical.scss',
+	])
 	.pipe(gulpif(!production, sourcemaps.init()))
 	.pipe(plumber())
 	.pipe(sass())
 	.pipe(groupmedia())
 	.pipe(gulpif(production, autoprefixer({
-		browsers: ['last 12 versions', '> 1%', 'ie 8', 'ie 7'],
+		browsers: ['last 2 versions'],
 	})))
 	.pipe(gulpif(production, mincss({
 		compatibility: 'ie8',
