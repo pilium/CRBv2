@@ -1,0 +1,65 @@
+mixin ie-hack()
+	.ie-hack
+		.ie-hack__header
+			h2.ie-hack__title Ваш браузер устарел и не поддерживается нашим сайтом
+			p.ie-hack__text К сожалению, браузер, которым вы пользуйтесь, устарел, и не может нормально отображать сайт. Пожалуйста, скачайте любой из следующих браузеров:
+		ul.ie-hack__list
+			+ie-hack__item({
+				tag: 'g',
+				name: 'Google Chrome',
+				href: 'https://www.google.com/chrome/browser/desktop/',
+				version: '49'
+			})
+			+ie-hack__item({
+				tag: 'f',
+				name: 'Mozilla Firefox',
+				href: 'https://www.mozilla.org/ru/firefox/new/',
+				version: '36'
+			})
+			+ie-hack__item({
+				tag: 'e',
+				name: 'Atom',
+				href: 'https://browser.ru/',
+				version: 'Последняя'
+			})
+			+ie-hack__item({
+				tag: 's',
+				name: 'Vivaldi',
+				href: 'https://vivaldi.com/ru/download/',
+				version: 'Последняя'
+			})
+			+ie-hack__item({
+				tag: 'o',
+				name: 'Opera',
+				href: 'https://www.opera.com/ru',
+				version: '36'
+			})
+			+ie-hack__item({
+				tag: 'y',
+				name: 'Яндекс браузер',
+				href: 'https://browser.yandex.ru/',
+				version: 'Последняя'
+			})
+mixin ie-hack__item(props)
+	li.ie-hack__item(class=`ie-hack__item--${props.tag}`)
+		.ie-hack__item-center
+			h3= props.name
+			.ie-hack__img
+		.ie-hack__download
+			a.ie-hack__browserlink(href= props.href target="blank" rel="noopener noreferrer") Скачать
+		.ie-hack__available
+			p Доступно для
+			+available__platforms()
+		.ie-hack__minVersion
+			span.ie-hack__version Минимальная версия:
+			span
+				b= props.version
+			
+mixin available__platforms(col)
+	ul.ie-hack__platforms
+		li.ie-hack__platform.ie-hack__platform--win
+			span Windows
+		li.ie-hack__platform.ie-hack__platform--mac
+			span Mac
+		li.ie-hack__platform.ie-hack__platform--lin
+			span Linux

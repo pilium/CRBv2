@@ -1,31 +1,6 @@
 import '../common.js';
 
-document.addEventListener('mousewheel', event => {
-
-}, { passive: true });
-
-document.addEventListener('wheel', event => {
-
-}, { passive: true });
-
-document.addEventListener('scroll', event => {
-
-}, { passive: true });
-
-
-document.addEventListener('touchstart', event => {
-
-}, { passive: true });
-
-document.addEventListener('touchend', event => {
-
-}, { passive: true });
-
-document.addEventListener('touchmove', event => {
-
-}, { passive: true });
-
-function jivo() {
+function al() {
 	let d = document;
 	let w = window;
 
@@ -47,5 +22,5 @@ function jivo() {
 	}
 }
 
-setTimeout(jivo, 100);
+setTimeout(al, 100);
 

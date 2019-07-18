@@ -41,12 +41,9 @@
 		}
 	}
 
-	&--informer {
-		padding: 0;
-	}
-
 	&--map,
-	&--weather {
+	&--weather,
+	&--informer {
 		padding: 0;
 	}
 }

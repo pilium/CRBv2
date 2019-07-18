@@ -13,3 +13,5 @@ import '%modules%/tel-mobile/tel-mobile.js';
 import '%modules%/sandwich/sandwich.js';
 import '%modules%/menu/menu.js';
 import '../lazyloadImg.js';
+import '%modules%/ie-hack/ie-hack.js';
+import '%components%/preloader/preloader.js';

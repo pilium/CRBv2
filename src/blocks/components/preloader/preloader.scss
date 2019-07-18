@@ -4,10 +4,10 @@
 	right: 0;
 	top: 0;
 	bottom: 0;
-	z-index: 9999;
+	z-index: 9;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(#fff, 0.6);
+	background-color: #fff;
 
 	&__icon {
 		position: absolute;
@@ -17,8 +17,8 @@
 	}
 
 	&__path {
-		fill: var(--color-main);
-		stroke: var(--color-bg-icon);
+		fill: #1a7977;
+		stroke: #3e9892;
 
 		&--1 { animation: visible 2s ease 0.2s infinite; }
 		&--2 { animation: visible 2s ease 0.4s infinite; }
@@ -44,6 +44,11 @@
 				transform-origin: 0% 100%;
 			}
 		}
+	}
+
+	&--main {
+		position: fixed;
+		z-index: 11;
 	}
 }
 

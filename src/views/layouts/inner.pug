@@ -15,13 +15,15 @@ html(lang="ru")
 	head
 		include ../includes/head
 	body(class= bodyClass)
+		+preloader({
+			class: 'preloader--main',
+		})
 		.main-wrapper
-			+blind()
 			block header
 				include ../../blocks/modules/header/header
 			main.main
 				block content
 			block footer
-				link(rel="stylesheet" href="./styles/main.css")
+				+blind()
 				include ../../blocks/modules/footer/footer
 			block scripts	

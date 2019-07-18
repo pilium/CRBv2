@@ -14,7 +14,7 @@
 	color: var(--color-light);
 	cursor: pointer;
 	user-select: none;
-	transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+	transition: background-color 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), border-color 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 
 	&__icon {
 		position: relative;
@@ -68,7 +68,7 @@
 			border-color: var(--color-main);
 			color: var(--color-light);
 			background-color: var(--color-main);
-			transition: background-color linear 0.3s, border-color linear 0.3s;
+			transition: background-color 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), border-color 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 		}
 
 		@media screen and (min-width: $break_xl) {

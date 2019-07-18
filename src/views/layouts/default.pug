@@ -14,7 +14,9 @@ html(lang="ru")
 	head
 		include ../includes/head
 	body(class= bodyClass)
-		+ie-hack()
+		+preloader({
+			class: 'preloader--main',
+		})
 		.main-wrapper
 			block header
 				include ../../blocks/modules/header/header

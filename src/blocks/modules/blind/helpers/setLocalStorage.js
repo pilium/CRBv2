@@ -8,7 +8,7 @@ let blindParametrs = {
 
 export function setLocaleStorage(type, target) {
 	if (!target || !type) {
-		console.error('Не определен target или type функции setLocaleStorage');
+		throw new ReferenceError('Не определен target или type функции setLocaleStorage');
 	}
 
 	switch (type) {

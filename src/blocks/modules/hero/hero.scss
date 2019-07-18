@@ -38,11 +38,11 @@
 	&__title {
 		margin-top: 0;
 		font-family: var(--font-family--semibold);
-		font-size: rem(24);
+		font-size: rem(28);
 		line-height: 30px;
 
 		@media screen and (min-width: $break_xs) {
-			font-size: rem(64);
+			font-size: rem(56);
 			line-height: 1.2;
 		}
 	}
