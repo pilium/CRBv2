@@ -1,8 +1,8 @@
 import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 import gulp from 'gulp';
-import gulpif from 'gulp-if';
-import rename from 'gulp-rename';
+// import gulpif from 'gulp-if';
+// import rename from 'gulp-rename';
 import browsersync from 'browser-sync';
 import debug from 'gulp-debug';
 import yargs from 'yargs';
@@ -16,9 +16,9 @@ webpackConfig.devtool = production ? false : 'source-map';
 
 gulp.task('scripts', () => gulp.src('./src/js/index.js')
 	.pipe(webpackStream(webpackConfig), webpack)
-	.pipe(gulpif(production, rename({
-		suffix: '.min',
-	})))
+	// .pipe(gulpif(production, rename({
+	// 	suffix: '.min',
+	// })))
 	.pipe(gulp.dest('./dist/js/'))
 	.pipe(debug({
 		title: 'JS files',
