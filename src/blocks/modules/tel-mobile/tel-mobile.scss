@@ -2,7 +2,7 @@
 	position: fixed;
 	right: 8px;
 	bottom: 8px;
-	z-index: 998;
+	z-index: 9;
 	line-height: 0;
 
 	.link-text {
@@ -19,6 +19,11 @@
 		line-height: var(--line-height);
 		background-color: var(--color-bg-secondary);
 		transition: left linear 0.3s;
+	}
+
+	.button__icon {
+		border-radius: 50%;
+		background-color: var(--color-bg-light);
 	}
 
 	&__svg-icon {
