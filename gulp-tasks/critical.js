@@ -9,7 +9,7 @@ gulp.task('critical', () =>
 			critical({
 				base: 'dist/',
 				inline: true,
-				css: ['dist/styles/main.min.css'],
+				css: ['dist/styles/critical.min.css'],
 				minify: true,
 			})
 		)
