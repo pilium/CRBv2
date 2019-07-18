@@ -15,7 +15,8 @@ const argv = yargs.argv;
 const production = !!argv.production;
 
 gulp.task('styles', () => gulp.src(
-	[	'./src/styles/main.scss',
+	[
+		'./src/styles/main.scss',
 		'./src/styles/critical.scss',
 	])
 	.pipe(gulpif(!production, sourcemaps.init()))
@@ -23,10 +24,10 @@ gulp.task('styles', () => gulp.src(
 	.pipe(sass())
 	.pipe(groupmedia())
 	.pipe(gulpif(production, autoprefixer({
-		browsers: ['last 2 versions'],
+		browsers: ['last 1 versions', '> 1%', 'IE 11'],
 	})))
 	.pipe(gulpif(production, mincss({
-		compatibility: 'ie8',
+		compatibility: 'ie10',
 		level: {
 			1: {
 				specialComments: 0,
