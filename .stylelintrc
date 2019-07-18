@@ -7,9 +7,10 @@
 		"stylelint-scss",
 		"stylelint-order",
 		"stylelint-images",
-		"stylelint-high-performance-animation",
 		"stylelint-declaration-block-no-ignored-properties",
-		"stylelint-a11y"
+		"stylelint-a11y",
+		"stylelint-group-selectors",
+		"stylelint-z-index-value-constraint",
 	],
 	"rules": {
 		"plugin/8-point-grid": {
@@ -51,6 +52,10 @@
 				]
 			}
 		],
+		"plugin/z-index-value-constraint": {
+			"min": 1,
+			"max": 11,
+		},
 		"block-no-empty": null,
 		"color-named": "never",
 		"function-url-quotes": "always",
