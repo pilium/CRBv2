@@ -15,6 +15,7 @@ export const initialValues = {
 		colorLight: '#fff',
 		colorDark: '#000',
 		bgIcon: '#3e9892',
+		bgMain: '#1a7977',
 		bgText: '#4a5d5b',
 		bgHover: '#55c8c0',
 		bgBlind: '#000',
@@ -27,7 +28,6 @@ export const initialValues = {
 
 	fonts: {
 		'default': '"Exo 2", -apple-system, BlinkMacSystemFont, "Ubuntu", "Arial", sans-serif',
-		'thin': 'Exo 2 Thin',
 		'semibold': 'Exo 2 Semi Bold',
 		'bold': 'Exo 2 Bold',
 		'fontSize': '16px',

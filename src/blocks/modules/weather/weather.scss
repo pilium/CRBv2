@@ -7,14 +7,22 @@
 		border-radius: var(--border-radius);
 		width: 100%;
 		height: 100%;
+		color: var(--color-light);
 
 		@media screen and (min-width: $break_xxxl) {
 			position: absolute;
 			left: 0;
 			top: 0;
-			background: url("../img/snow.jpg") no-repeat top center;
-			background-size: cover;
 		}
+	}
+
+	&__img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
 	}
 
 	&__wrapper {
@@ -24,13 +32,14 @@
 	}
 
 	&__info {
+		position: relative;
+		z-index: 2;
 		display: flex;
 		align-items: center;
 		flex: 1;
 		justify-content: space-around;
 		padding: 8px;
-		color: var(--color-dark);
-		background-color: var(--color-bg-icon);
+		background-color: var(--color-bg-main);
 
 		@media screen and (min-width: $break_xxxl) {
 			height: 40%;
@@ -68,7 +77,7 @@
 		width: 100%;
 		height: 100%;
 		text-align: center;
-		color: var(--color-dark);
+		color: var(--color-light);
 
 		@media screen and (min-width: $break_sm) {
 			flex: 1;
@@ -107,13 +116,24 @@
 		}
 	}
 
+	&__svg-icon,
+	&__refresh-icon {
+		fill: var(--color-light);
+	}
+
 	&__svg-icon {
 		width: 32px;
 		height: 32px;
-		fill: var(--color-dark);
+	}
+
+	&__refresh-icon {
+		width: 24px;
+		height: 24px;
 	}
 
 	&__date {
+		position: relative;
+		z-index: 2;
 		display: none;
 
 		@media screen and (min-width: $break_md) {
@@ -124,12 +144,28 @@
 			height: 100%;
 			font-family: var(--font-family--bold);
 			font-size: rem(30);
-			color: var(--color-dark);
-			background-color: var(--color-bg-icon);
+			background-color: var(--color-bg-main);
 		}
 
 		@media screen and (min-width: $break_xxxl) {
 			height: 40%;
+		}
+	}
+
+	&__update {
+		position: absolute;
+		left: 8px;
+		top: 8px;
+		z-index: 2;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		border-radius: var(--border-radius);
+		padding: 8px;
+		background-color: var(--color-bg-icon);
+
+		@media screen and (min-width: $break_md) {
+			display: flex;
 		}
 	}
 }

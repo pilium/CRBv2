@@ -15,6 +15,7 @@ html {
 	--color-modal: #6e768e;
 	--color-bg-secondary: #f2f7f7;
 	--color-bg-icon: #3e9892;
+	--color-bg-main: #1a7977;
 	--color-light: #fff;
 	--color-bg-light: #fff;
 	--color-dark: #000;
@@ -36,6 +37,7 @@ html {
 	// Gradients
 	--gradient-main: linear-gradient(130.72013189013455deg, var(--color-main) 0.927083333333334%, hsl(183, 55%, 47%) 97.84374999999999%);
 
+
 	// Font
 	--font-size: 16px;
 	--font-size-h1: 2.5rem;
@@ -46,7 +48,6 @@ html {
 	--font-size-h6: var(--font-size);
 	--line-height: 1.5;
 	--font-family--default: "Exo 2", -apple-system, BlinkMacSystemFont, "Ubuntu", "Arial", sans-serif;
-	--font-family--thin: "Exo 2 Thin";
 	--font-family--semibold: "Exo 2 Semi Bold";
 	--font-family--bold: "Exo 2 Bold";
 

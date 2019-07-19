@@ -12,7 +12,6 @@ import {setActiveState} from './setActiveState';
 
 export function setSerifFont() {
 	root.setProperty('--font-family--default', 'serif');
-	root.setProperty('--font-family--thin', 'serif');
 	root.setProperty('--font-family--semibold', 'serif');
 	root.setProperty('--font-family--bold', 'serif');
 	setLocaleStorage('font', 'setSerifFont');
@@ -59,6 +58,7 @@ export function setColorsInvers() {
 	root.setProperty('--color-bg-body', '#000');
 	root.setProperty('--color-bg-secondary', '#000');
 	root.setProperty('--color-bg-icon', '#000');
+	root.setProperty('--color-bg-main', '#000');
 	root.setProperty('--color-bg-light', '#000');
 	root.setProperty('--gradient-main', '#000');
 	root.setProperty('--color-text--bg', '#000');
@@ -83,6 +83,7 @@ export function setColorsContrast() {
 	root.setProperty('--color-bg-body', '#fff');
 	root.setProperty('--color-bg-secondary', '#fff');
 	root.setProperty('--color-bg-icon', '#fff');
+	root.setProperty('--color-bg-main', '#fff');
 	root.setProperty('--color-bg-light', '#fff');
 	root.setProperty('--color-text--bg', '#fff');
 	root.setProperty('--gradient-main', '#fff');
@@ -106,6 +107,7 @@ export function setColorsComfort() {
 	root.setProperty('--color-bg-body', '#e5ded6');
 	root.setProperty('--color-bg-secondary', '#e5ded6');
 	root.setProperty('--color-bg-icon', '#e5ded6');
+	root.setProperty('--color-bg-main', '#e5ded6');
 	root.setProperty('--color-text--bg', '#e5ded6');
 	root.setProperty('--color-bg-light', '#e5ded6');
 	root.setProperty('--gradient-main', '#e5ded6');
@@ -129,6 +131,7 @@ export function setColorsBlue() {
 	root.setProperty('--color-bg-body', '#9dd1ff');
 	root.setProperty('--color-bg-secondary', '#9dd1ff');
 	root.setProperty('--color-bg-icon', '#9dd1ff');
+	root.setProperty('--color-bg-main', '#9dd1ff');
 	root.setProperty('--color-text--bg', '#9dd1ff');
 	root.setProperty('--color-bg-light', '#9dd1ff');
 	root.setProperty('--gradient-main', '#9dd1ff');
@@ -152,6 +155,7 @@ export function setColorsBrown() {
 	root.setProperty('--color-bg-body', '#3b2716');
 	root.setProperty('--color-bg-secondary', '#3b2716');
 	root.setProperty('--color-bg-icon', '#3b2716');
+	root.setProperty('--color-bg-main', '#3b2716');
 	root.setProperty('--color-text--bg', '#3b2716');
 	root.setProperty('--color-bg-light', '#3b2716');
 	root.setProperty('--gradient-main', '#3b2716');

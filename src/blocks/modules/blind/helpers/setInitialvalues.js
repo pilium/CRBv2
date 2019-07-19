@@ -28,6 +28,7 @@ export function setInitialColors() {
 	root.setProperty('--color-bg-secondary', initialValues.colors.bgSecondary);
 	root.setProperty('--color-bg-light', initialValues.colors.bgLight);
 	root.setProperty('--color-bg-icon', initialValues.colors.bgIcon);
+	root.setProperty('--color-bg-main', initialValues.colors.bgMain);
 	root.setProperty('--gradient-main', initialValues.colors.grMain);
 	root.setProperty('--color-text--bg', initialValues.colors.bgText);
 	root.setProperty('--color-hover', initialValues.colors.bgHover);
