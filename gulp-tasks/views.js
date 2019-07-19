@@ -24,7 +24,7 @@ gulp.task('views', () =>
 			})
 		)
 		.pipe(gulpif(production, replace('.css', '.min.css')))
-		.pipe(gulpif(production, replace('.js', '.min.js')))
+		// .pipe(gulpif(production, replace('.js', '.min.js')))
 		.pipe(gulp.dest('./dist/'))
 		.on('end', browsersync.reload)
 );
