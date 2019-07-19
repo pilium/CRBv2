@@ -7,7 +7,7 @@
 	z-index: 9;
 	width: 100%;
 	height: 100%;
-	background-color: #fff;
+	background-color: var(--color-bg-light);
 
 	&__icon {
 		position: absolute;
@@ -17,8 +17,8 @@
 	}
 
 	&__path {
-		fill: #1a7977;
-		stroke: #3e9892;
+		fill: var(--color-main);
+		stroke: var(--color-bg-icon);
 
 		&--1 { animation: visible 2s ease 0.2s infinite; }
 		&--2 { animation: visible 2s ease 0.4s infinite; }
@@ -49,6 +49,12 @@
 	&--main {
 		position: fixed;
 		z-index: 11;
+		background-color: #fff;
+
+		.preloader__path {
+			fill: #1a7977;
+			stroke: #3e9892;
+		}
 	}
 }
 
