@@ -9,7 +9,6 @@
 		"stylelint-images",
 		"stylelint-declaration-block-no-ignored-properties",
 		"stylelint-a11y",
-		"stylelint-group-selectors",
 		"stylelint-z-index-value-constraint",
 	],
 	"rules": {
