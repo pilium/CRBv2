@@ -195,10 +195,6 @@ ul,
 ol {
 	list-style-type: none;
 	padding-left: 0;
-
-	&.toc__list-inner {
-		padding-left: 1.5em;
-	}
 }
 
 li {
@@ -211,10 +207,6 @@ dl {
 
 dd {
 	margin-left: 0;
-
-	+ dt {
-		margin-top: (var(--line-height) / 2);
-	}
 }
 
 small {
@@ -222,16 +214,6 @@ small {
 	font-size: 0.75rem;
 	line-height: 1.2;
 	color: var(--color-text-helper);
-}
-
-blockquote {
-	margin-right: 0;
-	margin-left: 0;
-	padding: 0;
-}
-
-abbr {
-	text-decoration: none;
 }
 
 fieldset {
