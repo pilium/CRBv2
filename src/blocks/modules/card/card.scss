@@ -1,8 +1,12 @@
 .card {
 	&__inner {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
+		display: block;
+		min-height: 656px;
+
+		@media screen and (min-width: $break_md) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 
 	&__img {
@@ -33,11 +37,11 @@
 	}
 
 	&__title {
+		margin-bottom: 24px;
 		padding-right: 8px;
 
-		h2 {
-			margin-top: 0;
-			font-size: rem(20);
+		@media screen and (min-width: $break_md) {
+			min-height: 120px;
 		}
 	}
 
@@ -81,12 +85,8 @@
 		fill: var(--color-icon);
 	}
 
-	.btn {
+	.card__btn {
 		margin-top: auto;
-		margin-bottom: 8px;
-	}
-
-	@media screen and (min-width: $break_md) {
-		display: flex;
+		padding: 0 4%;
 	}
 }
