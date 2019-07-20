@@ -1,57 +1,29 @@
-import {Slider} from './sliders/slider-class';
+let Flickity = require('flickity');
 
-let sliderNews = new Slider({
-	element: document.querySelector('.js-slider--news'),
-	sliderName: 'slider-news',
-	sliderOptions: {
-		type: 'carousel',
-		startAt: 0,
-		perView: 4,
-		animationTimingFunc: 'ease',
-		animationDuration: 800,
-		hoverpause: false,
-		gap: 32,
-		breakpoints: {
-			1200: {
-				perView: 2,
-				gap: 40,
-			},
-			710: {
-				perView: 1,
-			},
-		},
-	},
+let sliderNews = document.querySelector('.js-slider--news');
+let sliderArticles = document.querySelector('.js-slider--articles');
+
+let flktyNews = new Flickity(sliderNews, {
+	pageDots: false,
+	prevNextButtons: false,
+	groupCells: '90%',
+	cellAlign: 'left',
+	cellSelector: '.slider__cell',
 });
 
-let sliderArticles = new Slider({
-	element: document.querySelector('.js-slider--articles'),
-	sliderName: 'slider-articles',
-	sliderOptions: {
-		type: 'carousel',
-		startAt: 0,
-		perView: 4,
-		animationTimingFunc: 'ease',
-		animationDuration: 800,
-		hoverpause: false,
-		gap: 32,
-		breakpoints: {
-			1200: {
-				perView: 2,
-				gap: 40,
-			},
-			710: {
-				perView: 1,
-			},
-		},
-	},
+let flktyArticles = new Flickity(sliderArticles, {
+	pageDots: false,
+	prevNextButtons: false,
+	groupCells: '90%',
+	cellAlign: 'left',
+	cellSelector: '.slider__cell',
 });
 
-sliderNews.init();
-sliderNews.showControls();
-sliderNews.addLiveRegion();
-sliderNews.mount();
+const destroyBtn = document.querySelector('.destroy');
 
-sliderArticles.init();
-sliderArticles.addLiveRegion();
-sliderArticles.showBullets();
-sliderArticles.mount();
+if (destroyBtn) {
+	destroyBtn.addEventListener('click', () => {
+		flktyArticles.destroy();
+		flktyNews.destroy();
+	});
+}

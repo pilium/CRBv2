@@ -83,9 +83,9 @@
 		"yargs": "^12.0.5"
 	},
 	"dependencies": {
-		"@glidejs/glide": "^3.3.0",
 		"choices.js": "^7.0.0",
 		"flatpickr": "^4.6.1",
+		"flickity": "^2.2.1",
 		"micromodal": "^0.4.0",
 		"simplebar": "^4.0.0",
 		"spotlight.js": "^0.6.12"
