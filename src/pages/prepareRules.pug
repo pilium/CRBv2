@@ -9,6 +9,10 @@ block vars
 block content
 	+breadcrumbs()
 	+article()
-
+	+section({
+		mods: 'informer',
+	})
+		+informer('inner')
 block scripts
-	script(async src="../js/common.js")
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="../js/inner.js")

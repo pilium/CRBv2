@@ -1,4 +1,4 @@
-import '../common.js';
+import '../common';
 
 function al() {
 	let d = document;
@@ -9,7 +9,7 @@ function al() {
 
 		s.type = 'text/javascript';
 		s.async = true;
-		s.src = './js/afterLoad.js';
+		s.src = './js/innerAfterLoad.js';
 
 		document.body.appendChild(s);
 	}
@@ -23,4 +23,3 @@ function al() {
 }
 
 setTimeout(al, 100);
-

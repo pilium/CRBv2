@@ -5,9 +5,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
 	entry: {
 		main: './src/js/index.js',
-		common: './src/js/import/pages/common.js',
+		inner: './src/js/import/pages/inner.js',
 		gallery: './src/js/import/pages/gallery.js',
-		afterLoad: './src/js/import/afterLoad.js',
+		mainAfterLoad: './src/js/import/mainAfterLoad.js',
+		innerAfterLoad: './src/js/import/innerAfterLoad.js',
 	},
 	output: {
 		filename: '[name].js',

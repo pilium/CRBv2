@@ -1,4 +1,4 @@
-mixin informer()
+mixin informer(inner)
 	.informer
 		.informer__inner
 			+panel({
@@ -8,4 +8,7 @@ mixin informer()
 			+panel({
 				mods: 'weather,shadow, mr1'
 			})
-				+weather()
+				if(inner)
+					+map()
+				else
+					+weather()
