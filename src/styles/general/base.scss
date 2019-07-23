@@ -233,25 +233,3 @@ fieldset {
 	height: 1px;
 	clip-path: inset(100%);
 }
-
-::-webkit-scrollbar { /* 1 - скроллбар */
-	width: 4px;
-	height: 4px;
-}
-
-::-webkit-scrollbar-button { /* 2 - кнопка */
-	border-radius: 8px;
-}
-
-::-webkit-scrollbar-track { /* 3 - трек */
-	background-color: #fff;
-}
-
-::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */
-	background-color: var(--color-bg-dark);
-}
-
-::-webkit-scrollbar-thumb { /* 5 - ползунок */
-	border-radius: 8px;
-	background-color: var(--color-main);
-}
