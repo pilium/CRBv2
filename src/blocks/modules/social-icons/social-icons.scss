@@ -12,13 +12,6 @@
 
 	&__item {
 		cursor: pointer;
-
-		&:hover,
-		&:focus {
-			.social-icons__icon {
-				background-color: var(--color-hover);
-			}
-		}
 	}
 
 	&__icon {
@@ -27,7 +20,6 @@
 		justify-content: center;
 		border-radius: 50%;
 		padding: 16px;
-		background-color: var(--color-bg-icon);
 	}
 
 	&__svg-icon {

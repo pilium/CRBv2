@@ -1,6 +1,7 @@
 .footer {
 	padding: 8px 16px;
-	color: var(--color-text);
+	color: var(--color-light);
+	background-color: var(--color-bg-main);
 
 	&__inner {
 		display: flex;
@@ -15,6 +16,5 @@
 
 	&__copyright {
 		max-width: 656px;
-		font-size: rem(14);
 	}
 }
