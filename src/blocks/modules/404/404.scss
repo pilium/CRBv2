@@ -1,0 +1,36 @@
+.not-found {
+	position: relative;
+	font-size: 16px;
+	text-align: center;
+
+	&__title {
+		margin-top: 0;
+		font-family: var(--font-family--bold);
+		font-size: 40px;
+		color: var(--color-main);
+
+		&--first {
+			margin-bottom: 0;
+			font-size: 124px;
+		}
+
+		@media screen and (min-width: $break_md) {
+			font-size: 72px;
+		}
+	}
+
+	&__mark {
+		padding: 0 8px;
+		font-family: var(--font-family--bold);
+
+		@media screen and (min-width: $break_md) {
+			padding: 8px 16px;
+			color: var(--color-light);
+			background-color: var(--color-bg-main);
+		}
+	}
+
+	@media screen and (min-width: $break_md) {
+		font-size: 24px;
+	}
+}

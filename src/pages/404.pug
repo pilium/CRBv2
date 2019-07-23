@@ -1,0 +1,18 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "404"
+	- var title = "Страница не найдена";
+	- var description = 'Страница не найдена';
+	- var breadcrumbs = [{title: 'Страница не найдена'}]
+
+block content
+	+breadcrumbs()
+	+section({
+		mods: 'not-found',
+		header: false,
+		container: true,
+	})
+		+404()
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="../js/inner.js")
