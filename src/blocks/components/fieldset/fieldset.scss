@@ -1,24 +1,34 @@
 .fieldset {
-	position: relative;
+	margin: 0;
 	margin-bottom: 8px;
+	border: none;
+	padding: 0;
 
-	&::before {
+	&__wrapper {
+		position: relative;
+
+		&::before {
+			@media screen and (min-width: $break_md) {
+				--size: 40px;
+
+				content: attr(data-step-count);
+				position: absolute;
+				left: 0;
+				top: 0;
+				border: 2px solid var(--color-modal);
+				border-radius: 50%;
+				width: var(--size);
+				height: var(--size);
+				font-family: var(--font-family--bold);
+				font-size: rem(28);
+				line-height: 32px;
+				text-align: center;
+				color: var(--color-modal);
+			}
+		}
+
 		@media screen and (min-width: $break_md) {
-			--size: 40px;
-
-			content: attr(data-step-count);
-			position: absolute;
-			left: 0;
-			top: 0;
-			border: 2px solid var(--color-modal);
-			border-radius: 50%;
-			width: var(--size);
-			height: var(--size);
-			font-family: var(--font-family--bold);
-			font-size: rem(28);
-			line-height: 32px;
-			text-align: center;
-			color: var(--color-modal);
+			padding-left: 56px;
 		}
 	}
 
@@ -47,7 +57,6 @@
 		}
 	}
 
-	// Визуал для валидации
 	&.valid {
 		&::before {
 			@media screen and (min-width: $break_md) {
@@ -69,9 +78,5 @@
 			margin-bottom: 0;
 			padding: 0;
 		}
-	}
-
-	@media screen and (min-width: $break_md) {
-		padding-left: 56px;
 	}
 }

@@ -1,9 +1,10 @@
 mixin fieldset(props)
 	if(props.step)
-		fieldset.fieldset(data-step-count=props.step)
-			if(!props.legendHidden)
-				legend.fieldset__legend= props.legend
-			block
+		fieldset.fieldset
+			.fieldset__wrapper(data-step-count=props.step)
+				if(!props.legendHidden)
+					legend.fieldset__legend= props.legend
+				block
 	else
 		fieldset.fieldset.fieldset--no-step
 			if (props.legendHidden)
