@@ -48,15 +48,6 @@
 		}
 	}
 
-	.rating {
-		@media screen and (min-width: $break_md) {
-			position: absolute;
-			right: 16px;
-			top: 8px;
-			margin-bottom: 0;
-		}
-	}
-
 	&.valid {
 		&::before {
 			@media screen and (min-width: $break_md) {
