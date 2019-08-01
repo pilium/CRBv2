@@ -4,7 +4,7 @@ mixin feedback-type(props)
 	//- 	icon: 'feedback',
 	//- 	text: 'Отзыв',
 	//- })
-	.feedback-type(tabindex="0" role="radio" aria-checked="false")
+	.feedback-type(tabindex="0" role="radio" data-type= props.type aria-checked="false")
 		if(props.activeIcon)
 			.feedback-type__active-icon
 				+icon(props.activeIcon,'feedback-type__active-svg-icon')
