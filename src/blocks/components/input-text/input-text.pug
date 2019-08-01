@@ -10,12 +10,11 @@ mixin input-text(props)
 	.input-text(class= allMods)
 		label.input-text__label(for= props.id)= props.text
 			if(props.required)
-				strong
-					abbr.input-text__required(title="обязательное поле")  *
+				strong.input-text__required  *
 		.input-text__wrap
 			if(props.validateIcons)
-				+icon(props.valideIconAccept,'input-text__validation__icon icon-valid')
-				+icon(props.valideIconError,'input-text__validation__icon icon-invalid')
+				+icon('accept','input-text__validation-icon icon-valid')
+				+icon('error','input-text__validation-icon icon-invalid')
 			if(typeof(props.isTextarea) !== 'undefined' && props.isTextarea)
 				if (props.required)
 					textarea.input-text__input(name= props.name id= props.id aria-describedby= props.helpId placeholder= props.ph required)&attributes(attributes)
@@ -26,4 +25,4 @@ mixin input-text(props)
 					input.input-text__input(type= props.type name= props.name id= props.id aria-describedby= props.helpId placeholder= props.ph required)&attributes(attributes)
 				else
 					input.input-text__input(type= props.type name= props.name id= props.id aria-describedby= props.helpId placeholder= props.ph)&attributes(attributes)
-		small.form-text.text-muted(id= props.helpId)= props.helpText
+		small.input-text__helper(id= props.helpId aria-live="polite")= props.helpText

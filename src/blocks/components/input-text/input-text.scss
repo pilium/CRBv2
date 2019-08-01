@@ -4,6 +4,7 @@
 	&__label {
 		display: block;
 		margin-bottom: 8px;
+		font-size: rem(18);
 		color: var(--color-modal);
 	}
 
@@ -15,7 +16,7 @@
 		position: relative;
 	}
 
-	&__validation__icon {
+	&__validation-icon {
 		position: absolute;
 		right: 8px;
 		top: 50%;
@@ -44,21 +45,50 @@
 		&::-moz-placeholder { color: var(--color-text-helper); }
 		&:-moz-placeholder { color: var(--color-text-helper); }
 		&:-ms-input-placeholder { color: var(--color-text-helper); }
+
+		&:valid { background-color: #e8f0fe; }
+
+		&:required:valid {
+			border-color: var(--color-border);
+		}
+	}
+
+	&__helper {
+		display: none;
+		font-size: 0.75rem;
+		line-height: 1.2;
+		color: var(--color-error);
 	}
 
 	&.valid,
 	&.invalid {
-		.icon-valid {
+		.input-text__validation-icon {
 			width: 32px;
 			height: 32px;
-			opacity: 1;
 			transform: translateY(-50%);
 			transition: transform linear 0.3s;
 		}
 	}
 
+	&.invalid {
+		.icon-invalid {
+			fill: var(--color-error);
+			opacity: 1;
+		}
+
+		.input-text__helper {
+			display: block;
+		}
+	}
+
+	&.valid {
+		.icon-valid {
+			fill: var(--color-main);
+			opacity: 1;
+		}
+	}
+
 	&--checkable {
-		display: none;
 		margin-bottom: 16px;
 
 		.input-text__input {

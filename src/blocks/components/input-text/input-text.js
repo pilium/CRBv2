@@ -1,6 +1,6 @@
-import {date} from '../../components/checkbox/checkbox';
 const dateContainer = document.querySelector('.input-text--checkable');
 const dateInput = document.querySelector('#testimonial-date');
+const date = document.querySelector('#testimonial-date ');
 
 function dateToggle() {
 	if (date.checked) {
