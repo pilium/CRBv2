@@ -11,6 +11,7 @@ html {
 	--color-icon: #3e9892;
 	--color-link: #27615e;
 	--color-border: #2e8884;
+	--color-error: #f00;
 	--color-border-light: #cedada;
 	--color-modal: #6e768e;
 	--color-bg-secondary: #f2f7f7;
@@ -35,16 +36,16 @@ html {
 	// --gradient-hover: linear-gradient(360deg, var(--color-main) 0, var(--color-hover) 0);
 
 	// Gradients
-	--gradient-main: linear-gradient(130.72013189013455deg, var(--color-main) 0.927083333333334%, hsl(183, 55%, 47%) 97.84374999999999%);
+	--gradient-main: linear-gradient(130.72013189013455deg, var(--color-main) 2.927083333333334%, hsl(183, 55%, 47%) 97.84374999999999%);
 
 
 	// Font
 	--font-size: 16px;
-	--font-size-h1: 2.5rem;
-	--font-size-h2: 2rem;
-	--font-size-h3: 1.5rem;
-	--font-size-h4: 1.25rem;
-	--font-size-h5: 1.1rem;
+	--font-size-h1: 2.7rem;
+	--font-size-h2: 2.2rem;
+	--font-size-h3: 1.7rem;
+	--font-size-h4: 1.5rem;
+	--font-size-h5: 1.3rem;
 	--font-size-h6: var(--font-size);
 	--line-height: 1.5;
 	--font-family--default: "Exo 2", -apple-system, BlinkMacSystemFont, "Ubuntu", "Arial", sans-serif;
