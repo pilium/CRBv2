@@ -5,7 +5,7 @@
 	&__name {
 		display: block;
 		margin-bottom: 8px;
-		font-size: rem(20);
+		font-size: rem(18);
 		color: var(--color-modal);
 	}
 
@@ -38,10 +38,6 @@
 				white-space: nowrap;
 				text-overflow: ellipsis;
 			}
-		}
-
-		&__list--single {
-			padding: 8px 16px 8px 8px;
 		}
 
 		&__list--dropdown {
