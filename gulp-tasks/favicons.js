@@ -10,13 +10,13 @@ gulp.task('favicons', () =>
 				icons: {
 					appleIcon: true,
 					favicons: true,
-					online: false,
-					appleStartup: false,
-					android: false,
-					firefox: false,
-					yandex: false,
-					windows: false,
-					coast: false,
+					online: true,
+					appleStartup: true,
+					android: true,
+					firefox: true,
+					yandex: true,
+					windows: true,
+					coast: true,
 				},
 			})
 		)
