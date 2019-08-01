@@ -6,219 +6,172 @@ mixin modal(props)
 					.modal__header
 						h2.modal__title= props.title
 						button.modal__close(aria-label="Закрыть модальное окно" data-micromodal-close)
-					.modal__content
-						//- +preloader()
-						//- dynamic content
-						.modal__inner
-							.feedback-types(role="radiogroup")
-								+feedback-type({
-									activeIcon: 'accept',
-									icon: 'feedback',
-									text: 'Отзыв о больнице',
+					.modal__content.modal__content--initial
+						+form({
+							action: '#',
+							method: 'POST',
+						})
+							.modal__inner
+								//- .modal__feedback-types(role="radiogroup")
+								//- 	+feedback-type({
+								//- 		activeIcon: 'accept',
+								//- 		icon: 'feedback',
+								//- 		text: 'Отзыв о больнице',
+								//- 		type: 'testimonial'
+								//- 	})
+								//- 	+feedback-type({
+								//- 		activeIcon: 'accept',
+								//- 		icon: 'question',
+								//- 		text: 'Вопрос',
+								//- 		type: 'question'
+								//- 	})
+								+fieldset({
+									step: 1,
+									legend: 'Введите контактные данные',
 								})
-								+feedback-type({
-									activeIcon: 'accept',
-									icon: 'consultation',
-									text: 'Консультация врача',
-								})
-								+feedback-type({
-									activeIcon: 'accept',
-									icon: 'question',
-									text: 'Вопрос',
-								})
-							.d-content
-								.d-content__inner
-									form(action="#" method="GET")
+									+input-text({
+										type: 'text',
+										id: 'feedback-fio',
+										name: 'feedback-fio',
+										ph: 'Введите фамилию и имя',
+										text: 'Фамилия и имя:',
+										helpId: 'fiohelp',
+										helpText: 'текст подсказки',
+										validateIcons: true,
+										required: true,
+									})
+									+input-text({
+										type: 'email',
+										id: 'feedback-mail',
+										name: 'feedback-mail',
+										ph: 'Введите ваш email',
+										text: 'Электронная почта:',
+										helpId: 'mailhelp',
+										helpText: 'текст подсказки',
+										validateIcons: true,
+										required: true,
+									})(autocapitalize="off" autocomplete="email")
+								.dynamic-modal
+									.dynamic-modal__testimonial
 										+fieldset({
-											step: 1,
-											legend: 'Введите контактные данные',
+											step: 2,
+											legend: 'Напишите ваш отзыв или вопрос',
 										})
 											+input-text({
 												type: 'text',
-												id: 'feedback-fio',
-												name: 'feedback-fio',
-												ph: 'Введите фамилию и имя',
-												text: 'Фамилия и имя:',
-												valideIconAccept: 'accept',
-												valideIconError: 'error',
-												helpId: 'fiohelp',
+												id: 'testimonial-theme',
+												name: 'testimonial-theme',
+												ph: 'Введите тему отзыва или вопроса',
+												text: 'Тема вашего отзыва или вопроса:',
+												helpId: 'testimonialThemehelp',
 												helpText: 'текст подсказки',
 												validateIcons: true,
 												required: true,
 											})
 											+input-text({
-												type: 'email',
-												id: 'feedback-mail',
-												name: 'feedback-mail',
-												ph: 'Введите ваш email',
-												text: 'Электронная почта:',
-												valideIconAccept: 'accept',
-												valideIconError: 'error',
-												helpId: 'mailhelp',
+												type: 'text',
+												id: 'testimonial-text',
+												name: 'testimonial-text',
+												ph: 'Введите текст отзыва или вопроса',
+												text: 'Текст вашего отзыва или вопроса:',
+												helpId: 'testimonialTexthelp',
 												helpText: 'текст подсказки',
 												validateIcons: true,
 												required: true,
-											})(autocapitalize="off" autocomplete="email")
-										.dynamic-modal
-											//- +fieldset({
-											//- 	step: 2,
-											//- 	legend: 'Напишите ваш вопрос',
-											//- })
-											//- 	+input-text({
-											//- 		type: 'text',
-											//- 		id: 'question-theme',
-											//- 		name: 'question-theme',
-											//- 		ph: 'Введите тему вопроса',
-											//- 		text: 'Тема вашего вопроса:',
-											//- 		valideIconAccept: 'accept',
-											//- 		valideIconError: 'error',
-											//- 		helpId: 'questionThemehelp',
-											//- 		helpText: 'текст подсказки',
-											//- 		validateIcons: true,
-											//- 		required: true,
-											//- 	})
-											//- 	+input-text({
-											//- 		type: 'text',
-											//- 		id: 'question-text',
-											//- 		name: 'question-text',
-											//- 		ph: 'Введите текст вопроса',
-											//- 		text: 'Тема вашего вопроса:',
-											//- 		valideIconAccept: 'accept',
-											//- 		valideIconError: 'error',
-											//- 		helpId: 'questionTexthelp',
-											//- 		helpText: 'текст подсказки',
-											//- 		validateIcons: true,
-											//- 		required: true,
-											//- 		isTextarea: true,
-											//- 	})(cols="30" rows="20")
-											+fieldset({
-												step: 2,
-												legend: 'Напишите ваш отзыв',
-											})
-												+input-text({
-													type: 'text',
-													id: 'testimonial-theme',
-													name: 'testimonial-theme',
-													ph: 'Введите тему отзыва',
-													text: 'Тема вашего отзыва:',
-													valideIconAccept: 'accept',
-													valideIconError: 'error',
-													helpId: 'testimonialThemehelp',
-													helpText: 'текст подсказки',
-													validateIcons: true,
-													required: true,
-												})
-												+input-text({
-													type: 'text',
-													id: 'testimonial-text',
-													name: 'testimonial-text',
-													ph: 'Введите текст отзыва',
-													text: 'Текст вашего отзыва:',
-													valideIconAccept: 'accept',
-													valideIconError: 'error',
-													helpId: 'testimonialTexthelp',
-													helpText: 'текст подсказки',
-													validateIcons: true,
-													required: true,
-													isTextarea: true,
-												})(cols="30" rows="10")
-											+fieldset({
-												step: 3,
-												legend: 'Дополнительно о отзыве',
-											})
-												+rating()
-												.modal__block
-													+checkbox({
-														title: 'Отзыв о докторе или медсестре',
-														id: 'doctor'
-													})
-													.modal__line
-														+field-select(
-															'Выберите врача или медсестру',
+												isTextarea: true,
+											})(cols="30" rows="10")
+										+fieldset({
+											step: 3,
+											legend: 'Дополнительно о отзыве',
+										})
+											.modal__block
+												.modal__line
+													+field-select(
+														'Выберите врача или медсестру',
+														{
+															name: 'select-doctor',
+															id: 'select-doctor'
+														},
+														[
 															{
-																name: 'select-doctor',
-																id: 'select-doctor'
+															attrs: {
+																label: 'Врачи',
+																placeholder: 'tw',
 															},
-															[
+															child: [
 																{
-																attrs: {
-																	label: 'Врачи',
-																},
-																child: [
-																	{
-																		title: 'Андара Магане Чамара Чандраратне',
-																		attrs: {
-																			value: '2',
-																		}
-																	},
-																	{
-																		title: 'Кожемякина Зоя Александровна',
-																		attrs: {
-																			value: '1',
-																		}
-																	},
-																	{
-																		title: 'Кожемякина Зоя Александровна',
-																		attrs: {
-																			value: '1',
-																		}
-																	},
-																],
+																	title: 'Андара Магане Чамара Чандраратне',
+																	attrs: {
+																		value: '2',
+																	}
 																},
 																{
-																attrs: {
-																	label: 'Медсестры',
+																	title: 'Кожемякина Зоя Александровна',
+																	attrs: {
+																		value: '1',
+																	}
 																},
-																child: [
-																	{
-																		title: 'Андара Магане Чамара Чандраратне',
-																		attrs: {
-																			value: '2',
-																		}
-																	},
-																	{
-																		title: 'Кожемякина Зоя Александровна',
-																		attrs: {
-																			value: '1',
-																		}
-																	},
-																	{
-																		title: 'Кожемякина Зоя Александровна',
-																		attrs: {
-																			value: '1',
-																		}
-																	},
-																],
+																{
+																	title: 'Кожемякина Зоя Александровна',
+																	attrs: {
+																		value: '1',
+																	}
 																},
 															],
-															'',
-															''
-															)
-												
-													+checkbox({
-														title: 'Указать дату приема',
-														id: 'date'
-													})
+															},
+															{
+															attrs: {
+																label: 'Медсестры',
+															},
+															child: [
+																{
+																	title: 'Андара Магане Чамара Чандраратне',
+																	attrs: {
+																		value: '2',
+																	}
+																},
+																{
+																	title: 'Кожемякина Зоя Александровна',
+																	attrs: {
+																		value: '1',
+																	}
+																},
+																{
+																	title: 'Кожемякина Зоя Александровна',
+																	attrs: {
+																		value: '1',
+																	}
+																},
+															],
+															},
+														],
+														'',
+														''
+														)
+												.modal__line
 													+input-date()
-											+fieldset({
-												step: 4,
-												legend: 'Проверка, что вы не робот',
-											})
-												span Google captcha
-					if(props.footer)
-						.modal__footer
-							+polite({
-								title: 'Принимаю',
-							})
-							.modal__footer-line
-								.modal__footer-btn
-									+btn({
-										tag: 'button',
-										text: 'Отправить',
-										mods: 'modal'
-									})(type="submit")
-									+btn({
-										tag: 'button',
-										modalText: 'Отмена',
-										mods: 'modal,cancel'
-									})(data-micromodal-close)
+								if(props.footer)
+									.modal__footer
+										+polite({
+											title: 'Принимаю',
+										})
+										.modal__footer-line
+											.modal__footer-btn
+												+btn({
+													tag: 'button',
+													text: 'Отправить',
+													mods: 'modal'
+												})(type="submit")
+												+btn({
+													tag: 'button',
+													modalText: 'Отмена',
+													mods: 'modal,cancel'
+												})(data-micromodal-close)
+					.modal__content.modal__content--success
+						.modal__success
+							h2 Ваша заявка отправлена
+							+btn({
+								tag: 'button',
+								modalText: 'Закрыть',
+								mods: 'modal,cancel'
+							})(data-micromodal-close)

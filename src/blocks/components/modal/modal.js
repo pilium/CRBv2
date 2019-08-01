@@ -1,7 +1,7 @@
 import MicroModal from 'micromodal';
 // eslint-disable-next-line no-unused-vars
 import SimpleBar from 'simplebar';
-export const types = document.querySelector('.feedback-types');
+export const types = document.querySelector('.modal__feedback-types');
 
 export const content = document.querySelector('.modal__content');
 export const modalLine = document.querySelector('.modal__line');
