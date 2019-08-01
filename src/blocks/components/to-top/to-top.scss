@@ -1,0 +1,47 @@
+.scrollToTop {
+	position: fixed;
+	right: 11px;
+	bottom: 72px;
+	z-index: 11;
+	padding: 8px;
+	background-color: var(--color-bg-icon);
+	opacity: 0;
+	visibility: hidden;
+	cursor: pointer;
+	transform: translateY(-2em);
+	transition: opacity 0.3s, background-color 0.3s;
+
+	svg {
+		display: block;
+		fill: var(--color-light);
+	}
+
+	&:hover,
+	&:focus {
+		background: var(--color-bg-main);
+	}
+
+	&.visible {
+		visibility: visible;
+		animation: slide-in-bck-br 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+	}
+
+	@keyframes slide-in-bck-br {
+		0% {
+			opacity: 0;
+			transform: translateZ(700px) translateY(300px) translateX(400px);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translateZ(0) translateY(0) translateX(0);
+		}
+	}
+
+	@media screen and (min-width: $break_lg) {
+		right: 0;
+		bottom: 16px;
+		padding: 16px 8px;
+		width: 64px;
+	}
+}

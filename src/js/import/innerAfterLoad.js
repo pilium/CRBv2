@@ -14,5 +14,5 @@ import '%modules%/sandwich/sandwich.js';
 import '%modules%/menu/menu.js';
 import '%components%/form/form.js';
 import '../lazyloadImg.js';
+import '%components%/to-top/to-top.js';
 import '%modules%/ie-hack/ie-hack.js';
-import '%modules%/404/404.js';
