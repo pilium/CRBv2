@@ -74,11 +74,12 @@
 		border-bottom: 2px solid var(--color-main);
 		padding: 24px 56px;
 		font-size: rem(18);
-		color: var(--color-dark);
-		background-color: var(--color-bg-icon);
+		color: var(--color-light);
+		background-color: var(--color-bg-main);
 
 		&:hover,
 		&:focus {
+			color: var(--color-dark);
 			background: var(--color-hover);
 		}
 	}
