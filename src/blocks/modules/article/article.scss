@@ -1,22 +1,31 @@
 .article {
 	&__title {
-		font-size: rem(54);
+		margin: 48px auto;
+		font-size: rem(60);
+		text-align: center;
 	}
 
-	// &__inner {
-	// 	display: flex;
-	// 	align-items: flex-start;
+	&__text {
+		margin: 0 auto 24px;
+		max-width: 760px;
+	}
 
-	// 	> * {
-	// 		&:not(:last-child) { margin-right: 5%; }
-	// 	}
-	// }
+	h2,
+	h3,
+	h4 {
+		margin: 40px 0;
+	}
 
-	// &__text {
-	// 	flex: 1;
-	// }
+	ul {
+		padding-left: 2rem;
 
-	// .toc {
-	// 	flex: 0 0 40%;
-	// }
+		li {
+			list-style-type: disc;
+		}
+	}
+
+	p {
+		font-size: rem(18);
+		line-height: 1.65;
+	}
 }
