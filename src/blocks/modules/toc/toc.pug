@@ -1,0 +1,13 @@
+mixin toc(data)
+	.toc
+		.toc__inner
+			h2.toc__title Содержание
+			ol.toc__list
+				each item in data
+					li.toc__list-item
+						a.link.link--underline(href= item.anchor)= item.title 
+						if (item.childs)
+							ul.toc__list-inner
+								each child in item.childs
+									li
+										a.link.link--underline(href=child.anchor)= child.title

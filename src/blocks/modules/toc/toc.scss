@@ -1,0 +1,29 @@
+.toc {
+	padding-top: 16px;
+	padding-bottom: 120px;
+	background-color: var(--color-bg-body);
+
+	&__inner {
+		margin: 0 auto;
+		max-width: 760px;
+	}
+
+	&__title {
+		margin-bottom: 24px;
+		font-size: rem(24);
+	}
+
+	&__list {
+		list-style-type: decimal;
+		padding-left: 1rem;
+		font-weight: 100;
+
+		li {
+			margin-bottom: 1em;
+		}
+	}
+
+	&__list-inner {
+		margin-top: 1rem;
+	}
+}
