@@ -1,0 +1,19 @@
+.form {
+	&__inner {
+		display: block;
+	}
+
+	&__success {
+		display: none;
+	}
+
+	&__success-inner {
+		font-size: rem(32);
+		text-align: center;
+	}
+
+	&__success-icon {
+		width: 144px;
+		height: 144px;
+	}
+}

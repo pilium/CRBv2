@@ -3,6 +3,7 @@ import {mailValidaton, email} from './validators/mailValidation';
 import {fioValidation, fio} from './validators/fioValidation';
 import {politeValidaton, politeCheckbox} from './validators/politeValidate';
 import {serializeForm} from './helpers/serialize-form';
+import {formSuccess} from './helpers/formSuccess';
 
 let isFioValid;
 let isMailValid;
@@ -28,8 +29,9 @@ form.addEventListener(
 		if (isFioValid.isValid && isMailValid.isValid && isPoliteCheckboxValid) {
 			let data = serializeForm(form);
 
-			console.log(data);
+			formSuccess();
 
+			console.log(data);
 		} else {
 			console.log({isMailValid});
 			console.log({isFioValid});

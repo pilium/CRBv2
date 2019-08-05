@@ -1,6 +1,8 @@
 .toc {
 	padding-top: 16px;
-	padding-bottom: 120px;
+	padding-right: 16px;
+	padding-bottom: 56px;
+	padding-left: 16px;
 	background-color: var(--color-bg-body);
 
 	&__inner {
@@ -25,5 +27,9 @@
 
 	&__list-inner {
 		margin-top: 1rem;
+	}
+
+	@media screen and (min-width: $break_md) {
+		padding-bottom: 120px;
 	}
 }

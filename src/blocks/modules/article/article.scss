@@ -1,8 +1,12 @@
 .article {
 	&__title {
 		margin: 48px auto;
-		font-size: rem(60);
+		font-size: rem(34);
 		text-align: center;
+
+		@media screen and (min-width: $break_md) {
+			font-size: rem(60);
+		}
 	}
 
 	&__text {

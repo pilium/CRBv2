@@ -6,25 +6,12 @@ mixin modal(props)
 					.modal__header
 						h2.modal__title= props.title
 						button.modal__close(aria-label="Закрыть модальное окно" data-micromodal-close)
-					.modal__content.modal__content--initial
+					.modal__content
 						+form({
 							action: '#',
 							method: 'POST',
 						})
-							.modal__inner
-								//- .modal__feedback-types(role="radiogroup")
-								//- 	+feedback-type({
-								//- 		activeIcon: 'accept',
-								//- 		icon: 'feedback',
-								//- 		text: 'Отзыв о больнице',
-								//- 		type: 'testimonial'
-								//- 	})
-								//- 	+feedback-type({
-								//- 		activeIcon: 'accept',
-								//- 		icon: 'question',
-								//- 		text: 'Вопрос',
-								//- 		type: 'question'
-								//- 	})
+							.form__inner
 								+fieldset({
 									step: 1,
 									legend: 'Введите контактные данные',
@@ -167,11 +154,7 @@ mixin modal(props)
 													modalText: 'Отмена',
 													mods: 'modal,cancel'
 												})(data-micromodal-close)
-					.modal__content.modal__content--success
-						.modal__success
-							h2 Ваша заявка отправлена
-							+btn({
-								tag: 'button',
-								modalText: 'Закрыть',
-								mods: 'modal,cancel'
-							})(data-micromodal-close)
+							.form__success
+								.form__success-inner
+									h2.form__success-title Ваша заявка отправлена
+									+icon('success', 'form__success-icon')
