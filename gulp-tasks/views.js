@@ -13,7 +13,7 @@ const production = !!argv.production;
 
 gulp.task('views', () =>
 	gulp
-		.src(['./src/views/index.pug', './src/pages/*.pug'])
+		.src(['./src/views/index.pug', './src/pages/**/*.pug', './src/pages/*.pug'])
 		.pipe(
 			pug({
 				plugins: [pugbem],

@@ -3,7 +3,6 @@
 		position: relative;
 		display: none;
 		padding: 16px 0;
-		font-size: rem(14);
 		white-space: nowrap;
 
 		> * {
@@ -12,13 +11,19 @@
 					content: "/";
 					margin: 0 8px;
 				}
+			}
 
-				.link { color: var(--color-main); }
+			&:last-child {
+				.link {
+					color: var(--color-text);
+					cursor: default;
+				}
 			}
 		}
 
 		@media screen and (min-width: $break_sm) {
 			display: flex;
+			overflow-x: scroll;
 		}
 	}
 }
