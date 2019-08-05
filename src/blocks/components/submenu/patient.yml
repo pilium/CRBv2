@@ -10,7 +10,7 @@
           href: '#'
           text: 'Диспансеризация'
         -
-          href: '#'
+          href: '/patientDuties.html'
           text: 'Права и обязанности пациента'
         -
           href: '#'
