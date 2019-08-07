@@ -13,13 +13,13 @@
           href: '/patientDuties.html'
           text: 'Права и обязанности пациента'
         -
-          href: '#'
+          href: '/writeRules.html'
           text: 'Правила записи на прием'
         -
           href: '/prepareRules.html'
           text: 'Правила подготовки к исследованиям'
         -
-          href: '#'
+          href: '/helpOrder.html'
           text: 'Порядок оказания медицинской помощи'
         -
           href: '#'
