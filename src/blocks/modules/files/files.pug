@@ -1,0 +1,12 @@
+mixin files()
+	section.files
+		.files__wrap
+			h2.files__title Документы
+			+btn({
+				tag: 'button',
+				icon: 'question',
+				iconClass: 'files__icon',
+				mods: 'cancel,pd2,bg-tr',
+			})(data-custom-open="fileInfo" aria-haspopup="true" aria-expanded="false" title="Информация по данному разделу")
+		.files__items
+			block

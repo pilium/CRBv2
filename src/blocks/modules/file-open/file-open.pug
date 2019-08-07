@@ -1,0 +1,43 @@
+mixin file-open(props)
+	.file-open
+		case props.format
+			when 'doc'
+				ul.file-open__list
+					li.file-open__item
+						a.link.link--underline(href="https://products.office.com/ru-ru/word") Microsoft Word
+					li.file-open__item
+						a.link.link--underline(href="https://ru.libreoffice.org/features/writer/") LibreOffice Writer
+					li.file-open__item
+						a.link.link--underline(href="https://www.wps.com/") WPS Office
+			when 'pdf'
+				ul.file-open__list
+					li.file-open__item
+						a.link.link--underline(href="http://softcatalog.info/ru/obzor/vybiraem-luchshiy-brauzer") Современные браузеры
+					li.file-open__item
+						a.link.link--underline(href="https://www.foxitsoftware.com/ru/downloads/") Foxit Reader
+					li.file-open__item
+						a.link.link--underline(href="https://get.adobe.com/ru/reader/") Adobe Acrobat Reader
+			when 'jpg'
+				ul.file-open__list
+					li.file-open__item
+						a.link.link--underline(href="http://softcatalog.info/ru/obzor/vybiraem-luchshiy-brauzer") Современные браузеры
+					li.file-open__item
+						a.link.link--underline(href="https://www.microsoft.com/en-us/p/microsoft-photos/9wzdncrfjbh4?activetab=pivot:overviewtab") Microsoft Photos
+					li.file-open__item
+						a.link.link--underline(href="https://open-file.ru/programs/image-editors") Программы для просмотра изображений
+			when 'xls'
+				ul.file-open__list
+					li.file-open__item
+						a.link.link--underline(href="https://products.office.com/ru-ru/excel?SilentAuth=1&wa=wsignin1.0") Microsoft Excel
+					li.file-open__item
+						a.link.link--underline(href="https://ru.libreoffice.org/download/") LibreOffice Calc
+					li.file-open__item
+						a.link.link--underline(href="https://www.wps.com/") WPS Office
+			when 'rar'
+				ul.file-open__list
+					li.file-open__item
+						a.link.link--underline(href="https://www.win-rar.com/start.html?&L=4") WinRar
+					li.file-open__item
+						a.link.link--underline(href="http://7-zip.org.ua/ru/download.html") 7z
+					li.file-open__item
+						a.link.link--underline(href="http://ziparchiver.hamstersoft.com/") Hamster ZIP Archiver

@@ -1,0 +1,52 @@
+.files {
+	&__wrap {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 24px;
+			width: 100%;
+			height: 2px;
+			background-color: var(--color-bg-main);
+		}
+
+		> * {
+			&:not(:last-child) { margin-right: 8px; }
+		}
+	}
+
+	&__icon-wrap {
+		align-self: center;
+		border: 1px solid var(--color-border);
+		border-radius: 50%;
+		padding: 8px;
+		cursor: pointer;
+	}
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+		fill: var(--color-main);
+	}
+
+	&__items {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		> * {
+			margin: 16px 0;
+		}
+	}
+
+	.btn {
+		margin-top: 8px;
+	}
+}

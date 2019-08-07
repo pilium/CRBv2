@@ -1,0 +1,40 @@
+.file-info {
+	display: none;
+	padding-left: 0;
+
+	> * {
+		&:not(:last-child) { margin-bottom: 8px; }
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		span { font-size: 18px; }
+	}
+
+	&__title {
+		font-family: var(--font-family--bold);
+		font-size: rem(18);
+	}
+
+	&__format {
+		display: flex;
+		border-radius: 8px;
+
+		> * {
+			&:not(:last-child) { margin-right: 8px; }
+		}
+	}
+
+	&__open {
+		font-family: var(--font-family--bold);
+		font-size: rem(18);
+		text-overflow: ellipsis;
+	}
+
+	&.show {
+		display: block;
+	}
+}

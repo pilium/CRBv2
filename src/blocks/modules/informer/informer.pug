@@ -9,6 +9,8 @@ mixin informer(inner)
 				mods: 'weather,shadow, mr1'
 			})
 				if(inner)
-					+map()
+					+map({
+						mods: 'inner',
+					})
 				else
 					+weather()

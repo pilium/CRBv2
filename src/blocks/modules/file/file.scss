@@ -1,0 +1,133 @@
+.file {
+	position: relative;
+	border-radius: var(--border-radius);
+	width: 300px;
+	height: 216px;
+	box-shadow: 0 6px 20px 6px rgba(0, 0, 0, 0.1);
+
+	&__inner {
+		overflow-y: scroll;
+		padding: 8px 16px;
+		height: 168px;
+		max-height: 168px;
+	}
+
+	&__title {
+		font-family: var(--font-family--bold);
+		font-size: rem(18);
+		text-overflow: ellipsis;
+	}
+
+	&__tags {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		border-radius: var(--border-radius);
+		padding: 8px;
+		width: 100%;
+		height: 40px;
+
+		> * {
+			&:not(:last-child) { margin-right: 8px; }
+		}
+	}
+
+	&__tag {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-style: italic;
+		color: var(--color-main);
+		cursor: default;
+		transition: color linear 0.3s;
+
+		> * {
+			&:not(:last-child) { margin-right: 2px; }
+		}
+
+		&:focus,
+		&:hover {
+			color: var(--color-icon);
+
+			.file__icon {
+				fill: var(--color-icon);
+			}
+		}
+
+		&--dl {
+			margin-left: auto;
+			cursor: pointer;
+		}
+	}
+
+	&__icon {
+		width: 32px;
+		height: 32px;
+		transition: fill linear 0.3s;
+
+		&--dl {
+			width: 24px;
+			height: 24px;
+			fill: var(--color-main);
+		}
+	}
+
+	&__hint {
+		position: absolute;
+		right: -12px;
+		top: -12px;
+		border-radius: var(--border-radius);
+		width: 32px;
+		height: 32px;
+		background-color: var(--color-bg-main);
+		transition: background-color 0.2s ease;
+
+		&.show {
+			padding: 8px 16px 8px 8px;
+			width: calc(100% + 16px);
+			height: calc(100% + 16px);
+			box-shadow: 0 6px 20px 6px rgba(0, 0, 0, 0.1);
+			background-color: var(--color-bg-light);
+
+			.file__open-hint {
+				&::before,
+				&::after {
+					background-color: var(--color-bg-main);
+				}
+				&::before { transform: translate(15px, 10px) rotate(-45deg); }
+				&::after { transform: translate(15px, 10px) rotate(45deg); }
+			}
+		}
+	}
+
+	&__open-hint {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+		display: block;
+		border-radius: var(--border-radius);
+		width: 32px;
+		height: 32px;
+		cursor: pointer;
+		pointer-events: auto;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: 2px;
+			width: 2px;
+			height: 12px;
+			background-color: var(--color-bg-light);
+			transform-origin: center center;
+			transition: all 0.25s ease;
+		}
+
+		&::before { transform: translate(15px, 6px) rotate(0) scale(1, 0.2); }
+		&::after { transform: translate(15px, 12px) rotate(0) scale(1, 0.5); }
+	}
+}

@@ -1,0 +1,19 @@
+mixin file(props)
+	.file
+		.file__inner
+			a.link.file__title(href="#")= props.title
+			.file__tags
+				span.file__tag(title="Формат файла doc")
+					+icon(props.icon, 'file__icon')
+					span= props.size
+				a.file__tag.file__tag--dl(href=props.href download)
+					span.visually-hidden Скачать файл
+					+icon('download', 'file__icon file__icon--dl')
+		.file__hint
+			span.file__open-hint
+			+file-info({
+				type: props.type,
+				date: props.date,
+				format: props.format,
+				size: props.size
+			})

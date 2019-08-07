@@ -14,5 +14,6 @@ dist
 yarn.lock
 package-lock.json
 src/styles/vendor
+src/files
 tmp
 debug.log

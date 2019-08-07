@@ -2,7 +2,6 @@
 	&__title {
 		margin: 48px auto;
 		font-size: rem(34);
-		text-align: center;
 
 		@media screen and (min-width: $break_md) {
 			font-size: rem(60);
@@ -20,12 +19,15 @@
 		margin: 40px 0;
 	}
 
-	ul {
+	&__list {
+		list-style-type: disc;
 		padding-left: 2rem;
 
 		li {
-			list-style-type: disc;
+			ul { margin-top: 1em; }
 		}
+
+		&--noPd { padding-left: 0; }
 	}
 
 	p {

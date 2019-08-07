@@ -1,0 +1,39 @@
+mixin file-info(props)
+	ul.file-info
+		li.file-info__item
+			span.file-info__title Тип документа: 
+			span= props.type
+		li.file-info__item
+			span.file-info__title(title="Дата последнего изменения") Дата: 
+			span= props.date
+		li.file-info__item
+			span.file-info__title Формат:
+			case props.format
+				when 'doc'
+					span.file__info-format(title="Расширение имени файла, используемое для файлов, представляющих текст, с разметкой или без.Расширение «.doc» часто использовалось для обозначения текстовых файлов, содержащих текст без форматирования, позже стало использоваться для двоичных форматов с разметкой.") DOС ( #{props.size} )
+				default
+					span Не указан
+		span.file-info__open Чем открыть:
+		case props.format
+			when 'doc'
+				+file-open({
+					format: 'doc',
+				})
+			when 'docx'
+				+file-open({
+					format: 'doc',
+				})
+			when 'rtf'
+				+file-open({
+					format: 'doc',
+				})
+			when 'pdf'
+				+file-open({
+					format: 'pdf',
+				})
+			when 'jpg'
+				+file-open({
+					format: 'jpg',
+				})
+			default
+				span Рекомендуемые программы не указаны

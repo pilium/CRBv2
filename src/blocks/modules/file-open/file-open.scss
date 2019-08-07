@@ -1,0 +1,18 @@
+.file-open {
+	margin-top: 8px;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding-left: 0;
+
+		li { list-style-type: none; }
+		p { margin-bottom: 0; }
+
+		> * {
+			&:not(:last-child) { margin-bottom: 2px; }
+		}
+	}
+}
