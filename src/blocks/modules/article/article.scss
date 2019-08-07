@@ -13,12 +13,6 @@
 		max-width: 760px;
 	}
 
-	h2,
-	h3,
-	h4 {
-		margin: 40px 0;
-	}
-
 	&__list {
 		list-style-type: disc;
 		padding-left: 2rem;
@@ -30,8 +24,46 @@
 		&--noPd { padding-left: 0; }
 	}
 
+	&__figure { margin: 16px 40px; }
+
+	&__strong {
+		position: relative;
+		margin-top: 16px;
+		margin-bottom: 24px;
+		padding-left: 32px;
+		font-family: var(--font-family--bold);
+		color: #223836;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 4px;
+			height: 100%;
+			background: #3e9690;
+		}
+
+		p {
+			margin-bottom: 0;
+			line-height: 1;
+		}
+	}
+
+	h2,
+	h3,
+	h4 {
+		margin: 40px 0;
+	}
+
 	p {
 		font-size: rem(18);
 		line-height: 1.65;
+	}
+
+	.link {
+		font-family: var(--font-family--bold);
+		line-height: 1.5;
 	}
 }
