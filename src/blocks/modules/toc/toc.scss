@@ -1,7 +1,8 @@
 .toc {
+	margin-bottom: 24px;
 	padding-top: 16px;
 	padding-right: 16px;
-	padding-bottom: 56px;
+	padding-bottom: 24px;
 	padding-left: 16px;
 	background-color: var(--color-bg-body);
 
@@ -29,9 +30,5 @@
 		list-style-type: circle;
 		margin-top: 1rem;
 		padding-left: 2em;
-	}
-
-	@media screen and (min-width: $break_md) {
-		padding-bottom: 64px;
 	}
 }
