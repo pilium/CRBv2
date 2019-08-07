@@ -25,5 +25,9 @@
 			display: flex;
 			overflow-x: scroll;
 		}
+
+		@media screen and (min-width: $break_md) {
+			overflow-x: auto;
+		}
 	}
 }
