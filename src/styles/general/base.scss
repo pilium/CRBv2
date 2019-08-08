@@ -150,6 +150,7 @@ svg {
 a {
 	text-decoration: none;
 	background-color: transparent;
+	cursor: pointer;
 	transition: color 0.3s;
 
 	&[href^="tel:"] {
