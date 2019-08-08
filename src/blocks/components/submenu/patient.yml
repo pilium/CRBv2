@@ -31,10 +31,10 @@
           href: '/helpOpportunity.html'
           text: 'Возможность получения медицинской помощи'
         -
-          href: '/demografic.html'
+          href: '/demographic.html'
           text: 'Демографические показатели'
         -
-          href: '#'
+          href: '/settlerPtotect.html'
           text: 'Защита прав граждан'
         -
           href: '#'
