@@ -1,8 +1,7 @@
 mixin article(props)
 	article.article
 		.article__wrapper
-			.container
-				h1.article__title= props.title
+			h1.article__title= props.title
 			+to-top()
 			.article__inner
 				block
