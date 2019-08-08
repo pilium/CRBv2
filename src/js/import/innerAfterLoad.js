@@ -17,3 +17,4 @@ import '../lazyloadImg.js';
 import '%components%/to-top/to-top.js';
 import '%modules%/ie-hack/ie-hack.js';
 import '%modules%/file/file.js';
+import '%modules%/tabs/tabs.js';

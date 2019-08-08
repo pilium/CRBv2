@@ -1,0 +1,36 @@
+.tabs {
+	&__list {
+		margin-bottom: 16px;
+		color: var(--color-text);
+		background-color: var(--color-bg-light);
+	}
+
+	&__item {
+		display: inline-block;
+		border-bottom: 1px solid var(--color-border);
+		width: 50%;
+		text-align: center;
+
+		&--active {
+			border-bottom-width: 4px;
+			color: var(--color-main);
+			background-color: var(--color-bg-light);
+			transition: background-color 0.3s cubic-bezier(0.42, 0, 1, 1);
+		}
+	}
+
+	&__link {
+		display: block;
+
+		@media screen and (min-width: $break_xs) {
+			padding: 8px 16px;
+			font-size: rem(20);
+		}
+	}
+
+	&__panel {
+		padding: 16px;
+
+		[aria-hidden="true"] { display: none; }
+	}
+}
