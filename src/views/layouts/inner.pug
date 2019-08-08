@@ -19,9 +19,10 @@ html(lang="ru")
 			class: 'preloader--main',
 		})
 		.main-wrapper
+			+skip-content()
 			block header
 				include ../../blocks/modules/header/header
-			main.main
+			main.main#content
 				block content
 			block footer
 				+blind()
