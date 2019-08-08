@@ -1,0 +1,12 @@
+mixin table(props)
+	-
+		var allMods = '';
+		if(typeof(props.mods) !== 'undefined' && props.mods) {
+			var modsList = props.mods.split(',');
+			for (var i = 0; i < modsList.length; i++) {
+				allMods = allMods + ' table--' + modsList[i].trim();
+			}
+		}
+	table.table(class= allMods)
+		caption.table__caption= props.caption
+		block
