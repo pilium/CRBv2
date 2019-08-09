@@ -88,6 +88,18 @@
 		}
 	}
 
+	&--equal-2-1-1 {
+		th {
+			&:first-child {
+				width: 50%;
+			}
+
+			&:last-child {
+				width: 25%;
+			}
+		}
+	}
+
 	&--schedule {
 		td {
 			padding: 40px 0;
