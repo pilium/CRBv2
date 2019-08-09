@@ -1,7 +1,7 @@
 .article {
 	&__title {
 		margin: 48px auto;
-		font-size: rem(34);
+		font-size: rem(24);
 		text-align: center;
 
 		@media screen and (min-width: $break_md) {
@@ -52,6 +52,8 @@
 			line-height: 1;
 		}
 	}
+
+	&__video { margin: 32px 0; }
 
 	h2,
 	h3,
