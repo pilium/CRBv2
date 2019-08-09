@@ -4,6 +4,9 @@
       label: 'О больнице'
       list:
         -
+          href: '/history.html'
+          text: 'История больницы'
+        -
           href: '#'
           text: 'Новости'
         -
