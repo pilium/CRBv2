@@ -49,17 +49,23 @@
 	td {
 		&.center { text-align: center; }
 
+		&.table__cell-response {
+			@media screen and (max-width: $break_sm) {
+				&::before {
+					content: attr(data-title);
+					display: block;
+					margin-bottom: 8px;
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+			}
+		}
+
 		@media screen and (max-width: $break_sm) {
 			display: block;
 			padding: 0 16px;
+			font-size: rem(14);
 			text-align: center;
-
-			&::before {
-				content: attr(data-title);
-				display: block;
-				font-weight: bold;
-				text-transform: uppercase;
-			}
 
 			&:last-child { border-bottom: 0; }
 		}
@@ -77,6 +83,36 @@
 
 			&:last-child {
 				width: 30%;
+			}
+		}
+	}
+
+	&--schedule {
+		td {
+			padding: 40px 0;
+			font-size: rem(18);
+			text-align: center;
+
+			.attention { color: var(--color-error); }
+
+			&:first-child,
+			&:nth-child(2) { font-family: var(--font-family--bold); }
+
+			@media screen and (max-width: $break_sm) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin: 8px 0;
+				font-size: rem(16);
+
+				&:first-child,
+				&:nth-child(2) {
+					font-family: var(--font-family--default);
+					text-align: left;
+				}
+
+				&:first-child { margin-top: 0; }
+				&:last-child { margin-bottom: 0; }
 			}
 		}
 	}

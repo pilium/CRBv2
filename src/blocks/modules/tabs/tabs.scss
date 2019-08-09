@@ -33,4 +33,8 @@
 
 		[aria-hidden="true"] { display: none; }
 	}
+
+	&__wrapper {
+		@media screen and (min-width: $break_xs) { padding: 0 72px; }
+	}
 }
