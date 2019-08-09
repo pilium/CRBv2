@@ -1,0 +1,474 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "График приема врачей";
+	- var description = 'График приема специалистов поликлиники МБУЗ «ЦРБ» волгодонского района';
+	- var breadcrumbs = [{title: 'Пациентам',link: 'article.html'},{title: 'График приема врачей'}]
+	- var keywords = 'График приема врачей';
+
+block content
+	+breadcrumbs()
+	+article({
+		title: 'График приема специалистов поликлиники МБУЗ «ЦРБ» волгодонского района',
+	})
+		+tabs()
+			section.tabs__panel#section-0(role="tabpanel")
+				.tabs__wrapper
+					+table({
+						mods: 'schedule',
+					})
+						thead
+							tr
+								th Ф.И.О.
+								th Специальность
+								th.cabinet.table__cell-response(data-title="Кабинет") Кабинет
+								th
+									span Пн
+								th
+									span Вт
+								th
+									span Ср
+								th
+									span Чт
+								th
+									span Пт
+								th
+									span Cб
+						tbody
+							tr
+								td Кожемякина Зоя Александровна
+								td Заведующая поликлиникой
+								td.cabinet.table__cell-response(data-title="Кабинет") 306
+								td.table__cell-response(data-title="ПН")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ВТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="СР")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ЧТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ПТ")
+									span.attention Отпуск
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Отпуск
+							tr
+								td Ледяева Людмила Васильевна
+								td Участковый  терапевт
+								td.cabinet.table__cell-response(data-title="Кабинет") 201
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 12:00 - 16:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 12:00 - 16:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:00 - 12:00
+								td.weekdayLast.table__cell-response(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Чувилов Алексей Алексеевич
+								td Участковый  терапевт
+								td.cabinet.table__cell-response(data-title="Кабинет") 213
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:00 - 12:00
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Денисова Олеся Геннадьевна
+								td Кардиолог
+								td.table__cell-response.cabinet(data-title="Кабинет") 311
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 09:00 - 16:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 09:00 - 16:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 09:00 - 16:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 09:00 - 16:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 09:00 - 16:00
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Раджапов Байрам Бахтиярович
+								td Участковый  терапевт
+								td.table__cell-response.cabinet(data-title="Кабинет") 214
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 12:00 - 16:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 12:00 - 16:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 12:00 - 16:00
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Бузнякова Любовь Васильевна
+								td Участковый педиатр
+								td.table__cell-response.cabinet(data-title="Кабинет") 207
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 12:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:00 - 12:00
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Власова Юлия Сергеевна
+								td Участковый педиатр
+								td.table__cell-response.cabinet(data-title="Кабинет") 209
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:30 - 12:30
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:30 - 12:30
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:30 - 12:30
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:30 - 12:30
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:30 - 12:30
+								td.table__cell-response.weekdayLast(data-weekday="6" data-title="СБ")
+									span.attention Выходной
+							tr
+								td Кирьянова Елена Юрьевна
+								td Оториноларинголог
+								td.table__cell-response.cabinet(data-title="Кабинет") 210
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span.attention нет приема
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span.attention нет приема
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span.attention нет приема
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span.attention нет приема
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span.attention нет приема
+								td.table__cell-response.weekdayLast(data-title="СБ" data-weekday="6")
+									span 09:00 - 12:00
+							tr
+								td Туфанов Камол Ниязович
+								td Детский уролог-андролог
+								td.table__cell-response.cabinet(data-title="Кабинет") 307
+								td.table__cell-response(data-title="ПН")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ВТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="СР")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ЧТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ПТ")
+									span.attention Отпуск
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Отпуск
+							tr
+								td Поднебесная Марина Васильевна
+								td Акушер - гинеколог
+								td.table__cell-response.cabinet(data-title="Кабинет") 313
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 15:30
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 15:30
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 15:30
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 15:30
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 09:00 - 15:30
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Рамизов Бахтиер Фарамизович
+								td Невролог
+								td.table__cell-response.cabinet(data-title="Кабинет") 314
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 13:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 13:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 13:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 13:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:00 - 13:00
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Ефремов Владимир Михайлович
+								td Окулист
+								td.table__cell-response.cabinet(data-title="Кабинет") 204
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span.attention нет приема
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span.attention нет приема
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 16:00 - 19:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span.attention нет приема
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span.attention нет приема
+								td.table__cell-response.weekdayLast(data-title="СБ" data-weekday="6")
+									span 08:00 - 12:00
+							tr
+								td Жуков Ирэк Евгеньевич
+								td Хирург
+								td.table__cell-response.cabinet(data-title="Кабинет") 305
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 15:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 15:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 15:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 15:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:00 - 15:00
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Туфанов Камол Ниязович
+								td Детский хирург
+								td.table__cell-response.cabinet(data-title="Кабинет") 307
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 14:30 - 17:00
+								td.table__cell-response(data-title="ВТ")
+									span.attention нет приема
+								td.table__cell-response(data-title="СР")
+									span.attention нет приема
+								td.table__cell-response(data-title="ЧТ")
+									span.attention нет приема
+								td.table__cell-response(data-title="ПТ")
+									span.attention нет приема
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Акимочкина Наталья Анатольевна
+								td Дерматолог
+								td.table__cell-response.cabinet(data-title="Кабинет") 308
+								td.table__cell-response(data-title="ПН")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ВТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="СР")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ЧТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ПТ")
+									span.attention Отпуск
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Отпуск
+							tr
+								td Гутовская Татьяна Геннадьевна
+								td Зубной врач
+								td.table__cell-response.cabinet(data-title="Кабинет") 301
+								td.table__cell-response(data-title="ПН")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ВТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="СР")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ЧТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ПТ")
+									span.attention Отпуск
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Отпуск
+							tr
+								td Глогусь Любовь Николаевна
+								td Стоматолог
+								td.cabinet.table__cell-response(data-title="Кабинет") 301
+								td.attention(colspan="6") Нечёт. дни с 08:00 до 14:36 Чёт. дни с 13:00 до 19:30
+							tr
+								td Коноплев Алексей Александрович
+								td Стоматолог
+								td.table__cell-response.cabinet(data-title="Кабинет") 302
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 15:12
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 15:12
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 15:12
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 15:12
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:00 - 15:12
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Худяков Алексей Николаевич
+								td Врач-эндоскопист
+								td.table__cell-response.cabinet(data-title="Кабинет") 109
+								td.table__cell-response(data-title="ПН")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ВТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="СР")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ЧТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ПТ")
+									span.attention Отпуск
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Отпуск
+							tr
+								td Андара Магане Чамара Чандраратне
+								td Акушер - гинеколог
+								td.table__cell-response.cabinet(data-title="Кабинет") 310
+								td.table__cell-response(data-title="ПН")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ВТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="СР")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ЧТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ПТ")
+									span.attention Отпуск
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Отпуск
+							tr
+								td Щербакова Ирина Геннадьевна
+								td УЗИ
+								td.table__cell-response.cabinet(data-title="Кабинет") 211
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 14:30
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 14:30
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 14:30
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 14:30
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:00 - 14:30
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Рылева Александра Викторна
+								td Функц. диагностика
+								td.table__cell-response.cabinet(data-title="Кабинет") 112
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 08:00 - 14:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 08:00 - 14:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 08:00 - 14:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 08:00 - 14:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 08:00 - 14:00
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+							tr
+								td Рожкова Светлана Васильевна
+								td Физиотерапия
+								td.table__cell-response.cabinet(data-title="Кабинет") 216
+								td.table__cell-response(data-title="ПН")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ВТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="СР")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ЧТ")
+									span.attention Отпуск
+								td.table__cell-response(data-title="ПТ")
+									span.attention Отпуск
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Отпуск
+							tr
+								td Медведев Николай Игоревич
+								td Врачебная коммисия
+								td.table__cell-response.cabinet(data-title="Кабинет") 216
+								td.table__cell-response(data-weekday="1" data-title="ПН")
+									span 15:48 - 18:00
+								td.table__cell-response(data-weekday="2" data-title="ВТ")
+									span 15:48 - 18:00
+								td.table__cell-response(data-weekday="3" data-title="СР")
+									span 15:48 - 18:00
+								td.table__cell-response(data-weekday="4" data-title="ЧТ")
+									span 15:48 - 18:00
+								td.table__cell-response(data-weekday="5" data-title="ПТ")
+									span 15:48 - 18:00
+								td.table__cell-response.weekdayLast(data-title="СБ")
+									span.attention Выходной
+			section.tabs__panel#section-1(role="tabpanel")
+				.tabs__wrapper
+					+table({
+						mods: 'schedule',
+					})
+						thead
+							tr
+								th Ф.И.О
+								th Специальность
+								th.cabinet(data-title="Кабинет") Кабинет
+								th Пн
+								th Вт
+								th Ср
+								th Чт
+								th Пт
+						tbody
+							tr
+								td Казимов Аскар Казимович
+								td Участковый терапевт
+								td.table__cell-response.cabinet(data-title="Кабинет") 6
+								td.table__cell-response(data-weekday="1" data-title="ПН") 08:00 - 15:48
+								td.table__cell-response(data-weekday="2" data-title="ВТ") 08:00 - 15:48
+								td.table__cell-response(data-weekday="3" data-title="СР") 08:00 - 15:48
+								td.table__cell-response(data-weekday="4" data-title="ЧТ") 08:00 - 15:48
+								td.table__cell-response(data-weekday="5" data-title="ПТ") 08:00 - 15:48
+							tr
+								td Дарянов Муртаз Кирманшаевич
+								td Участковый терапевт
+								td.table__cell-response.cabinet(data-title="Кабинет") 4
+								td.table__cell-response(data-weekday="1" data-title="ПН") 08:00 - 15:48
+								td.table__cell-response(data-weekday="2" data-title="ВТ") 08:00 - 15:48
+								td.table__cell-response(data-weekday="3" data-title="СР") 08:00 - 15:48
+								td.table__cell-response(data-weekday="4" data-title="ЧТ") 08:00 - 15:48
+								td.table__cell-response(data-weekday="5" data-title="ПТ") 08:00 - 15:48
+							tr
+								td Караваева Эльвира Викторовна
+								td Участковый педиатр
+								td.table__cell-response.cabinet(data-title="Кабинет") 7
+								td.table__cell-response(data-weekday="1" data-title="ПН") 08:00 - 15:48
+								td.table__cell-response(data-weekday="2" data-title="ВТ") 08:00 - 15:48
+								td.table__cell-response(data-weekday="3" data-title="СР") 08:00 - 15:48
+								td.table__cell-response(data-weekday="4" data-title="ЧТ") 08:00 - 15:48
+								td.table__cell-response(data-weekday="5" data-title="ПТ") 08:00 - 15:48
+							tr
+								td Суворова Светлана Абрамовна
+								td Зубной врач
+								td.table__cell-response.cabinet(data-title="Кабинет") 2
+								td.table__cell-response(data-weekday="1" data-title="ПН") 08:00 - 14:36
+								td.table__cell-response(data-weekday="2" data-title="ВТ") 08:00 - 14:36
+								td.table__cell-response(data-weekday="3" data-title="СР") 08:00 - 14:36
+								td.table__cell-response(data-weekday="4" data-title="ЧТ") 08:00 - 14:36
+								td.table__cell-response(data-weekday="5" data-title="ПТ") 08:00 - 14:36
+							tr
+								td Кац Сергей Сергеевич
+								td Участковый терапевт
+								td.table__cell-response.cabinet(data-title="Кабинет") 6
+								td.table__cell-response(data-weekday="1" data-title="ПН") 08:00 - 15:48
+								td.table__cell-response(data-weekday="2" data-title="ВТ") 08:00 - 15:48
+								td.table__cell-response(data-weekday="3" data-title="СР") 08:00 - 15:48
+								td.table__cell-response(data-weekday="4" data-title="ЧТ") 08:00 - 15:48
+								td.table__cell-response(data-weekday="5" data-title="ПТ") 08:00 - 15:48
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/inner.js")
