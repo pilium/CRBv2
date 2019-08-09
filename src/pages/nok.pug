@@ -1,0 +1,39 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Независимая оценка качества";
+	- var description = 'Независимая оценка качества медицинских услуг';
+	- var breadcrumbs = [{title: 'Пациентам',link: 'article.html'},{title: 'Независимая оценка качества'}]
+	- var keywords = 'Независимая оценка качества';
+
+block content
+	+breadcrumbs()
+	+article({
+		title: 'Независимая оценка качества медицинских услуг',
+	})
+		.article__text
+			img.article__img(src="https://res.cloudinary.com/dhccuflos/image/upload/v1565336752/nok_crb.jpg", alt="Приглашение на сайт независимой оценки качества медицинских услуг")
+			//- iframe(src="https://nok.rosminzdrav.ru/MO/GetBanner/6112/1" border="0" scrolling="no" allowtransparency="true" width="300" height="110" style="border: 0;")
+			+files()
+				+file({
+					title: 'Показатели оценки качества оказания услуг в амбулаторных условиях',
+					size: '46 кб',
+					icon: 'doc',
+					href: '#',
+					type: 'Внутренний',
+					date: '21.01.2019г.',
+					format: 'docx',
+				})
+				+file({
+					title: 'Показатели оценки качества оказания услуг в стационарных условиях',
+					size: '49 кб',
+					icon: 'doc',
+					href: '#',
+					type: 'Внутренний',
+					date: '21.01.2019г.',
+					format: 'docx',
+				})
+
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/inner.js")
