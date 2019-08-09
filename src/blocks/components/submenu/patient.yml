@@ -7,7 +7,7 @@
           href: '/schedule.html'
           text: 'График приема врачей'
         -
-          href: '#'
+          href: '/dispans.html'
           text: 'Диспансеризация'
         -
           href: '/patientDuties.html'

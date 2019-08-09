@@ -1,0 +1,138 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Диспансеризация";
+	- var description = 'План маршрутизации по проведению 1 этапа диспансеризации (профилактического медицинского осмотра) взрослого населения в МБУЗ «ЦРБ» Волгодонгского района';
+	- var breadcrumbs = [{title: 'Пациентам',link: 'article.html'},{title: 'Диспансеризация'}]
+	- var keywords = 'Диспансеризация';
+
+block content
+	+breadcrumbs()
+	+article({
+		title: 'План маршрутизации по проведению 1 этапа диспансеризации (профилактического медицинского осмотра) взрослого населения в МБУЗ «ЦРБ» Волгодонгского района',
+	})
+		.article__text
+			.container
+				.article__strong
+					p
+						span Адрес: Волгодонской район, ст. Романовская, пер. Союзный, 97 а
+					p
+						span Телефон регистратуры: 
+						a.link.link--underline(href="tel:88639470722") 8(86394) 7-07-22
+				iframe(src="https://onedrive.live.com/embed?cid=E481F2289F387339&resid=E481F2289F387339%212607&authkey=AKj15BEfDhHTYPU&em=2&wdAr=1.3333333333333333" width="100%" height="793px" frameborder="0")
+					| Это внедренный файл 
+					a.link.link--underline(target="_blank" href="https://office.com" rel="noopener noreferrer") Microsoft Office
+					|  на платформе 
+					a.link.link--underline(target="_blank" href="https://office.com/webapps" rel="noopener noreferrer") Office Online
+
+				+table({
+					mods: ''
+				})
+					thead
+						tr
+							th(scope="col") Наименование осмотра
+							th(scope="col") Где проводится
+							th(scope="col") Режим работы
+					tbody
+						tr
+							td(scope="row") Получение листка маршрутизации для прохождения диспансеризации
+							td.table__cell-response(rowspan="2" scope="rowgroup" data-title="Где:") Поликлиника, 2 этаж, кабинет № 205
+							td.table__cell-response(rowspan="2" scope="rowgroup" data-title="Когда:") Понедельник-пятница: 8:00 - 15:45, Суббота: 8:00 - 12:00
+						tr
+							td(scope="row") Опрос (анкетирование), антропометрия, расчет индекса массы тела,  измерение артериального давления, определение относительного и абсолютного сердечно-сосудистого риска.
+						tr
+							td(scope="row") Осмотр фельдшером (акушеркой) или врачом акушером-гинекологом (женщины с 18 до 99 лет)
+							td.table__cell-response(data-title="Где:") Поликлиника, 3 этаж, кабинет № 310- 313
+							td.table__cell-response(data-title="Когда:") Понедельник-пятница: 8:00 - 15:45, Суббота: 8:00 - 12:00
+						tr
+							td(scope="row") Взятие мазка с шейки матки (для женщин в 18, 21, 24,27,30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63)
+							td.table__cell-response(data-title="Где:") Поликлиника, 3 этаж, кабинет № 310- 313
+							td.table__cell-response(data-title="Когда:") Понедельник-пятница: 8:00 - 15:45, Суббота: 8:00 - 12:00
+						tr
+							td(scope="row") Флюорография легких (для граждан с 18 лет 1 раз в 2 года)
+							td.table__cell-response(data-title="Где:") Рентгенкабинет, территория больничного комплекса ст. Романовская
+							td.table__cell-response(data-title="Когда:") Понедельник-пятница: 8:00 - 15:45, Суббота: 8:00 - 12:00
+						tr
+							td(scope="row") Измерение внутриглазного давления (для граждан с 40 лет)
+							td.table__cell-response(data-title="Где:") Поликлиника, 2 этаж, кабинет № 204
+							td.table__cell-response(data-title="Когда:") Понедельник-пятница: 8:00 - 15:45, Суббота: 8:00 - 12:00
+						tr
+							td(scope="row") Электрокардиография (ЭКГ)- (для граждан  с 35 лет)
+							td.table__cell-response(data-title="Где:") Поликлиника, 1 этаж, кабинет № 113
+							td.table__cell-response(data-title="Когда:") Понедельник-пятница: 8:00 - 15:45, Суббота: 8:00 - 12:00
+						tr
+							td(scope="row") Определение уровня общего холестерина и глюкозы в крови
+							td.table__cell-response(data-title="Где:" rowspan="4" scope="rowgroup") Поликлиника, 1 этаж, кабинет № 102
+							td.table__cell-response(data-title="Когда:" rowspan="4" scope="rowgroup") Понедельник-пятница: 8:00 - 11:00
+						tr
+							td(scope="row") Общий анализ крови (для граждан с 40 лет)
+						tr
+							td(scope="row") Определение простат-специфического антигена (ПСА) в крови для мужчин 45, 51 год
+						tr
+							td(scope="row") Исследование кала на скрытую кровь (для граждан 51, 54, 57, 60, 63, 66, 69, 72 года)
+						tr
+							td(scope="row") Маммография (для женщин с 40 до 74 лет 1 раз в 2 года)
+							td.table__cell-response(data-title="Где:") Рентгенкабинет, территория больничного комплекса ст. Романовская
+							td.table__cell-response(data-title="Когда:") Понедельник-пятница с 8.00 до 15.00, Суббота: 8:00 - 12:00
+						tr
+							td(scope="row") Эзофагогастродуоденоскопия (граждане в 45 лет)
+							td.table__cell-response(data-title="Где:") Поликлиника, 1 этаж,кабинет № 109
+							td.table__cell-response(data-title="Когда:") Понедельник, среда, пятница с 12.00 до 16.00 (запись)
+						tr
+							td(scope="row") Прием (осмотр) врачом-терапевтом по результатам профилактического медицинского осмотра и I этапа диспансеризации, в том числе осмотр  на выявление  визуальных и иных локализаций онкологических заболеваний, включающий осмотр кожных покровов, слизистых губ и ротовой полости, пальпация щитовидной железы, лимфатических узлов с целью установления диагноза, определение группы здоровья, группы диспансерного наблюдения, определения медицинских показаний для  осмотров (консультаций) и обследований в рамках второго этапа диспансеризации
+							td.table__cell-response(data-title="Где:") Поликлиника, 2, 3 этаж, кабинет № 201; № 213, № 214
+							td.table__cell-response(data-title="Когда:") Понедельник-пятница: 8:00 - 15:45, Суббота: 8:00 - 12:00
+				.article__video
+					video(controls="" width="100%" loop="" muted="" preload="metadata" poster="https://res.cloudinary.com/dhccuflos/image/upload/v1565332256/video/dispans/poster.jpg")
+						source(src="https://res.cloudinary.com/dhccuflos/video/upload/v1565332283/video/dispans/video.h264.mp4" type="video/mp4; codecs=avc1.4D401E,mp4a.40.2")
+						source(src="https://res.cloudinary.com/dhccuflos/video/upload/v1565332294/video/dispans/video.hevc.mp4" type="video/mp4; codecs=hevc,mp4a.40.2")
+						source(src="https://res.cloudinary.com/dhccuflos/video/upload/v1565332276/video/dispans/dispans.webm" type="video/webm")
+						p Ваш браузер не поддерживает встроенное видео.Пройдите по ссылке 
+							a.link.link--underline(href="https://res.cloudinary.com/dhccuflos/video/upload/v1565332283/video/dispans/video.h264.mp4" target="_blanc") Диспансеризация
+							|  для просмотра видео
+				.article__strong
+					p При возникновении проблем при прохождении диспансеризации звонить по телефону 
+						a.link.link--underline(href="tel:88639470614") 8 (86394) 7-06-14
+						| (Заместитель главного врача по медицинскому обслуживанию населения Ким Любовь Михайловна)
+				.article__strong
+					p Диспансеризация проводится согласно приказу Министерства Здравоохранения РФ #[i от 13.03.2019. №124н]
+				+files()
+					+file({
+						title: 'Приказ Минздрава РФ от 13.03.2019 № 124Н',
+						size: '760 кб',
+						icon: 'rtf',
+						href: '#',
+						type: 'Министерство',
+						date: '13.03.2019г.',
+						format: 'rtf',
+					})
+					+file({
+						title: 'План маршрутизации диспансеризации на 2019г.',
+						size: '16 кб',
+						icon: 'docx',
+						href: '#',
+						type: 'Министерство',
+						date: '21.01.2019г.',
+						format: 'docx',
+					})
+					+file({
+						title: 'График выезда врачебных бригад в МБУЗ «ЦРБ» Волгодонского района на 2019 год.',
+						size: '41 кб',
+						icon: 'docx',
+						href: '#',
+						type: 'Министерство',
+						date: '22.01.2019г.',
+						format: 'docx',
+					})
+					+file({
+						title: 'Выполнение диспансеризации за 2018 год',
+						size: '31 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Министерство',
+						date: '22.01.2019г.',
+						format: 'doc',
+					})
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/inner.js")
