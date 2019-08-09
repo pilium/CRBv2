@@ -34,6 +34,7 @@
 
 	th,
 	td {
+		vertical-align: middle;
 		padding: 16px;
 	}
 
@@ -92,6 +93,18 @@
 		th {
 			&:first-child {
 				width: 50%;
+			}
+
+			&:last-child {
+				width: 25%;
+			}
+		}
+	}
+
+	&--equal-1-2-1 {
+		th {
+			&:first-child {
+				width: 25%;
 			}
 
 			&:last-child {
