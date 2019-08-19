@@ -1,6 +1,6 @@
 .article {
 	&__title {
-		margin: 0 auto 48px;
+		margin: 40px auto;
 		font-size: rem(24);
 		text-align: center;
 
@@ -78,6 +78,15 @@
 
 	&__video,
 	&__img { margin: 32px 0; }
+
+	&__item {
+		&:not(:last-child) { margin-bottom: 64px; }
+	}
+
+	&__item-img {
+		margin: 0 auto;
+		max-width: 424px;
+	}
 
 	h2,
 	h3,
