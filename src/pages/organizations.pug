@@ -1,0 +1,127 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Вышестоящие организации";
+	- var description = 'Вышестоящие организации';
+	- var breadcrumbs = [{title: 'Пациентам',link: 'article.html'},{title: 'Вышестоящие организации'}]
+	- var keywords = 'Вышестоящие организации';
+
+block content
+	+breadcrumbs()
+	+article({
+		title: 'Вышестоящие организации',
+	})
+		.article__text
+			.container
+				.article__item-wrapper
+					.article__item
+						.article__item-img
+							img(src="https://res.cloudinary.com/dhccuflos/image/upload/v1566198736/organizations/mzro.jpg" alt="Логотип Министерства здравоохранения Ростовской области")
+						.article__item-info
+							h2 Министерство здравоохранения Ростовской области
+							p
+								span Адрес: 
+								| 344029 г. Ростов-на Дону Ул. 1-ой Конной Армии,33
+							p
+								span Министр здравоохранения: 
+								strong Быковская Татьяна Юрьевна
+							p
+								span Телефон приемной: 
+								a.link.link--underline(href="88632423096") 8-(863) 242-30-96
+							p
+								span Ссылка на сайт: 
+								a.link.link--underline(href="http://www.minzdrav.donland.ru" target="_blank" rel="noopener noreferrer") www.minzdrav.donland.ru
+					.article__item
+						.article__item-img
+							img(src="https://res.cloudinary.com/dhccuflos/image/upload/v1566198736/organizations/rofoms2.png" alt="Логотип Территориального фонда обязательного медицинского страхования Ростовской области")
+						.article__item-info
+							h2 Территориальный фонд обязательного медицинского страхования Ростовской области
+							p
+								span Адрес: 
+								| 344000 г. Ростов-на Дону Ул. Варфоломеева, 261/81
+							p
+								span Директор ТФОМС: 
+								strong Решетников Алексей Валентинович
+							p
+								span Телефон приемной: 
+								a.link.link--underline(href="88632349022") 8-(863) 234-90-22
+							p
+								span Ссылка на сайт: 
+								a.link.link--underline(href="http://www.rostov-tfoms.ru" target="_blank" rel="noopener noreferrer") www.rostov-tfoms.ru
+					.article__item
+						.article__item-img
+							img(src="https://res.cloudinary.com/dhccuflos/image/upload/v1566198736/organizations/administracija.jpg" alt="Логотип Администрации Волгодонского района")
+						.article__item-info
+							h2 Администрация Волгодонского района
+							p
+								span Адрес: 
+								| 347350 Ростовская область Волгодонской район ст.Романовская
+								|                             ул.Почтовая 13
+							p
+								span Глава района: 
+								strong Бурлака Сергей Викторович
+							p
+								span Телефон приемной: 
+								a.link.link--underline(href="88639470130") 8-(86394) 7-01-30
+							p
+								span Ссылка на сайт: 
+								a.link.link--underline(href="http://www.volgodonskoiraion.ru" target="_blank" rel="noopener noreferrer") www.volgodonskoiraion.ru
+					.article__item
+						.article__item-img
+							img(src="https://res.cloudinary.com/dhccuflos/image/upload/v1566198736/organizations/miac.jpg" alt='Логотип Государственного бюджетного учреждения Ростовской области "Медицинский информационно-аналитический центр"')
+						.article__item-info
+							h2
+								| Государственное бюджетное учреждение Ростовской области "Медицинский
+								| информационно-аналитический центр"
+							p
+								span Адрес: 
+								| 344029 г. Ростов-на Дону пр.Сельмаш, 14
+							p
+								span и.о начальника: 
+								strong Березина Анастасия Александровна
+							p
+								span Телефон приемной: 
+								a.link.link--underline(href="88632522103") 8- (863) 252-21-03
+							p
+								span Ссылка на сайт: 
+								a.link.link--underline(href="http://www.miacrost.ru" target="_blank" rel="noopener noreferrer") www.miacrost.ru
+					.article__item
+						.article__item-img
+							img(src="https://res.cloudinary.com/dhccuflos/image/upload/v1566198736/organizations/roszdravnadzor.jpg" alt="Логотип Федеральной службы по надзору в сфере здравоохранения.")
+						.article__item-info
+							h2 Федеральная служба по надзору в сфере здравоохранения.
+							p
+								span Адрес: 
+								| 344037 г. Ростов-на-Дону, ул.Ченцова 71/63 "б"
+							p
+								span Руководитель: 
+								strong Полинская Татьяна Алексеевна
+							p
+								span Телефон приемной: 
+								a.link.link--underline(href="+78632869816") +7 (863) 286-98-16
+							p
+								span Ссылка на сайт: 
+								a.link.link--underline(href="http://www.roszdravnadzor.ru/" target="_blank" rel="noopener noreferrer") www.roszdravnadzor.ru/
+					.article__item
+						.article__item-img
+							img(src="https://res.cloudinary.com/dhccuflos/image/upload/v1566198736/organizations/rospotrebnadzor.jpg" alt="Логотип Управления федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по Ростовской области")
+						.article__item-info
+							h2
+								| Управление федеральной службы по надзору в сфере защиты прав потребителей и
+								| благополучия человека по Ростовской области
+							p
+								span Адрес: 
+								| 344019 г. Ростов-на Дону ул. 18 линия, 17
+							p
+								span Руководитель: 
+								strong Ковалев Евгений Владимирович
+							p
+								span Телефон приемной: 
+								a.link.link--underline(href="+78632510592") +7 (863) 251-05-92
+							p
+								span Ссылка на сайт: 
+								a.link.link--underline(href="http://www.61.rospotrebnadzor.ru" target="_blank" rel="noopener noreferrer") www.61.rospotrebnadzor.ru
+	
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/inner.js")
