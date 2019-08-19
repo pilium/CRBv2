@@ -53,6 +53,29 @@
 		}
 	}
 
+	&__links {
+		> * {
+			margin: 8px 0;
+			&:first-child { margin-top: 0; }
+			&:last-child { margin-bottom: 0; }
+		}
+	}
+
+	&__link-wrap {
+		display: flex;
+		align-items: center;
+
+		> * {
+			&:not(:last-child) { margin-right: 8px; }
+		}
+	}
+
+	&__link-img {
+		width: 24px;
+		height: 24px;
+		fill: var(--color-link);
+	}
+
 	&__video,
 	&__img { margin: 32px 0; }
 
