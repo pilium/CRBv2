@@ -1,0 +1,16 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Галерея";
+	- var description = 'Галерея';
+	- var breadcrumbs = [{title: 'Пациентам',link: 'article.html'},{title: 'Галерея'}]
+	- var keywords = 'Галерея';
+
+block content
+	+breadcrumbs()
+	.container
+		h1.article__title Галерея МБУЗ "ЦРБ"
+		+gallery()
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/gallery.js")
