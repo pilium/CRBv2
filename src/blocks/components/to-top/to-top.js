@@ -23,12 +23,16 @@ export let scrollToTop = (function () {
 	let scrollPosition = window.scrollY;
 	let scrollButton = document.getElementById('scrollToTop');
 
-	window.addEventListener('scroll', () => {
-		scrollPosition = window.scrollY;
-		// eslint-disable-next-line no-unused-expressions
-		showButton < scrollPosition ? scrollButton.classList.add('visible') : scrollButton.classList.remove('visible');
-	});
-	scrollButton.onclick = function () {
-		scrollTop(scrollSpeed);
-	};
+	if (scrollButton) {
+		window.addEventListener('scroll', () => {
+			scrollPosition = window.scrollY;
+			// eslint-disable-next-line no-unused-expressions
+			showButton < scrollPosition
+				? scrollButton.classList.add('visible')
+				: scrollButton.classList.remove('visible');
+		});
+		scrollButton.onclick = function () {
+			scrollTop(scrollSpeed);
+		};
+	}
 })();
