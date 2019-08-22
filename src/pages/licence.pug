@@ -1,0 +1,175 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Лицензии и документы";
+	- var description = 'Лицензии и документы';
+	- var breadcrumbs = [{title: 'Пациентам',link: 'article.html'},{title: 'Лицензии и документы'}]
+	- var keywords = 'Лицензии и документы';
+
+block content
+	+breadcrumbs()
+	+article({
+		title: 'Лицензии и документы',
+	})
+		.article__text
+			.container
+				h2 Лицензии:
+				.files__items
+					+file({
+						title: 'Лицензия на медицинскую деятельность',
+						size: '538 кб',
+						icon: 'pdf',
+						href: '#',
+						type: 'Внутренний',
+						date: '30.07.2019г.',
+						format: 'pdf',
+					})
+					+file({
+						title: 'Лицензия на фармацевтическую деятельность',
+						size: '726 кб',
+						icon: 'pdf',
+						href: '#',
+						type: 'Внутренний',
+						date: '01.08.2018г.',
+						format: 'pdf',
+					})
+				h2 Документы:
+				.files__items
+					+file({
+						title: 'Свидетельство о постановке на учет российской организации в налоговом органе по месту нахождения на территории Российской Федерации',
+						size: '218 кб',
+						icon: 'jpg',
+						href: '#',
+						type: 'Внутренний',
+						date: '15.11.2001г.',
+						format: 'jpg',
+					})
+					+file({
+						title: 'Свидетельство o внесении в Единый государственный реестр юридических лиц',
+						size: '251 кб',
+						icon: 'jpg',
+						href: '#',
+						type: 'Внутренний',
+						date: '25.11.2001г.',
+						format: 'jpg',
+					})
+					+file({
+						title: 'Устав МБУЗ "ЦРБ" волгодонского района',
+						size: '2.08 мб',
+						icon: 'pdf',
+						href: '#',
+						type: 'Внутренний',
+						date: '02.08.2018г.',
+						format: 'pdf',
+					})
+					+file({
+						title: 'Структура МБУЗ "ЦРБ" волгодонского района',
+						size: '1.36 мб',
+						icon: 'pdf',
+						href: '#',
+						type: 'Внутренний',
+						date: '14.96.2019г.',
+						format: 'pdf',
+					})
+					+file({
+						title: 'Оказание стационарной медицинской помощи',
+						size: '523 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '16.12.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Оказание медицинской помощи в дневных стационарах',
+						size: '513 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '20.12.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Оказание амбулаторно-поликлинической помощи',
+						size: '573 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '22.12.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Оказание скорой медицинской помощи',
+						size: '506 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '28.12.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Оказание платных медицинских услуг',
+						size: '497 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '28.12.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Рассмотрение обращений граждан',
+						size: '527 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '28.12.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Прием заявок (запись) на прием к врачу',
+						size: '508 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '28.12.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Заполнение и направление в аптеки электронных рецептов',
+						size: '497 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '28.12.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Выдача направлений гражданам на прохождение медико-социальной экспертизы',
+						size: '545 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '18.02.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Оказание доврачебной медицинской помощи на ФАПах',
+						size: '170 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '18.02.2011г.',
+						format: 'doc',
+					})
+					+file({
+						title: 'Политика конфиденциальности',
+						size: '108 кб',
+						icon: 'doc',
+						href: '#',
+						type: 'Внутренний',
+						date: '18.02.2019г.',
+						format: 'doc',
+					})
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/inner.js")
