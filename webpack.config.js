@@ -6,7 +6,6 @@ module.exports = {
 	entry: {
 		main: './src/js/index.js',
 		inner: './src/js/import/pages/inner.js',
-		gallery: './src/js/import/pages/gallery.js',
 		mainAfterLoad: './src/js/import/mainAfterLoad.js',
 		innerAfterLoad: './src/js/import/innerAfterLoad.js',
 	},
