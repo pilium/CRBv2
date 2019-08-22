@@ -13,7 +13,7 @@
           href: '#'
           text: 'Полезные статьи'
         -
-          href: '#'
+          href: '/roadmap.html'
           text: 'Дорожная карта'
         -
           href: '/modernize.html'

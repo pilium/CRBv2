@@ -1,0 +1,19 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Дорожная карта";
+	- var description = 'Дорожная карта';
+	- var breadcrumbs = [{title: 'Пациентам',link: 'article.html'},{title: 'Дорожная карта'}]
+	- var keywords = 'Дорожная карта';
+
+block content
+	+breadcrumbs()
+	+article({
+		title: 'Дорожная карта',
+	})
+		.article__text
+			.container
+				+roadmap()
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/inner.js")
