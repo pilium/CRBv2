@@ -28,6 +28,9 @@
 	&__info-item { margin-bottom: 24px; }
 
 	&__img {
+		height: 440px;
+		object-fit: cover;
+
 		@media screen and (min-width: $break_xl) {
 			margin-right: 40px;
 			max-width: 40%;
