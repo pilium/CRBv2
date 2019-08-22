@@ -77,6 +77,15 @@
 		td { height: 80px; }
 	}
 
+	&--equal {
+		th { width: 50%; }
+
+		td {
+			font-family: var(--font-family--bold);
+			text-align: center;
+		}
+	}
+
 	&--equal-1 {
 		th {
 			&:first-child {
@@ -103,6 +112,8 @@
 
 	&--equal-1-2-1 {
 		th {
+			text-align: center;
+
 			&:first-child {
 				width: 25%;
 			}
