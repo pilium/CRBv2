@@ -1,6 +1,6 @@
 .article {
 	&__title {
-		margin: 8px auto;
+		margin: 40px auto;
 		font-size: rem(24);
 
 		@media screen and (min-width: $break_md) {
@@ -104,5 +104,12 @@
 	.link {
 		font-family: var(--font-family--bold);
 		line-height: 1.5;
+	}
+
+	&--big {
+		.article__title {
+			margin: 80px 0;
+			text-align: center;
+		}
 	}
 }
