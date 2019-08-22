@@ -1,5 +1,14 @@
 mixin article(props)
-	article.article
+	-
+		// список модификаторов
+		var allMods = '';
+		if(typeof(props.mods) !== 'undefined' && props.mods) {
+			var modsList = props.mods.split(',');
+			for (var i = 0; i < modsList.length; i++) {
+				allMods = allMods + ' article--' + modsList[i].trim();
+			}
+		}
+	article.article(class= allMods)
 		.article__wrapper
 			.container
 				h1.article__title= props.title
