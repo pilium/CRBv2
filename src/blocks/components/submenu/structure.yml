@@ -13,7 +13,7 @@
           href: '#'
           text: 'Терапевтическое отделение'
         -
-          href: '#'
+          href: '/ambulance.html'
           text: 'Отделение скорой помощи'
         -
           href: '/diagnostic.html'
