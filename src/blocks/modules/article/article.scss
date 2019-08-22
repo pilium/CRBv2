@@ -1,6 +1,6 @@
 .article {
 	&__title {
-		margin: 40px auto;
+		margin: 8px auto;
 		font-size: rem(24);
 		text-align: center;
 
@@ -9,9 +9,10 @@
 		}
 	}
 
-	&__text {
-		margin: 0 auto 24px;
-		max-width: 68em;
+	&__subtitle {
+		font-size: rem(26);
+
+		@media screen and (min-width: $break_xs) { font-size: var(--font-size-h2); }
 	}
 
 	&__list {
@@ -29,9 +30,9 @@
 
 	&__strong {
 		position: relative;
-		margin-top: 16px;
-		margin-bottom: 24px;
-		padding-left: 32px;
+		margin-top: 24px;
+		margin-bottom: 32px;
+		padding-left: 16px;
 		font-family: var(--font-family--bold);
 		font-weight: bold;
 		color: var(--color-main);
@@ -51,6 +52,8 @@
 			margin-bottom: 0;
 			line-height: 1;
 		}
+
+		@media screen and (min-width: $break_md) { padding-left: 32px; }
 	}
 
 	&__links {
