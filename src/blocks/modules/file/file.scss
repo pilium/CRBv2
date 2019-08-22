@@ -12,12 +12,6 @@
 		max-height: 168px;
 	}
 
-	&__title {
-		font-family: var(--font-family--bold);
-		font-size: rem(18);
-		text-overflow: ellipsis;
-	}
-
 	&__tags {
 		position: absolute;
 		left: 0;
@@ -57,21 +51,27 @@
 			}
 		}
 
-		&--dl {
-			margin-left: auto;
-			cursor: pointer;
+		&--dl { cursor: pointer; }
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+
+		> * {
+			&:not(:last-child) { margin-right: 16px; }
 		}
 	}
 
 	&__icon {
-		width: 32px;
-		height: 32px;
-		transition: fill linear 0.3s;
+		width: 40px;
+		height: 40px;
+		fill: var(--color-main);
 
 		&--dl {
-			width: 24px;
-			height: 24px;
-			fill: var(--color-main);
+			width: 32px;
+			height: 32px;
 		}
 	}
 

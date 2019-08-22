@@ -1,16 +1,21 @@
 mixin file(props)
 	.file
 		.file__inner
-			a.link.file__title(href="#")= props.title
+			a.link.file__title(href= props.href target="blanc")= props.title
 			.file__tags
 				span.file__tag(title="Формат файла doc")
 					+icon(props.icon, 'file__icon')
 					span= props.size
-				a.file__tag.file__tag--dl(href=props.href download)
-					span.visually-hidden Скачать файл
-					+icon('download', 'file__icon file__icon--dl')
+				.file__icons
+					if (props.addition)
+						a.file__tag.file__tag--dl(href= props.additionLink)
+							span.visually-hidden Приложения к файлу
+							+icon('downloadAdd', 'file__icon file__icon--dl')
+					a.file__tag.file__tag--dl(download= `${props.title}.${props.format}` href=props.href)
+						span.visually-hidden Скачать файл
+						+icon('download', 'file__icon file__icon--dl')
 		.file__hint
-			span.file__open-hint
+			span.file__open-hint(tabindex="0")
 			+file-info({
 				type: props.type,
 				date: props.date,
