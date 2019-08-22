@@ -1,0 +1,25 @@
+mixin expert()
+	.expert
+		h2.article__title Специалисты отделения
+		block
+
+mixin expert__item(props)
+	.expert__item
+		img.expert__img(src= props.src alt= props.name)
+		.expert__info
+			span.expert__name= props.name
+			.expert__info-item
+				span.expert__info-title Специальность
+				span.expert__job= props.job
+			.expert__info-item
+				span.expert__info-title Образование
+				span.expert__edu= props.edu
+			.expert__info-item
+				span.expert__info-title Последнее повышение
+				span.expert__up= props.up
+			.expert__info-item
+				span.expert__info-title Сертификат
+				span.expert__cert= props.cert
+			.expert__info-item
+				span.expert__info-title Категория
+				span.expert__category= props.category
