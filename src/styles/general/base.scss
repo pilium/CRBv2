@@ -155,7 +155,6 @@ a {
 
 	&[href^="tel:"] {
 		@media (min-width: 1200px) {
-			font-size: rem(20);
 			white-space: nowrap;
 			text-decoration: inherit;
 			cursor: pointer;
