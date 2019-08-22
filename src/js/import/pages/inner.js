@@ -22,4 +22,4 @@ function al() {
 	}
 }
 
-setTimeout(al, 100);
+setTimeout(al, 1);
