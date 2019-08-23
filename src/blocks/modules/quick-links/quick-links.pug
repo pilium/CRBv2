@@ -7,45 +7,53 @@ mixin quick-links(props)
 				icon: 'calendar',
 				title: 'График приема',
 				descr: 'станица Романовская, хутор Рябичев',
+				href: '/schedule.html'
 			})
 			+quick-links__item({
 				icon: 'doctor',
 				title: 'Услуги',
 				descr: 'Стоматология, рентгенология, физиотерапия...',
+				href: '/helpOrder.html'
 			})
 			+quick-links__item({
 				icon: 'testimonial',
 				title: 'Отзывы',
 				descr: 'Отзывы пацментов о работе больницы',
+				href: '/testimonials.html'
 			})
 			+quick-links__item({
 				icon: 'health',
 				title: 'Диспансеризация',
 				descr: 'Информация по прохождении диспансеризации в больнице',
+				href: '/dispans.html'
 			})
 			+quick-links__item({
 				icon: 'medical-insurance',
 				title: 'Страховые компании',
 				descr: 'Информация о страховых компаниях ростовской области ',
+				href: '/smo.html'
 			})
 			+quick-links__item({
 				icon: 'article',
 				title: 'Полезные статьи',
 				descr: 'большое количество статей на тему здоровья',
+				href: '/schedule.html'
 			})
 			+quick-links__item({
 				icon: 'gallery',
 				title: 'Галерея',
 				descr: 'Фотографии больницы, врачей, кабинетов',
+				href: '/gallery.html'
 			})
 			+quick-links__item({
 				icon: 'payment',
 				title: 'Платные услуги',
 				descr: 'Информация с список платных услуг больницы',
+				href: '/pay.html'
 			})
 		
 mixin quick-links__item(props)
-	a.quick-links__item(href="#")
+	a.quick-links__item(href= props.href)
 		.quick-links__icon
 			+icon(props.icon, 'quick-links__svg-icon')
 		.quick-links__info
