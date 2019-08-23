@@ -10,8 +10,11 @@
           href: '/surgeon.html'
           text: 'Хирургическое отделение'
         -
-          href: '#'
+          href: '/terapevt.html'
           text: 'Терапевтическое отделение'
+        -
+          href: '#'
+          text: 'Терапевтическое отделение №2'
         -
           href: '/ambulance.html'
           text: 'Отделение скорой помощи'
