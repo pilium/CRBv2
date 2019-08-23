@@ -1,28 +1,28 @@
-mixin doctor-about()
+mixin doctor-about(props)
 	.doctor-about
 		.doctor-about__wrapper
 			.doctor-about__info
 				figure
-					img.doctor-about__img(src="https://picsum.photos/300/366?random=4" alt="Денисова Олеся Геннадьевна")
-					figcaption.doctor-about__figcaption Денисова Олеся Геннадьевна
+					img.doctor-about__img(src= props.src alt= props.name)
+					figcaption.doctor-about__figcaption= props.name
 				+doctor-about__test()
 			.doctor-about__education
 				.doctor-about__main-info
-					h1.doctor-about__name Денисова Олеся Геннадьевна
-					.doctor-about__job Врач-кардиолог
+					h1.doctor-about__name= props.name
+					.doctor-about__job= props.job
 				.doctor-about__edu
 					h2.doctor-about__edu-title Образование
 					ul.doctor-about__edu-list
-						li.doctor-about__edu-item
-							span.doctor-about__edu-year 2011 год
-							p.doctor-about__edu-text Окончил Львовский национальный медицинский университет им. Даниила Галицкого и получил полное высшее образование по специальности «Стоматология» и получил квалификацию врач-стоматолог;
-						li.doctor-about__edu-item
-							span.doctor-about__edu-year 2011 год
-							p.doctor-about__edu-text Окончил Львовский национальный медицинский университет им. Даниила Галицкого и получил полное высшее образование по специальности «Стоматология» и получил квалификацию врач-стоматолог;
-						li.doctor-about__edu-item
-							span.doctor-about__edu-year 2011 год
-							p.doctor-about__edu-text Окончил Львовский национальный медицинский университет им. Даниила Галицкого и получил полное высшее образование по специальности «Стоматология» и получил квалификацию врач-стоматолог;
-
+						each item in props.edu
+							li.doctor-about__edu-item
+								span.doctor-about__edu-year= item.year
+								p.doctor-about__edu-text= item.text
+				.doctor-about__cert
+					h2.doctor-about__edu-title Сертификаты
+					ul.doctor-about__cert-list
+						each item in props.cert
+							li.doctor-about__edu-item
+								img(src= item alt="alt")
 mixin doctor-about__test()
 	ul.doctor-about__test
 		li.doctor-about__test-item

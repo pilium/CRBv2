@@ -89,6 +89,12 @@
 		flex: 0 0 80px;
 	}
 
+	&__cert-list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
 	figure {
 		display: inline-block;
 		overflow: hidden;
