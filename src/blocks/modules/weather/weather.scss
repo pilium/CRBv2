@@ -153,20 +153,20 @@
 		}
 	}
 
-	&__update {
-		position: absolute;
-		left: 8px;
-		top: 8px;
-		z-index: 2;
-		display: none;
-		align-items: center;
-		justify-content: center;
-		border-radius: var(--border-radius);
-		padding: 8px;
-		background-color: var(--color-bg-icon);
+	// &__update {
+	// 	position: absolute;
+	// 	left: 8px;
+	// 	top: 8px;
+	// 	z-index: 2;
+	// 	display: none;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	border-radius: var(--border-radius);
+	// 	padding: 8px;
+	// 	background-color: var(--color-bg-icon);
 
-		@media screen and (min-width: $break_md) {
-			display: flex;
-		}
-	}
+	// 	@media screen and (min-width: $break_md) {
+	// 		display: flex;
+	// 	}
+	// }
 }
