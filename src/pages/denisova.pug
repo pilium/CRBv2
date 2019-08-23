@@ -1,0 +1,42 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Денисова Олеся Геннадьевна";
+	- var description = 'Доктор Денисова Олеся Геннадьевна';
+	- var breadcrumbs = [{title: 'Наши доктора',link: 'doctors.html'},{title: 'Денисова Олеся Геннадьевна'}]
+	- var keywords = 'Денисова Олеся Геннадьевна'
+
+block content
+	+breadcrumbs()
+	+section({
+		mods: 'doctor-about',
+		header: false,
+		container: true,
+	})
+		+doctor-about({
+			src: 'https://picsum.photos/300/366?random=4',
+			name: 'Денисова Олеся Геннадьевна',
+			job: 'Врач-кардиолог',
+			edu: [
+				{
+					year: '2011 год',
+					text: 'Окончил Львовский национальный медицинский университет им. Даниила Галицкого и получил полное высшее образование по специальности «Стоматология» и получил квалификацию врач-стоматолог',
+				},
+				{
+					year: '2012 год',
+					text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci optio neque ratione magni facere incidunt fugiat dolores aspernatur maxime doloremque!',
+				},
+				{
+					year: '2013 год',
+					text: 'Окончил Львовский национальный медицинский университет им. Даниила Галицкого и получил полное высшее образование по специальности «Стоматология» и получил квалификацию врач-стоматолог',
+				},
+			],
+			cert: [
+				'https://picsum.photos/200/266?random=4',
+				'https://picsum.photos/200/266?random=4',
+				'https://picsum.photos/200/266?random=4',
+			]
+		})
+block scripts
+	link(rel="stylesheet" href="../styles/main.css")
+	script(async src="../js/inner.js")
