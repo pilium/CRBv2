@@ -3,14 +3,22 @@
 
 	&__chart {
 		position: relative;
-		flex: 0 0 40%;
 		width: 100%;
-		min-height: 144px;
-		max-height: 144px;
+		min-height: 200px;
 
 		@media screen and (min-width: $break_lg) {
-			max-height: 400px;
+			min-height: 400px;
 		}
+	}
+
+	.btn {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 3;
+		transform: translate(-50%, -50%);
+
+		&.hide { display: none; }
 	}
 
 	&--inner { margin-bottom: 0; }

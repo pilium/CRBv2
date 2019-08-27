@@ -12,6 +12,11 @@ mixin map(props)
 			mods: 'map',
 		})
 			.map__chart#map
+				+btn({
+					tag: 'button',
+					text: 'Загрузить карту',
+					mods: 'map'
+				})
 				h2.hide-text Больница на карте
 				//- +preloader({})
-				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A86bebf603bd4cc9e5d3dcd2169312c291a2739731cc1ea174fd85e33f3027241&amp;source=constructor" width="100%" height="417" frameborder="0")
+				//- iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A86bebf603bd4cc9e5d3dcd2169312c291a2739731cc1ea174fd85e33f3027241&amp;source=constructor" width="100%" height="417" frameborder="0")
