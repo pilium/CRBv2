@@ -29,19 +29,14 @@
 	}
 
 	&.hide {
-		animation: scale-out-ver-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+		animation: fade-out 1s ease-out both;
 
-		@keyframes scale-out-ver-bottom {
-			0% {
-				opacity: 1;
-				transform: scaleY(1);
-				transform-origin: 0% 100%;
-			}
+		@keyframes fade-out {
+			0% { opacity: 1; }
 
 			100% {
-				opacity: 1;
-				transform: scaleY(0);
-				transform-origin: 0% 100%;
+				z-index: -1;
+				opacity: 0;
 			}
 		}
 	}
