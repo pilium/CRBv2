@@ -4,9 +4,7 @@
 	.btn {
 		> * {
 			&:not(:last-child) {
-				@media screen and (min-width: $break_xl) {
-					margin-right: 8px;
-				}
+				@media screen and (min-width: $break_xl) { margin-right: 8px; }
 			}
 		}
 

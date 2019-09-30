@@ -1,3 +1,4 @@
+import '%components%/preloader/preloader.js';
 import '%modules%/header-bottom/header-bottom.js';
 import '%components%/modal/modal';
 import '%components%/input-text/input-text';
@@ -17,3 +18,4 @@ import '%components%/to-top/to-top.js';
 import '%modules%/ie-hack/ie-hack.js';
 import '%modules%/file/file.js';
 import '%modules%/tabs/tabs.js';
+import '%modules%/testimonials/testimonials.js';

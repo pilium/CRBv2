@@ -1,0 +1,51 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Адмиминистрация МБУЗ ЦРБ волгодонского района";
+	- var description = 'Адмиминистрация МБУЗ ЦРБ волгодонского района';
+	- var breadcrumbs = [{title: 'Структура',link: 'article.html'},{title: 'Адмиминистрация ЦРБ'}]
+	- var keywords = 'Адмиминистрация МБУЗ ЦРБ волгодонского района';
+
+block content
+	+breadcrumbs()
+	+article({
+		title: 'Адмиминистрация МБУЗ ЦРБ волгодонского района',
+		mods: 'big'
+	})
+		.article__text
+			.container
+				+expert__item({
+					src: 'https://res.cloudinary.com/dhccuflos/image/upload/v1566476482/administration/gldoc.jpg',
+					name: 'Найденов Сергей Юрьевич',
+					job: 'Главный врач',
+					edu: 'Ростовский государственный медицинский университет, 2001 г.',
+					up: 'Организация здравоохранения и общественное здоровье, в 2018 году.',
+					cert: '2018 г. "Организация здравоохранения и общественное здоровье"',
+					category: 'Отсутствует'
+				})
+				+expert__item({
+					src: 'https://res.cloudinary.com/dhccuflos/image/upload/v1566476481/administration/kim.jpg',
+					name: 'Ким Любовь Михайловна',
+					job: 'Заместитель по медицинскому обслуживанию',
+					edu: 'Ростовский ордена Дружбы народов медицинский институт, в 1985году.',
+					up: 'Организация здравоохранения и общественное здоровье, в 2017 году.',
+					cert: '2017 г. "Организация здравоохранения и общественное здоровье"',
+					category: 'Первая, 2014 г.'
+				})
+				+expert__item({
+					src: 'https://res.cloudinary.com/dhccuflos/image/upload/v1566476481/administration/nachmed.jpg',
+					name: 'Медведев Николай Игоревич',
+					job: 'Заместитель по медицинской части',
+					edu: 'ГБОУ ВПО Ростовский государственный медицинский университет, в 2008 году.',
+					up: 'Организация здравоохранения и общественное здоровье, в 2018 году.',
+					cert: '2018 г. "Организация здравоохранения и общественное здоровье"',
+					category: 'Отсутствует'
+				})
+				+expert__item({
+					src: 'https://res.cloudinary.com/dhccuflos/image/upload/v1566476482/administration/shumilov.jpg',
+					name: 'Шумилов Анатолий Владимирович',
+					job: 'Заместитель по АХЧ',
+				})
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/inner.js")

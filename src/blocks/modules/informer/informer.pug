@@ -8,9 +8,4 @@ mixin informer(inner)
 			+panel({
 				mods: 'weather,shadow, mr1'
 			})
-				if(inner)
-					+map({
-						mods: 'inner',
-					})
-				else
-					+weather()
+				+weather()

@@ -1,0 +1,45 @@
+.testimonials {
+	&__block {
+		position: relative;
+		margin: 0 auto 3rem;
+		border-left: 4px solid var(--color-border);
+		padding: 0 8px;
+		min-height: 320px;
+		line-height: 1.6;
+		color: var(--color-text);
+
+		@media screen and (min-width: $break_md) {
+			border-left: 8px solid var(--color-border);
+			padding: 16px 32px 16px 72px;
+
+			&::before {
+				content: "\201C";
+				position: absolute;
+				left: 8px;
+				top: -8px;
+				font-family: Arial, sans-serif;
+				font-size: 4em;
+				color: #057d62;
+			}
+		}
+	}
+
+	&__cite {
+		display: block;
+		margin-top: 16px;
+		font-size: 16px;
+		line-height: 1.8em;
+	}
+
+	&__name {
+		display: inline-block;
+		font-weight: 700;
+		color: #000;
+	}
+
+	&__date {
+		margin-left: 8px;
+		font-weight: 400;
+		font-style: italic;
+	}
+}

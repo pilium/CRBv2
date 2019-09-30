@@ -1,0 +1,20 @@
+extends ../views/layouts/inner
+block vars
+	- var bodyClass = "inner"
+	- var title = "Отзывы пациентов";
+	- var description = 'Отзывы пациентов';
+	- var breadcrumbs = [{title: 'Пациентам',link: 'article.html'},{title: 'Отзывы пациентов'}]
+	- var keywords = 'Отзывы пациентов';
+
+block content
+	+breadcrumbs()
+	+article({
+		title: 'Отзывы пациентов',
+	})
+		.article__text
+			.container
+				+testimonials()
+
+block scripts
+	link(rel="stylesheet" href="./styles/main.css")
+	script(async src="./js/inner.js")

@@ -36,7 +36,7 @@
 			margin-bottom: 0;
 			padding: 32px;
 			width: 50%;
-			min-height: 240px;
+			min-height: 248px;
 			text-align: center;
 
 			&:nth-child(odd) {
@@ -50,7 +50,6 @@
 
 		@media screen and (min-width: $break_xl) {
 			width: 25%;
-			min-height: 336px;
 
 			&:nth-child(5),
 			&:nth-child(6),

@@ -15,6 +15,9 @@ html(lang="ru")
 	head
 		include ../includes/head
 	body(class= bodyClass)
+		+preloader({
+			class: 'preloader--main',
+		})
 		.main-wrapper
 			+skip-content()
 			block header

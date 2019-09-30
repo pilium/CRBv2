@@ -20,7 +20,7 @@
           text: 'Модернизация здравоохранения'
         -
           href: '/corruption.html'
-          text: 'Противодействие с коррупцией'
+          text: 'Противодействие коррупции'
         -
           href: '/vacancy.html'
           text: 'Вакансии'
@@ -28,7 +28,7 @@
           href: '/pay.html'
           text: 'Платные услуги'
         -
-          href: '#'
+          href: '/testimonials.html'
           text: 'Отзывы'
         -
           href: '/organizations.html'
