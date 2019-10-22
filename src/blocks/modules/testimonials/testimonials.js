@@ -68,19 +68,3 @@ async function fetchTopFive() {
 }
 
 fetchTopFive();
-
-// fetch('https://crb-tesst.herokuapp.com/graphql', {
-// 	method: 'POST',
-// 	headers: {
-// 		'content-type': 'application/json',
-// 	},
-// 	body: JSON.stringify({
-// 		operationName: null,
-// 		query,
-// 		variables: {
-// 			id: 1,
-// 		},
-// 	}),
-// })
-// 	.then((r) => r.json())
-// 	.then(console.log);
