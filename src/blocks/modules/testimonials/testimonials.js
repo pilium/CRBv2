@@ -47,9 +47,6 @@ async function fetchTopFive() {
 			body: JSON.stringify({
 				operationName: null,
 				query,
-				variables: {
-					id: 1,
-				},
 			}),
 			cache: 'reload',
 		})
